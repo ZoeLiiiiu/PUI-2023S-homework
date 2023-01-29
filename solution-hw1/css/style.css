@@ -94,6 +94,16 @@ a:-webkit-any-link {
     font-size: 120px;
 }
 
+.dropdown{
+    margin-top: 200px;
+    margin-bottom: 200px;
+    height: auto;
+}
+
+.dropdown > p {
+    margin-bottom: 50px;
+}
+
 .dropbtn {
   border:10px solid black;
   padding-left: 70px;
@@ -106,8 +116,10 @@ a:-webkit-any-link {
   text-align: left;
 }
 
+
 .dropbtn > div{
     display: flex;
+
 }
 
 .dropdown-content {
