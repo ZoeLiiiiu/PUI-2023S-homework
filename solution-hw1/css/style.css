@@ -56,7 +56,6 @@ a:-webkit-any-link {
 .detailed-content{
     width: 1600px;
     margin: auto;
-    background-color: blue;
     text-align: left;
 }
 
@@ -86,44 +85,47 @@ a:-webkit-any-link {
     font-size: 120px;
 }
 
-
-/* styles for jobdown menu*/
 .dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
+  border:10px solid black;
+  padding-left: 30px;
+  cursor: pointer;
+  width: 1500px;
+  height: 200px;
+  font-size: 120px;
+  box-sizing: border-box;
+  margin: 0px;
+  text-align: left;
+}
 
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
+.dropdown-content {
+  box-sizing: border-box;
+  display: none;
+  background-color: #f9f9f9;
+  width: 1500px;
+}
 
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
+.dropdown-content p {
+  color: black;
+  text-decoration: none;
+  display: block;
+  border: 10px solid black;
+  border-top: 0px;
+  margin:0px;
+  box-sizing: border-box;
+  line-height: 200px;
+  padding-left: 30px;
+}
 
-  .dropdown-content p {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
+.dropdown-content p:hover {background-color: lightgray}
 
-  .dropdown-content p:hover {background-color: #f1f1f1}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
+.dropdown:hover .dropbtn {
+  background-color: grey;
+}
 
-  .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-  }
+
+
+
