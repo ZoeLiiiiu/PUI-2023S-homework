@@ -1,5 +1,5 @@
 # PUI homework
 
-Deployed website: `add the URL to your deployed website`
+Deployed website: https://zoeliiiiu.github.io/PUI-2023S-homework/index.html
 
-Repository link: https://ZoeLiiiiu.github.io/PUI-2023S-homework
+Repository link: https://github.com/ZoeLiiiiu/PUI-2023S-homework
