@@ -26,6 +26,7 @@ a:-webkit-any-link {
 .black-line{
     height: 20px;
     background-color: black;
+    margin-bottom: 100px;
 }
 
 .navigator{
@@ -48,12 +49,14 @@ a:-webkit-any-link {
     font-weight: 500;
     margin-top: 400px;
     margin-bottom: 200px;
+    text-align: center;
 }
 
 
 .main-content > img{
     width: 50%;
     border: 20px solid black;
+    align-self: center;
 }
 
 .items{
