@@ -2,6 +2,10 @@ body{
     font-family: Roboto,Arial,Helvetica,sans-serif;
 }
 
+p{
+    font-size: 120px;
+}
+
 .triangle-down {
 	width: 0;
 	height: 0;
@@ -11,7 +15,7 @@ body{
     align-self: center;
 }
 
-a:-webkit-any-link {
+a {
     color: inherit;
     cursor: pointer;
     text-decoration: none;
@@ -26,14 +30,13 @@ a:-webkit-any-link {
 .black-line{
     height: 20px;
     background-color: black;
-    margin-bottom: 100px;
 }
 
 .navigator{
     text-align: center;
     font-size: 120px;
     color:black;
-    font: Arial;
+    margin-top: 100px;
 }
 
 .PRODUCTS{
@@ -56,7 +59,8 @@ a:-webkit-any-link {
 .main-content > img{
     width: 50%;
     border: 20px solid black;
-    align-self: center;
+    margin-left: 25%;
+    margin-right:25%;
 }
 
 .items{
@@ -69,9 +73,11 @@ a:-webkit-any-link {
     width: 1600px;
     margin: auto;
     text-align: left;
+    margin-bottom:500px ;
 }
 
 .items > div{
+    padding-bottom: 20px;
     margin-bottom: 250px;
 }
 
@@ -81,6 +87,7 @@ a:-webkit-any-link {
 
 .items img {
     margin-top: 20px;
+    margin-left: 20px;
     width: 1460px;
     height: 1460px;
     box-sizing: border-box;
@@ -89,12 +96,16 @@ a:-webkit-any-link {
 
 .items p {
     margin: 10px auto 10px auto;
-    text-decoration: underline;
-    text-decoration-color: darkolivegreen;
-    text-decoration-thickness: 5px;
     text-align: left;
     margin-left: 20px;
     font-size: 120px;
+}
+
+/*make sure the price is not underlined in product gallery page */
+p.item-name {
+    text-decoration: underline;
+    text-decoration-color: darkolivegreen;
+    text-decoration-thickness: 5px;
 }
 
 .dropdown{
@@ -111,7 +122,7 @@ a:-webkit-any-link {
   border:10px solid black;
   padding-left: 70px;
   cursor: pointer;
-  width: 1500px;
+  width: 1600px;
   height: 200px;
   font-size: 120px;
   box-sizing: border-box;
@@ -130,7 +141,7 @@ a:-webkit-any-link {
   box-sizing: border-box;
   display: none;
   background-color: #f9f9f9;
-  width: 1500px;
+  width: 1600px;
 }
 
 .dropdown-content p {
@@ -155,14 +166,80 @@ a:-webkit-any-link {
   background-color: grey;
 }
 
+
+/* determined where the triangle goes by setting the width of the text box*/
 .dropbtn-text{
-    width: 1250px;
+    width: 1350px;
 }
 
 .triangle-down{
     align-items: flex-end;
 }
 
+.add-to-cart {
+    margin-top: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+.add-to-cart-left{
+    /* determine where the in-cart text go by determine the width of the in-cart text box*/
+    width: 50%;
+    text-align: left;
+}
+
+button{
+    border: 10px solid black;
+    font-size: 120px;
+    font-weight: 600;
+    background-color: yellow;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 200px;
+}
 
 
+/*style for shopping cart starts here*/
+.shopping-cart img{
+    width: 500px;
+    border: 20px solid black;
+
+}
+
+.shopping-cart{
+    margin: auto;
+    text-align: center;
+    width: 60%;
+    margin-bottom: 500px;
+}
+
+.shopping-cart p {
+    margin: 10px auto 10px auto;
+    text-align: center;
+    font-size: 120px;
+}
+
+.items-to-be-paid{
+    height: auto;
+    margin: auto;
+    margin-bottom: 250px;
+}
+
+p.price{
+    margin: 100px auto 100px auto;
+}
+
+p.remove{
+    font-size: 60px;
+    font-weight: 600;
+    text-decoration: underline;
+    margin: 50px auto 50px auto;
+    text-decoration-thickness: 5px;
+}
+
+#total-price{
+    margin: 100px auto 100px auto;
+}
 
