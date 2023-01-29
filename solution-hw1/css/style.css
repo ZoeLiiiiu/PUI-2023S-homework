@@ -2,6 +2,15 @@ body{
     font-family: Roboto,Arial,Helvetica,sans-serif;
 }
 
+.triangle-down {
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 50px solid #555;
+    align-self: center;
+}
+
 a:-webkit-any-link {
     color: inherit;
     cursor: pointer;
@@ -87,7 +96,7 @@ a:-webkit-any-link {
 
 .dropbtn {
   border:10px solid black;
-  padding-left: 30px;
+  padding-left: 70px;
   cursor: pointer;
   width: 1500px;
   height: 200px;
@@ -95,6 +104,10 @@ a:-webkit-any-link {
   box-sizing: border-box;
   margin: 0px;
   text-align: left;
+}
+
+.dropbtn > div{
+    display: flex;
 }
 
 .dropdown-content {
@@ -113,7 +126,7 @@ a:-webkit-any-link {
   margin:0px;
   box-sizing: border-box;
   line-height: 200px;
-  padding-left: 30px;
+  padding-left: 70px;
 }
 
 .dropdown-content p:hover {background-color: lightgray}
@@ -124,6 +137,14 @@ a:-webkit-any-link {
 
 .dropdown:hover .dropbtn {
   background-color: grey;
+}
+
+#keep-original{
+    width: 1250px;
+}
+
+#triangle-down{
+    align-items: flex-end;
 }
 
 
