@@ -1,0 +1,80 @@
+body{
+    font-family: Roboto,Arial,Helvetica,sans-serif;
+}
+
+a:-webkit-any-link {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.logo{
+    width: 2000px;
+    margin:200px;
+}
+
+
+.black-line{
+    height: 20px;
+    background-color: black;
+}
+
+.navigator{
+    text-align: center;
+    font-size: 120px;
+    color:black;
+    font: Arial;
+}
+
+.PRODUCTS{
+    font-weight: 600;
+    background-color: yellow;
+    padding: 0;
+    display: inline;
+    box-shadow: 40px 0 0 yellow, -40px 0 0 yellow;
+}
+
+img{
+    border:100 px;
+}
+
+.main-content h1{
+    font-size: 140px;
+    font-weight: 500;
+    margin-top: 400px;
+    margin-bottom: 200px;
+}
+
+.items{
+    width: 1500px;
+    height: auto;
+    margin: auto;
+}
+
+.items > div{
+    margin-bottom: 250px;
+    /*background-color: yellow;*/
+}
+
+.items > div:hover{
+    background-color: yellow;
+}
+
+.items img {
+    margin-top: 20px;
+    width: 1460px;
+    height: 1460px;
+    border: 20px solid black;
+    box-sizing: border-box;
+}
+
+.items p {
+    margin: 10px auto 10px auto;
+    text-decoration: underline;
+    text-decoration-color: darkolivegreen;
+    text-decoration-thickness: 5px;
+    text-align: left;
+    margin-left: 20px;
+    font-size: 120px;
+    /*border-bottom: -30px;*/
+}
