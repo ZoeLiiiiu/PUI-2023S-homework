@@ -119,6 +119,7 @@ a:-webkit-any-link {
 
 .dropbtn > div{
     display: flex;
+    margin-top: 20px;
 
 }
 
@@ -151,11 +152,11 @@ a:-webkit-any-link {
   background-color: grey;
 }
 
-#keep-original{
+.dropbtn-text{
     width: 1250px;
 }
 
-#triangle-down{
+.triangle-down{
     align-items: flex-end;
 }
 
