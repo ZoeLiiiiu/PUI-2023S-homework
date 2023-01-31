@@ -113,14 +113,14 @@ button {
     margin-bottom: 52px;
 }
 
+
+
 .individual-item:hover {
     background-color: yellow;
-    font-weight: 600;
 }
 
-/*make sure the item-price's weight doesn't change*/
-.individual-item:hover .item-price {
-    font-weight: 500;
+.individual-item:hover .item-name{
+    font-weight: 600;
 }
 
 
