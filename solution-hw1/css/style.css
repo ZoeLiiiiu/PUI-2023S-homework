@@ -1,18 +1,11 @@
-body{
+/* set up default elements for all webpage */
+
+body {
     font-family: Roboto,Arial,Helvetica,sans-serif;
 }
 
-p{
+p {
     font-size: 24px;
-}
-
-.triangle-down {
-	width: 0;
-	height: 0;
-	border-left: 9.6px solid transparent;
-	border-right: 9.6px solid transparent;
-	border-top: 9.6px solid #555;
-    align-self: center;
 }
 
 a {
@@ -21,25 +14,41 @@ a {
     text-decoration: none;
 }
 
-.logo{
+button {
+    border: 2px solid black;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: yellow;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 40px;
+    color:black
+}
+
+
+
+/* set up header and navigation bar*/
+/*note that the navigation bar of cart page is different*/
+
+.logo {
     width: 30%;
     margin:40px;
 }
 
-
-.black-line{
+.black-line {
     height: 4px;
     background-color: black;
 }
 
-.navigator{
+.navigator {
     text-align: center;
     font-size: 24px;
     color:black;
     margin-top: 20px;
 }
 
-.PRODUCTS{
+/*making sure that the correct of navigator is being highlighted*/
+.products {
     font-weight: 600;
     background-color: yellow;
     padding: 0;
@@ -47,7 +56,7 @@ a {
     box-shadow: 8px 0 0 yellow, -8px 0 0 yellow;
 }
 
-.CART-on-cart-page{
+.cart-on-cart-page {
     font-weight: 600;
     background-color: yellow;
     padding: 0;
@@ -55,7 +64,11 @@ a {
     box-shadow: 8px 0 0 yellow, -8px 0 0 yellow;
 }
 
-.main-content h1{
+
+
+/*the style of title of all three pages*/
+
+.main-content h1 {
     font-size: 28px;
     font-weight: 500;
     margin-top: 80px;
@@ -64,39 +77,13 @@ a {
 }
 
 
-.main-content > img{
-    width: 50%;
-    border: 2px solid black;
-    margin-left: 25%;
-    margin-right:25%;
-}
 
-.items{
+/*the style of the product-gallery page starts here*/
+
+.items {
     width: 300px;
     height: auto;
     margin: auto;
-}
-
-.detailed-content{
-    width: 320px;
-    margin: auto;
-    text-align: left;
-    /*determine the margin bottom of product detailed page*/
-    margin-bottom:100px ;
-}
-
-.items > div{
-    padding-bottom: 4px;
-    margin-bottom: 52px;
-}
-
-.items > div:hover{
-    background-color: yellow;
-    font-weight: 600;
-}
-
-.items:hover .item-price{
-    font-weight: 500;
 }
 
 .items img {
@@ -115,119 +102,94 @@ a {
     font-size: 24px;
 }
 
-/*make sure the price is not underlined in product gallery page */
-p.item-name {
+.item-name {
     text-decoration: underline;
     text-decoration-color: darkolivegreen;
-    text-decoration-thickness: .96px;
+    text-decoration-thickness: 0.96px;
 }
 
-.dropdown{
+/*enabling the hover highlight*/
+
+.individual-item {
+    padding-bottom: 4px;
+    margin-bottom: 52px;
+}
+
+.individual-item:hover {
+    background-color: yellow;
+    font-weight: 600;
+}
+
+/*make sure the item-price's weight doesn't change*/
+.individual-item:hover .item-price {
+    font-weight: 500;
+}
+
+
+
+/*style fo the product-detail-page start here*/
+
+/*the section that contains dropdown menu and add to chart part*/
+.detailed-content {
+    width: 320px;
+    margin: auto;
+    text-align: left;
+    /*determine the margin bottom of product detailed page*/
+    margin-bottom:100px ;
+}
+
+.image-on-product-detail-page {
+    width: 50%;
+    border: 2px solid black;
+    margin-left: 25%;
+    margin-right:25%;
+}
+
+/*the style of dropdown menu*/
+
+.dropdown {
     margin-top: 40px;
     margin-bottom: 40px;
     height: auto;
 }
 
-.dropdown > p {
-    margin-bottom: 10px;
+.dropdown-box-on-product-detail-page {
+    font-size: 24px;
+    padding: 4px 8px 4px 8px;
+    border-radius: 0px;
+    border: 2px solid black;
+    width: 320px;
 }
 
-.dropbtn {
-  border:2px solid black;
-  padding-left: 14px;
-  cursor: pointer;
-  width: 320px;
-  height: 40px;
-  font-size: 24px;
-  box-sizing: border-box;
-  margin: 0px;
-  text-align: left;
-}
-
-
-.dropbtn > div{
-    display: flex;
-    margin-top: 4px;
-
-}
-
-.dropdown-content {
-  box-sizing: border-box;
-  display: none;
-  background-color: #f9f9f9;
-  width: 320px;
-}
-
-.dropdown-content p {
-  color: black;
-  text-decoration: none;
-  display: block;
-  border: 2px solid black;
-  border-top: 0px;
-  margin:0px;
-  box-sizing: border-box;
-  line-height: 40px;
-  padding-left: 14px;
-}
-
-.dropdown-content p:hover {background-color: lightgray}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown:hover .dropbtn {
-  background-color: grey;
-}
-
-
-/* determined where the triangle goes by setting the width of the text box*/
-.dropbtn-text{
-    width: 270px;
-}
-
-.triangle-down{
-    align-items: flex-end;
-}
+/*the style of the add-to-cart* section*/
 
 .add-to-cart {
     margin-top: 100px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-
 }
 
-.add-to-cart-left{
+.add-to-cart-left {
     /* determine where the in-cart text go by determine the width of the in-cart text box*/
     width: 50%;
     text-align: left;
 }
 
-button{
-    border: 2px solid black;
-    font-size: 20px;
+.price-to-be-paid {
     font-weight: 600;
-    background-color: yellow;
-    padding-left: 10px;
-    padding-right: 10px;
-    height: 40px;
-    color:black
 }
 
-#price-to-be-paid{
-    font-weight: 600;
-}
 
 
 /*style for shopping cart starts here*/
-.shopping-cart img{
+
+.shopping-cart img {
     width: 120px;
     border: 2px solid black;
-
 }
 
-.shopping-cart{
+.shopping-cart {
     margin: auto;
     text-align: center;
     width: 60%;
@@ -240,27 +202,24 @@ button{
     font-size: 24px;
 }
 
-.items-to-be-paid{
+.items-to-be-paid {
     height: auto;
     margin: auto;
     margin-bottom: 50px;
 }
 
-p.price{
+p.price {
     margin: 20px auto 20px auto;
 }
 
-
-
-p.remove{
+p.remove {
     font-size: 12px;
     font-weight: 600;
     text-decoration: underline;
     margin: 5px auto 10px auto;
-    text-decoration-thickness: .5px;
+    text-decoration-thickness: 0.5px;
 }
 
-#total-price{
+p.total-price {
     margin: 20px auto 20px auto;
 }
-

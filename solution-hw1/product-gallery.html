@@ -3,31 +3,37 @@
   <head>
     <title>Product Gallery</title>
     <link rel ="stylesheet" href = "css/style.css">
+    <meta charset="utf-8">
   </head>
   
   <body>
 
+    <!--header section-->
     <div class = "header">
       <a href="./product-gallery.html"><img class = "logo" src="asset/logo/logo-01.svg" alt = "logo"></a>
       <hr class="black-line">
     </div>
 
+    <!--navigator section-->
     <div class = "navigator">
-        <p class="PRODUCTS">
-          <a href="./product-gallery.html">PRODUCTS</a>
-        </p>
-      <p class = "CART">
+      <p class="products">
+        <a href="./product-gallery.html">PRODUCTS</a>
+      </p>
+      <p class = "cart">
         <a href="./shopping-cart.html">CART</a>
       </p>
     </div>
     
+    <!--main-content section-->
     <div class = "main-content">
       <h1>
         Our hand-made cinnamon rolls
       </h1>
 
+      <!--item section-->
+      <!--start the section because the maximum width is different-->
       <div class = "items">
-        <div id = "original">
+        <div class = "individual-item" id = "original">
           <a href="./product-detail-page.html"><img src="asset/products/original-cinnamon-roll.jpg" alt = "original-cinnamon-roll"></a>
           <a href="./product-detail-page.html"><p class="item-name">Original cinnamon roll</p></a>
           <p class = "item-price">
@@ -35,7 +41,7 @@
           </p>
         </div>
   
-        <div id = "apple">
+        <div class = "individual-item" id = "apple">
           <a href="./product-detail-page.html"><img src="asset/products/apple-cinnamon-roll.jpg" alt = "apple-cinnamon-roll"></a>
           <a href="./product-detail-page.html"><p class="item-name">Apple cinnamon roll</p></a>
 
@@ -44,7 +50,7 @@
           </p>
         </div>
   
-        <div id = "raisin">
+        <div class = "individual-item" id = "raisin">
           <a href="./product-detail-page.html"><img src="asset/products/raisin-cinnamon-roll.jpg" alt = "raisin-cinnamon-roll"></a>
           <a href="./product-detail-page.html"><p class="item-name">Raisin cinnamon roll</p></a>
           
@@ -53,7 +59,7 @@
           </p>
         </div>
   
-        <div id = "walnut">
+        <div class = "individual-item" id = "walnut">
           <a href="./product-detail-page.html"><img src="asset/products/walnut-cinnamon-roll.jpg" alt = "walnut-cinnamon-roll"></a>
           <a href="./product-detail-page.html"><p class="item-name">Walnut cinnamon roll</p></a>
 
@@ -63,7 +69,7 @@
 
         </div>
   
-        <div id = "chocolate">
+        <div class = "individual-item" id = "chocolate">
           <a href="./product-detail-page.html"><img src="asset/products/double-chocolate-cinnamon-roll.jpg" alt = "double-chocolate-cinnamon-roll"></a>
           <a href="./product-detail-page.html"><p class="item-name">Double-chocolate cinnamon roll</p></a>
           
@@ -72,7 +78,7 @@
           </p>
         </div>
   
-        <div id = "strawberry">
+        <div class = "individual-item" id = "strawberry">
           <a href="./product-detail-page.html"><img src="asset/products/strawberry-cinnamon-roll.jpg" alt = "strawberry-cinnamon-roll"></a>
           <a href="./product-detail-page.html">
             <p class="item-name">
@@ -85,13 +91,8 @@
           </p>
         </div>
       </div>
-      
 
-
-    
     </div>
-
-
 
   </body>
 </html>

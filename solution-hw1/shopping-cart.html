@@ -3,61 +3,65 @@
   <head>
     <title>Shopping Cart</title>
     <link rel ="stylesheet" href = "css/style.css">
+    <meta charset="utf-8">
   </head>
   
   <body>
+
+    <!--header section-->
     <div class = "header">
-        <a href="./product-gallery.html"><img class = "logo" src="asset/logo/logo-01.svg" alt = "logo"></a>
-        <hr class="black-line">
-      </div>
+      <a href="./product-gallery.html"><img class = "logo" src="asset/logo/logo-01.svg" alt = "logo"></a>
+      <hr class="black-line">
+    </div>
   
-      <div class = "navigator">
-        <p class="PRODUCTS-on-cart-page">
-          <a href="./product-gallery.html">PRODUCTS</a>
-        </p>
-        <p class = "CART-on-cart-page">
-          <a href="./shopping-cart.html">CART</a>
-        </p>
-      
-      </div>
+    <!--navigator section-->
+    <div class = "navigator">
+      <p class="products-on-cart-page">
+        <a href="./product-gallery.html">PRODUCTS</a>
+      </p>
+      <p class = "cart-on-cart-page">
+        <a href="./shopping-cart.html">CART</a>
+      </p>
+    </div>
     
-      <div class = "main-content">
-        <h1>
-          Shopping Cart
-        </h1>
+    <!--main-content section-->
+    <div class = "main-content">
+      <h1>
+        Shopping Cart
+      </h1>
 
-        <div class = "shopping-cart">
-            <div class = "items-to-be-paid">
-                <img src="asset/products/original-cinnamon-roll.jpg" alt = "original-cinnamon-roll">
-                <p class = "remove">Remove</p>
-                <p>Original cinnamon roll</p>
-                <p>Glazing:Keep original</p>
-                <p>Pack Size: 1</p>
-                <p class = "price">$ 2.49</p>
-            </div>
-
-            <div class = "items-to-be-paid">
-                <img src="asset/products/double-chocolate-cinnamon-roll.jpg" alt = "double-chocolate-cinnamon-roll">
-                <p class = "remove">Remove</p>
-                <p>Double-chocolate cinnamon roll</p>
-                <p>Glazing:Sugar milk</p>
-                <p>Pack Size: 6</p>                
-                <p class = "price">$ 27.45</p>
-            </div>
-
-            <hr class="black-line">
-
-            <p id = "total-price">
-                Total: $ 29.94            
-            </p>
-
-            <button>
-                Checkout            
-            </button>
-            
+      <div class = "shopping-cart">
+        <div class = "items-to-be-paid">
+          <img src="asset/products/original-cinnamon-roll.jpg" alt = "original-cinnamon-roll">
+          <p class = "remove">Remove</p>
+          <p>Original cinnamon roll</p>
+          <p>Glazing:Keep original</p>
+          <p>Pack Size: 1</p>
+          <p class = "price">$ 2.49</p>
         </div>
 
+        <div class = "items-to-be-paid">
+          <img src="asset/products/double-chocolate-cinnamon-roll.jpg" alt = "double-chocolate-cinnamon-roll">
+          <p class = "remove">Remove</p>
+          <p>Double-chocolate cinnamon roll</p>
+          <p>Glazing:Sugar milk</p>
+          <p>Pack Size: 6</p>                
+          <p class = "price">$ 27.45</p>
+        </div>
+
+        <hr class="black-line">
+
+        <p class = "total-price">
+            Total: $ 29.94            
+        </p>
+
+        <button class = "checkout-button">
+          Checkout            
+        </button>
+            
       </div>
+
+    </div>
 
   </body>
 
