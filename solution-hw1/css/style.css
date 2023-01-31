@@ -90,12 +90,14 @@ a {
     margin-bottom: 52px;
 }
 
-/*how can we not change the price font-weight?*/
 .items > div:hover{
     background-color: yellow;
     font-weight: 600;
 }
 
+.items:hover .item-price{
+    font-weight: 500;
+}
 
 .items img {
     margin-top: 4px;
@@ -210,6 +212,7 @@ button{
     padding-left: 10px;
     padding-right: 10px;
     height: 40px;
+    color:black
 }
 
 #price-to-be-paid{
