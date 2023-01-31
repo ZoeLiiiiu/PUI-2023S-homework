@@ -8,6 +8,7 @@ p {
     font-size: 24px;
 }
 
+/*source: https://www.w3schools.com/css/css_link.asp*/
 a {
     color: inherit;
     cursor: pointer;
@@ -46,6 +47,7 @@ button {
 }
 
 /*making sure that the correct of navigator is being highlighted*/
+/*source: https://www.computerhope.com/issues/ch001391.htm*/
 .products {
     font-weight: 600;
     background-color: yellow;
