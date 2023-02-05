@@ -1,0 +1,273 @@
+/* set up default elements for all webpage */
+
+body {
+    font-family: Roboto,Arial,Helvetica,sans-serif;
+}
+
+p {
+    font-size: 24px;
+}
+
+/*source: https://www.w3schools.com/css/css_link.asp*/
+a {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button {
+    border: 2px solid black;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: yellow;
+    padding-left: 40px;
+    padding-right: 40px;
+    height: 50px;
+    color:black
+}
+
+
+
+/* set up header and navigation bar*/
+.header{
+    display:flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+/*note that the navigation bar of cart page is different*/
+
+.logo {
+    width: 400px;
+    margin:40px;
+}
+
+.black-line {
+    height: 4px;
+    background-color: black;
+}
+
+.header-text{
+    flex-grow: 1;
+}
+
+.navigator {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/*making sure that the correct of navigator is being highlighted*/
+/*source: https://www.computerhope.com/issues/ch001391.htm*/
+.products {
+    font-weight: 600;
+    background-color: yellow;
+    padding: 0px 8px 0px 8px;
+    display: inline;
+    line-height: 30px;
+    height: 30px;
+    margin: 30px 50px 30px 50px;
+}
+
+.cart{
+    margin: 30px 50px 30px 50px;
+
+}
+
+.products-on-cart-page {
+    margin: 30px 50px 30px 50px;
+}
+
+.cart-on-cart-page {
+    font-weight: 600;
+    background-color: yellow;
+    padding: 0;
+    display: inline;
+    box-shadow: 8px 0 0 yellow, -8px 0 0 yellow;
+    margin: 30px 50px 30px 50px;
+}
+
+
+
+/*the style of title of all three pages*/
+
+.title{
+    bottom: 0px;
+}
+
+.title h1 {
+    font-size: 28px;
+    font-weight: 500;
+    margin-top: 100px;
+    margin-bottom: 0px;
+    /*why this is not working?*/
+    /*try to place the item at the end of the box*/
+    position: relative;
+    border-collapse: collapse;
+    bottom: 0px;
+}
+
+
+
+/*the style of the product-gallery page starts here*/
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    margin: auto;
+    justify-content: center;
+}
+
+.items img {
+    margin-top: 4px;
+    margin-left: 4px;
+    width: 292px;
+    height: 292px;
+    box-sizing: border-box;
+    border: 2px solid black;
+}
+
+.items p {
+    margin: 2px auto 2px auto;
+    text-align: left;
+    margin-left: 4px;
+    font-size: 24px;
+}
+
+.item-name {
+    text-decoration: underline;
+    text-decoration-color: darkolivegreen;
+    text-decoration-thickness: 0.96px;
+}
+
+/*enabling the hover highlight*/
+
+.item-box{
+    width: 31%;
+    margin-bottom: 30px;
+}
+
+.individual-item {
+    padding-bottom: 4px;
+    margin-bottom: 52px;
+    width: 300px;
+    margin: auto;
+}
+
+
+
+.individual-item:hover {
+    background-color: yellow;
+}
+
+.individual-item:hover .item-name{
+    font-weight: 600;
+}
+
+
+
+/*style fo the product-detail-page start here*/
+
+/*the section that contains dropdown menu and add to chart part*/
+.main-content{
+    display: flex;
+}
+
+.detailed-content {
+    width: 320px;
+    margin: auto;
+    text-align: left;
+    /*determine the margin bottom of product detailed page*/
+    margin-bottom:100px ;
+}
+
+.image-on-product-detail-page {
+    min-width: 600px;
+    width: 600px;
+    height:600px;
+    min-height: 600px;
+    border: 2px solid black;
+    margin-left: auto;
+}
+
+/*the style of dropdown menu*/
+
+.dropdown {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    height: auto;
+}
+
+.dropdown-box-on-product-detail-page {
+    font-size: 24px;
+    padding: 8px 8px 8px 8px;
+    border-radius: 0px;
+    border: 2px solid black;
+    width: 320px;
+}
+
+/*the style of the add-to-cart* section*/
+
+.add-to-cart {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.add-to-cart-left {
+    /* determine where the in-cart text go by determine the width of the in-cart text box*/
+    width: 34%;
+    text-align: left;
+}
+
+.price-to-be-paid {
+    font-weight: 600;
+}
+
+
+
+/*style for shopping cart starts here*/
+
+.shopping-cart img {
+    width: 120px;
+    border: 2px solid black;
+}
+
+.shopping-cart {
+    margin: auto;
+    text-align: center;
+    width: 60%;
+    margin-bottom: 100px;
+}
+
+.shopping-cart p {
+    margin: 2px auto 2px auto;
+    text-align: center;
+    font-size: 24px;
+}
+
+.items-to-be-paid {
+    display: flex;
+    height: auto;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+p.price {
+    margin: 20px auto 20px auto;
+}
+
+p.remove {
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: underline;
+    margin: 5px auto 10px auto;
+    text-decoration-thickness: 0.5px;
+}
+
+p.total-price {
+    margin: 25px auto 20px auto;
+}

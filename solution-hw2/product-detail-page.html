@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Product Details Page</title>
+    <link rel ="stylesheet" href = "css/style.css">
+    <meta charset="utf-8">
+  </head>
+  
+  <body>
+
+    <!--header section-->
+    <div class = "header">
+      <a href="./product-gallery.html"><img class = "logo" src="asset/logo/logo-01.svg" alt = "logo"></a>
+      <!--source for drawing a horizontal line: 
+      https://html-shark.com/HTML/HorizontalLine.htm#:~:text=Horizontal%20lines%20in%20HTML&text=Horizontal%20lines%20on%20a%20page,color%2C%20thickness%2C%20width%20etc.-->
+      <div class = "header-text">
+        <div class = "navigator">
+          <p class="products">
+            <a href="./product-gallery.html">PRODUCTS</a>
+          </p>
+          <p class = "cart">
+            <a href="./shopping-cart.html">CART</a>
+          </p>
+        </div>
+        <hr class="black-line">
+        <div class = "title">
+          <h1>
+            Original cinnamon roll
+          </h1>
+        </div>
+      </div>
+    </div>
+    
+    <!--main-content section--> 
+    <div class = "main-content">
+
+      <img class = "image-on-product-detail-page" src="asset/products/original-cinnamon-roll.jpg" alt = "original-cinnamon-roll">
+
+      <!--detailed-content section-->
+      <!--creat a new section becase the largest width is different-->
+      <div class = "detailed-content">
+
+        <p>
+          <span>Customize our delicious,</span> 
+          <span>hand-made cinammon roll to you liking!</span>
+        </p>
+        
+        <!-- a section for dropdown menu -->
+        <!--source: https://www.geeksforgeeks.org/how-to-set-the-default-value-for-an-html-select-element/-->
+        <div class="dropdown" id = "glazing-dropdown">
+
+          <p>
+            Glazing:
+          </p>
+
+          <select class = "dropdown-box-on-product-detail-page">
+            <option>Suger milk</option>
+            <option>Vanilla milk </option>
+            <option>Double chocolate</option>
+          </select>
+
+        </div>
+
+        <!-- another section for dropdown menu -->
+        <div class="dropdown" id = "pick-size-dropdown">
+
+          <p>
+            Pack size:
+          </p>
+
+          <select class = "dropdown-box-on-product-detail-page">
+            <option>1</option>
+            <option>3 </option>
+            <option>6</option>
+            <option>12</option>
+          </select>
+
+        </div>
+
+        <!-- section for add-to-cart-->
+        <div class = "add-to-cart">
+          <div class="add-to-cart-left">
+            <p class="price-to-be-paid"> $ 2.49 </p>
+          </div>
+          <button class="add-to-cart-btn"> Add to Cart </button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>
