@@ -77,6 +77,8 @@ button {
 
 .products-on-cart-page {
     margin: 30px 50px 30px 50px;
+
+
 }
 
 .cart-on-cart-page {
@@ -93,14 +95,14 @@ button {
 /*the style of title of all three pages*/
 
 .title{
-    bottom: 0px;
+    margin-bottom: 20px;
 }
 
 .title h1 {
     font-size: 28px;
     font-weight: 500;
     margin-top: 100px;
-    margin-bottom: 0px;
+    margin-bottom: 100px;
     /*why this is not working?*/
     /*try to place the item at the end of the box*/
     position: relative;
@@ -238,6 +240,7 @@ button {
 
 .shopping-cart {
     margin: auto;
+    margin-left: 480px;
     text-align: center;
     width: 60%;
     margin-bottom: 100px;
@@ -245,29 +248,56 @@ button {
 
 .shopping-cart p {
     margin: 2px auto 2px auto;
-    text-align: center;
+    text-align: left;
     font-size: 24px;
 }
 
 .items-to-be-paid {
-    display: flex;
     height: auto;
-    margin: auto;
     margin-bottom: 50px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.items-to-be-paid-text{
+    margin-left: 30px;
 }
 
 p.price {
-    margin: 20px auto 20px auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 50px;
+    text-align: right;
 }
 
 p.remove {
     font-size: 12px;
     font-weight: 600;
     text-decoration: underline;
-    margin: 5px auto 10px auto;
+    margin-top: 5px; 
+    margin-bottom: 10px;
     text-decoration-thickness: 0.5px;
+    margin-left: 0px;
+}
+
+.total-price{
+    display: flex;
 }
 
 p.total-price {
     margin: 25px auto 20px auto;
+}
+
+#total{
+    margin-top: 20px;
+    margin-left:154px;
+    margin-bottom:  20px;
+}
+
+.shopping-cart{
+    text-align: right;
+}
+
+.checkout-button{
+    margin-right: 50px;
 }
