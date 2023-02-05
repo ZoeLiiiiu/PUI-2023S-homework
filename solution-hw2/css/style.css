@@ -147,7 +147,7 @@ button {
 /*enabling the hover highlight*/
 
 .item-box{
-    width: 31%;
+    width: 30%;
     margin-bottom: 30px;
 }
 
@@ -239,10 +239,10 @@ button {
 }
 
 .shopping-cart {
-    margin: auto;
+    width: 100%;
+    margin-right: 0px;
     margin-left: 480px;
     text-align: center;
-    width: 60%;
     margin-bottom: 100px;
 }
 
@@ -256,7 +256,7 @@ button {
     height: auto;
     margin-bottom: 50px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
 .items-to-be-paid-text{
@@ -285,13 +285,13 @@ p.remove {
 }
 
 p.total-price {
-    margin: 25px auto 20px auto;
+    margin: 25px auto 30px auto;
 }
 
 #total{
     margin-top: 20px;
     margin-left:154px;
-    margin-bottom:  20px;
+    margin-bottom:  30px;
 }
 
 .shopping-cart{
