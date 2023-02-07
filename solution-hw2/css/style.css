@@ -8,6 +8,7 @@ p {
     font-size: 24px;
 }
 
+/*adjust the style of hyper-linl*/
 /*source: https://www.w3schools.com/css/css_link.asp*/
 a {
     color: inherit;
@@ -28,10 +29,11 @@ button {
 
 
 
-/* set up header and navigation bar*/
+/* set up header*/
 .header{
     display:flex;
     justify-content: flex-end;
+    /*this part enables navigator bar to line up with the right margin of the page*/
     flex-grow: 1;
 }
 
@@ -47,6 +49,8 @@ button {
     background-color: black;
 }
 
+/*this part makes sure that logo goes to left margin and navigator goes to right margin*/
+/*with out it, the logo would go too close to navigator*/
 .header-text{
     flex-grow: 1;
 }
@@ -66,19 +70,15 @@ button {
     padding: 0px 8px 0px 8px;
     display: inline;
     line-height: 30px;
-    height: 30px;
     margin: 30px 50px 30px 50px;
 }
 
 .cart{
     margin: 30px 50px 30px 50px;
-
 }
 
 .products-on-cart-page {
     margin: 30px 50px 30px 50px;
-
-
 }
 
 .cart-on-cart-page {
@@ -94,20 +94,11 @@ button {
 
 /*the style of title of all three pages*/
 
-.title{
-    margin-bottom: 20px;
-}
-
 .title h1 {
     font-size: 28px;
     font-weight: 500;
     margin-top: 100px;
     margin-bottom: 100px;
-    /*why this is not working?*/
-    /*try to place the item at the end of the box*/
-    position: relative;
-    border-collapse: collapse;
-    bottom: 0px;
 }
 
 
@@ -144,8 +135,7 @@ button {
     text-decoration-thickness: 0.96px;
 }
 
-/*enabling the hover highlight*/
-
+/*controlling spacing between items*/
 .item-box{
     width: 30%;
     margin-bottom: 30px;
@@ -158,8 +148,7 @@ button {
     margin: auto;
 }
 
-
-
+/*enabling the hover highlight*/
 .individual-item:hover {
     background-color: yellow;
 }
@@ -179,17 +168,15 @@ button {
 
 .detailed-content {
     width: 320px;
-    margin: auto;
-    text-align: left;
+    /*make sure that the page is spaced evenly*/
+    margin:auto;
     /*determine the margin bottom of product detailed page*/
     margin-bottom:100px ;
 }
 
 .image-on-product-detail-page {
-    min-width: 600px;
     width: 600px;
     height:600px;
-    min-height: 600px;
     border: 2px solid black;
     margin-left: auto;
 }
@@ -216,6 +203,7 @@ button {
     margin-top: 100px;
     display: flex;
     align-items: center;
+    /*so that the right margin of button aligns with the right margin of drop-down menu*/
     justify-content: flex-end;
 }
 
@@ -241,8 +229,8 @@ button {
 .shopping-cart {
     width: 100%;
     margin-right: 0px;
+    /*make sure the left part lines up with the logo*/
     margin-left: 480px;
-    text-align: center;
     margin-bottom: 100px;
 }
 
@@ -256,7 +244,6 @@ button {
     height: auto;
     margin-bottom: 50px;
     display: flex;
-    justify-content: space-between;
 }
 
 .items-to-be-paid-text{
@@ -276,28 +263,26 @@ p.remove {
     text-decoration: underline;
     margin-top: 5px; 
     margin-bottom: 10px;
-    text-decoration-thickness: 0.5px;
     margin-left: 0px;
 }
 
 .total-price{
     display: flex;
-}
-
-p.total-price {
-    margin: 25px auto 30px auto;
+    /*determine the space between total price and the button*/
+    margin-bottom: 20px;
 }
 
 #total{
     margin-top: 20px;
     margin-left:154px;
-    margin-bottom:  30px;
 }
 
+/*make sure the button goes to the right margin of the page*/
 .shopping-cart{
     text-align: right;
 }
 
+/*make sure the button lines-up with the other part at the right*/
 .checkout-button{
     margin-right: 50px;
 }
