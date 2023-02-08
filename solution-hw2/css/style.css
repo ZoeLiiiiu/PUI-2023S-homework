@@ -98,6 +98,7 @@ button {
     font-size: 28px;
     font-weight: 500;
     margin-top: 100px;
+    /*control the spacing between title and main-content*/
     margin-bottom: 100px;
 }
 
@@ -106,11 +107,17 @@ button {
 /*the style of the product-gallery page starts here*/
 
 .items {
-    display: flex;
-    flex-wrap: wrap;
     height: auto;
     margin: auto;
-    justify-content: center;
+    /*control the total width of item section to make it looks more like the mockup*/
+    width: 1080px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    /*control the distance between rows*/
+    margin-bottom: 30px;
 }
 
 .items img {
@@ -133,12 +140,6 @@ button {
     text-decoration: underline;
     text-decoration-color: darkolivegreen;
     text-decoration-thickness: 0.96px;
-}
-
-/*controlling spacing between items*/
-.item-box{
-    width: 30%;
-    margin-bottom: 30px;
 }
 
 .individual-item {
@@ -168,7 +169,7 @@ button {
 
 .detailed-content {
     width: 320px;
-    /*make sure that the page is spaced evenly*/
+    /*make sure that content is placed in the middle*/
     margin:auto;
     /*determine the margin bottom of product detailed page*/
     margin-bottom:100px ;
@@ -178,7 +179,8 @@ button {
     width: 600px;
     height:600px;
     border: 2px solid black;
-    margin-left: auto;
+    /*control the left margin of the image to look more like the mockup*/
+    margin-left: 120px;
 }
 
 /*the style of dropdown menu*/
@@ -231,6 +233,7 @@ button {
     margin-right: 0px;
     /*make sure the left part lines up with the logo*/
     margin-left: 480px;
+    /*determine the margin bottom of cart page*/
     margin-bottom: 100px;
 }
 
