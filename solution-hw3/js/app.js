@@ -1,14 +1,8 @@
 const queryString = window.location.search;
 
-// Then, we use the query string to create a URLSearchParams object:
 const params = new URLSearchParams(queryString);
 
-// Finally, we can access the parameter we want using the "get" method:
 const chosenProduct = params.get('product')
-
-/* ------------------------------------------------------------------------- */
-
-// Now, we will use the URL parameter to update our page.
 
 // Update the header text
 const headerElement = document.querySelector('#product-header-text');
@@ -74,12 +68,34 @@ else{
 }
 
 
+var priceChangeGlazing = 0
+var priceChangePackSize = 1
 
-
+//console.log("priceChangeGlazing is "+ priceChangeGlazing)
+//console.log("priceChangePackSize is "+ priceChangePackSize)
 
 }
 // detect the pack size
 function glazingChange(element) {
+    //console.log("glazingChange")
+    priceChangeGlazing = Number(element.value)
+    //console.log("priceChangeGlazing is "+ priceChangeGlazing)
+    updatePrice(priceChangeGlazing,priceChangePackSize)
+}
+
+function packSizeChange(element){
+    //console.log("packSizeChange")
+    priceChangePackSize = Number(element.value)
+    console.log("priceChangeGlazing is "+priceChangePackSize)
+    updatePrice(priceChangeGlazing,priceChangePackSize)
+}
+
+
+
+function updatePrice(priceChangeGlazing,priceChangePackSize){
+    //console.log("run update price")
+    //console.log("priceChangeGlazing is", this.priceChangeGlazing)
+    //console.log("priceChangePackSize is", this.priceChangePackSize)
     if (chosenProduct == null){
         unitPrice = 2.49
     } 
@@ -104,14 +120,12 @@ function glazingChange(element) {
     else{
         unitPrice = 2.49
     }
-    const priceChange = element.value
     let priceText =  document.querySelector('#total-price')
-    totalPrice = unitPrice + Number(priceChange)
+    totalPrice = (unitPrice + Number(priceChangeGlazing))*priceChangePackSize
     console.log("total price is" + totalPrice)
+    totalPrice = totalPrice.toFixed(2)
     priceText.innerText = "$ "+ totalPrice
 }
-
-//function 
 
 // TO DO: update when caculating the total price
 //Update the price
