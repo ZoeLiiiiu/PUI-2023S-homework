@@ -1,3 +1,6 @@
+//Utilize the URL Parameters to generate different pages base on user's product selection
+//URL Parameters starts here
+
 const queryString = window.location.search;
 
 const params = new URLSearchParams(queryString);
@@ -5,6 +8,8 @@ const params = new URLSearchParams(queryString);
 const chosenProduct = params.get('product')
 
 // Update the header text
+// Did't use  headerElement.innerText = chosenProduct because they are of different style
+// chosenProduct is "original-cinnamon-roll", while I want the headerElement.innerText to be "Original Cinnamon Roll"
 const headerElement = document.querySelector('#product-header-text');
 if (chosenProduct == null){
     headerElement.innerText = "Original Cinnamon Roll"
@@ -27,6 +32,7 @@ else if(chosenProduct == "double-chocolate-cinnamon-roll"){
 else if(chosenProduct == "strawberry-cinnamon-roll"){
     headerElement.innerText = "Strawberry Cinnamon Roll"
 }
+// do a else statement here for the sick of letting the code more rigorous
 else{
     headerElement.innerText = chosenProduct
 }
@@ -63,39 +69,30 @@ else if(chosenProduct == "double-chocolate-cinnamon-roll"){
 else if(chosenProduct == "strawberry-cinnamon-roll"){
     productPrice.innerText = "$ 3.99"
 }
+// do a else statement here for the sick of letting the code more rigorous
 else{
-    productPrice.innerText = chosenProduct
+    productPrice.innerText = "$ 2.49"
+}
 }
 
-
-console.log("priceChangeGlazing is "+ priceChangeGlazing)
-console.log("priceChangePackSize is "+ priceChangePackSize)
-
-}
-// detect the pack size
-function glazingChange(element) {
-    console.log("glazingChange")
-    priceChangeGlazing = Number(element.value)
-    console.log("priceChangeGlazing is "+ priceChangeGlazing)
-    updatePrice(priceChangeGlazing,priceChangePackSize)
-}
-
-function packSizeChange(element){
-    console.log("packSizeChange")
-    priceChangePackSize = Number(element.value)
-    console.log("priceChangeGlazing is "+priceChangePackSize)
-    updatePrice(priceChangeGlazing,priceChangePackSize)
-}
-
-
+//set default value for glazing price and pack size
 var priceChangeGlazing = 0
 var priceChangePackSize = 1
+
+// detect the glazing
+function glazingChange(element) {
+    priceChangeGlazing = Number(element.value)
+    updatePrice(priceChangeGlazing,priceChangePackSize)
+}
+
+// detect the pack size
+function packSizeChange(element){
+    priceChangePackSize = Number(element.value)
+    updatePrice(priceChangeGlazing,priceChangePackSize)
+}
+
 function updatePrice(priceChangeGlazing,priceChangePackSize){
-    console.log("run update price")
-    this.priceChangeGlazing = priceChangeGlazing
-    this.priceChangePackSize = priceChangePackSize
-    console.log("priceChangeGlazing is", this.priceChangeGlazing)
-    console.log("priceChangePackSize is", this.priceChangePackSize)
+    // setup the single price of different products
     if (chosenProduct == null){
         unitPrice = 2.49
     } 
@@ -117,12 +114,14 @@ function updatePrice(priceChangeGlazing,priceChangePackSize){
     else if(chosenProduct == "strawberry-cinnamon-roll"){
         unitPrice = 3.99
     }
+    // do a else statement here for the sick of letting the code more rigorous
     else{
         unitPrice = 2.49
     }
     let priceText =  document.querySelector('#total-price')
     totalPrice = (unitPrice + Number(priceChangeGlazing))*priceChangePackSize
     console.log("total price is" + totalPrice)
+    // get only two digit
     totalPrice = totalPrice.toFixed(2)
     priceText.innerText = "$ "+ totalPrice
 }
