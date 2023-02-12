@@ -1,0 +1,291 @@
+/* set up default elements for all webpage */
+
+body {
+    font-family: Roboto,Arial,Helvetica,sans-serif;
+}
+
+p {
+    font-size: 24px;
+}
+
+/*adjust the style of hyper-linl*/
+/*source: https://www.w3schools.com/css/css_link.asp*/
+a {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button {
+    border: 2px solid black;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: yellow;
+    padding-left: 40px;
+    padding-right: 40px;
+    height: 50px;
+    color:black
+}
+
+
+
+/* set up header*/
+.header{
+    display:flex;
+    justify-content: flex-end;
+    /*this part enables navigator bar to line up with the right margin of the page*/
+    flex-grow: 1;
+}
+
+/*note that the navigation bar of cart page is different*/
+
+.logo {
+    width: 400px;
+    margin:40px;
+}
+
+.black-line {
+    height: 4px;
+    background-color: black;
+}
+
+/*this part makes sure that logo goes to left margin and navigator goes to right margin*/
+/*with out it, the logo would go too close to navigator*/
+.header-text{
+    flex-grow: 1;
+}
+
+.navigator {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/*making sure that the correct of navigator is being highlighted*/
+/*source: https://www.computerhope.com/issues/ch001391.htm*/
+.products {
+    font-weight: 600;
+    background-color: yellow;
+    padding: 0px 8px 0px 8px;
+    display: inline;
+    line-height: 30px;
+    margin: 30px 50px 30px 50px;
+}
+
+.cart{
+    margin: 30px 50px 30px 50px;
+}
+
+.products-on-cart-page {
+    margin: 30px 50px 30px 50px;
+}
+
+.cart-on-cart-page {
+    font-weight: 600;
+    background-color: yellow;
+    padding: 0;
+    display: inline;
+    box-shadow: 8px 0 0 yellow, -8px 0 0 yellow;
+    margin: 30px 50px 30px 50px;
+}
+
+
+
+/*the style of title of all three pages*/
+
+.title h1 {
+    font-size: 28px;
+    font-weight: 500;
+    margin-top: 100px;
+    /*control the spacing between title and main-content*/
+    margin-bottom: 100px;
+}
+
+
+
+/*the style of the product-gallery page starts here*/
+
+.items {
+    height: auto;
+    margin: auto;
+    /*control the total width of item section to make it looks more like the mockup*/
+    width: 1080px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    /*control the distance between rows*/
+    margin-bottom: 30px;
+}
+
+.items img {
+    margin-top: 4px;
+    margin-left: 4px;
+    width: 292px;
+    height: 292px;
+    box-sizing: border-box;
+    border: 2px solid black;
+}
+
+.items p {
+    margin: 2px auto 2px auto;
+    text-align: left;
+    margin-left: 4px;
+    font-size: 24px;
+}
+
+.item-name {
+    text-decoration: underline;
+    text-decoration-color: darkolivegreen;
+    text-decoration-thickness: 0.96px;
+}
+
+.individual-item {
+    padding-bottom: 4px;
+    margin-bottom: 52px;
+    width: 300px;
+    margin: auto;
+}
+
+/*enabling the hover highlight*/
+.individual-item:hover {
+    background-color: yellow;
+}
+
+.individual-item:hover .item-name{
+    font-weight: 600;
+}
+
+
+
+/*style fo the product-detail-page start here*/
+
+/*the section that contains dropdown menu and add to chart part*/
+.main-content{
+    display: flex;
+}
+
+.detailed-content {
+    width: 320px;
+    /*make sure that content is placed in the middle*/
+    margin:auto;
+    /*determine the margin bottom of product detailed page*/
+    margin-bottom:100px ;
+}
+
+.image-on-product-detail-page {
+    width: 600px;
+    height:600px;
+    border: 2px solid black;
+    /*control the left margin of the image to look more like the mockup*/
+    margin-left: 120px;
+}
+
+/*the style of dropdown menu*/
+
+.dropdown {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    height: auto;
+}
+
+.dropdown-box-on-product-detail-page {
+    font-size: 24px;
+    padding: 8px 8px 8px 8px;
+    border-radius: 0px;
+    border: 2px solid black;
+    width: 320px;
+}
+
+/*the style of the add-to-cart* section*/
+
+.add-to-cart {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    /*so that the right margin of button aligns with the right margin of drop-down menu*/
+    justify-content: flex-end;
+}
+
+.add-to-cart-left {
+    /* determine where the in-cart text go by determine the width of the in-cart text box*/
+    width: 34%;
+    text-align: left;
+}
+
+.price-to-be-paid {
+    font-weight: 600;
+}
+
+
+
+/*style for shopping cart starts here*/
+
+.shopping-cart img {
+    width: 120px;
+    border: 2px solid black;
+}
+
+.shopping-cart {
+    width: 100%;
+    margin-right: 0px;
+    /*make sure the left part lines up with the logo*/
+    margin-left: 480px;
+    /*determine the margin bottom of cart page*/
+    margin-bottom: 30px;
+}
+
+.shopping-cart p {
+    margin: 2px auto 2px auto;
+    text-align: left;
+    font-size: 24px;
+}
+
+.items-to-be-paid {
+    height: auto;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.items-to-be-paid-text{
+    margin-left: 30px;
+}
+
+p.price {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 50px;
+    text-align: right;
+}
+
+p.remove {
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: underline;
+    margin-top: 5px; 
+    margin-bottom: 10px;
+    margin-left: 0px;
+}
+
+.total-price{
+    display: flex;
+    /*determine the space between total price and the button*/
+    margin-bottom: 20px;
+}
+
+#total{
+    margin-top: 20px;
+    margin-left:154px;
+}
+
+/*make sure the button goes to the right margin of the page*/
+.shopping-cart{
+    text-align: right;
+}
+
+/*make sure the button lines-up with the other part at the right*/
+.checkout-button{
+    margin-right: 50px;
+}
