@@ -27,9 +27,8 @@
           </p>
         </div>
         <hr class="black-line">
-        <div class = "title">
+        <div class = "title" id = "product-header-text">
           <h1>
-            Original cinnamon roll
           </h1>
         </div>
       </div>
@@ -38,7 +37,8 @@
     <!--main-content section--> 
     <div class = "main-content">
 
-      <img class = "image-on-product-detail-page" src="asset/products/original-cinnamon-roll.jpg" alt = "original-cinnamon-roll">
+      <img class = "image-on-product-detail-page" src="asset/products/original-cinnamon-roll.jpg" alt = "original-cinnamon-roll"
+      id = "image-on-product-detail-page">
 
       <!--detailed-content section-->
       <!--creat a new section to to let the image and the text displayed side by side-->
@@ -57,10 +57,13 @@
             Glazing:
           </p>
 
-          <select class = "dropdown-box-on-product-detail-page">
-            <option>Suger milk</option>
-            <option>Vanilla milk </option>
-            <option>Double chocolate</option>
+          <select class = "dropdown-box-on-product-detail-page"
+                  id="glazingOption"
+                  onchange="glazingChange(this)">
+            <option value = "0">Keep Original</option>
+            <option value = "0">Suger milk</option>
+            <option value = "0.5">Vanilla milk </option>
+            <option value = "1.5">Double chocolate</option>
           </select>
 
         </div>
@@ -72,11 +75,13 @@
             Pack size:
           </p>
 
-          <select class = "dropdown-box-on-product-detail-page">
-            <option>1</option>
-            <option>3 </option>
-            <option>6</option>
-            <option>12</option>
+          <select class = "dropdown-box-on-product-detail-page"
+                  id = "packSizeOption"
+                  onchange = "packSizeOption(this)">
+            <option value = "1">1</option>
+            <option value = "3">3 </option>
+            <option value = "6">6</option>
+            <option value = "12">12</option>
           </select>
 
         </div>
@@ -84,7 +89,7 @@
         <!-- section for add-to-cart-->
         <div class = "add-to-cart">
           <div class="add-to-cart-left">
-            <p class="price-to-be-paid"> $ 2.49 </p>
+            <p class="price-to-be-paid" id = "total-price"> $ 2.49 </p>
           </div>
           <button class="add-to-cart-btn"> Add to Cart </button>
         </div>

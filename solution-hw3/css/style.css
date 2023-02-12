@@ -102,6 +102,13 @@ button {
     margin-bottom: 100px;
 }
 
+#product-header-text.title{
+    font-size: 28px;
+    font-weight: 500;
+    margin-top: 100px;
+    /*control the spacing between title and main-content*/
+    margin-bottom: 100px;
+}
 
 
 /*the style of the product-gallery page starts here*/
