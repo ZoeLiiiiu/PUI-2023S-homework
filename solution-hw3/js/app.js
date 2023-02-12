@@ -68,34 +68,34 @@ else{
 }
 
 
-var priceChangeGlazing = 0
-var priceChangePackSize = 1
-
-//console.log("priceChangeGlazing is "+ priceChangeGlazing)
-//console.log("priceChangePackSize is "+ priceChangePackSize)
+console.log("priceChangeGlazing is "+ priceChangeGlazing)
+console.log("priceChangePackSize is "+ priceChangePackSize)
 
 }
 // detect the pack size
 function glazingChange(element) {
-    //console.log("glazingChange")
+    console.log("glazingChange")
     priceChangeGlazing = Number(element.value)
-    //console.log("priceChangeGlazing is "+ priceChangeGlazing)
+    console.log("priceChangeGlazing is "+ priceChangeGlazing)
     updatePrice(priceChangeGlazing,priceChangePackSize)
 }
 
 function packSizeChange(element){
-    //console.log("packSizeChange")
+    console.log("packSizeChange")
     priceChangePackSize = Number(element.value)
     console.log("priceChangeGlazing is "+priceChangePackSize)
     updatePrice(priceChangeGlazing,priceChangePackSize)
 }
 
 
-
+var priceChangeGlazing = 0
+var priceChangePackSize = 1
 function updatePrice(priceChangeGlazing,priceChangePackSize){
-    //console.log("run update price")
-    //console.log("priceChangeGlazing is", this.priceChangeGlazing)
-    //console.log("priceChangePackSize is", this.priceChangePackSize)
+    console.log("run update price")
+    this.priceChangeGlazing = priceChangeGlazing
+    this.priceChangePackSize = priceChangePackSize
+    console.log("priceChangeGlazing is", this.priceChangeGlazing)
+    console.log("priceChangePackSize is", this.priceChangePackSize)
     if (chosenProduct == null){
         unitPrice = 2.49
     } 
@@ -126,8 +126,3 @@ function updatePrice(priceChangeGlazing,priceChangePackSize){
     totalPrice = totalPrice.toFixed(2)
     priceText.innerText = "$ "+ totalPrice
 }
-
-// TO DO: update when caculating the total price
-//Update the price
-//const productPrice = document.querySelector('#image-on-product-detail-page');
-//"price-to-be-paid"
