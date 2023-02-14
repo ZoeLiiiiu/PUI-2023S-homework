@@ -11,25 +11,25 @@ const chosenProduct = params.get('product')
 // Did't use  headerElement.innerText = chosenProduct because they are of different style
 // chosenProduct is "original-cinnamon-roll", while I want the headerElement.innerText to be "Original Cinnamon Roll"
 const headerElement = document.querySelector('#product-header-text');
-if (chosenProduct == null){
+if (chosenProduct === null){
     headerElement.innerText = "Original Cinnamon Roll"
 } 
-else if(chosenProduct == "original-cinnamon-roll"){
+else if(chosenProduct === "original-cinnamon-roll"){
     headerElement.innerText = "Original Cinnamon Roll"
 }
-else if(chosenProduct == "apple-cinnamon-roll"){
+else if(chosenProduct === "apple-cinnamon-roll"){
     headerElement.innerText = "Apple Cinnamon Roll"
 }
-else if(chosenProduct == "raisin-cinnamon-roll"){
+else if(chosenProduct === "raisin-cinnamon-roll"){
     headerElement.innerText = "Raisin Cinnamon Roll"
 }
-else if(chosenProduct == "walnut-cinnamon-roll"){
+else if(chosenProduct === "walnut-cinnamon-roll"){
     headerElement.innerText = "Walnut Cinnamon Roll"
 }
-else if(chosenProduct == "double-chocolate-cinnamon-roll"){
+else if(chosenProduct === "double-chocolate-cinnamon-roll"){
     headerElement.innerText = "Double Chocolate Cinnamon Roll"
 }
-else if(chosenProduct == "strawberry-cinnamon-roll"){
+else if(chosenProduct === "strawberry-cinnamon-roll"){
     headerElement.innerText = "Strawberry Cinnamon Roll"
 }
 // do a else statement here for the sick of letting the code more rigorous
@@ -48,25 +48,25 @@ if (chosenProduct == null){
 
 // Update the default price
 const productPrice = document.querySelector('#total-price');
-if (chosenProduct == null){
+if (chosenProduct === null){
     productPrice.innerText = "$ 2.49"
 } 
-else if(chosenProduct == "original-cinnamon-roll"){
+else if(chosenProduct === "original-cinnamon-roll"){
     productPrice.innerText = "$ 2.49"
 }
-else if(chosenProduct == "apple-cinnamon-roll"){
+else if(chosenProduct === "apple-cinnamon-roll"){
     productPrice.innerText = "$ 3.49"
 }
-else if(chosenProduct == "raisin-cinnamon-roll"){
+else if(chosenProduct === "raisin-cinnamon-roll"){
     productPrice.innerText = "$ 2.99"
 }
-else if(chosenProduct == "walnut-cinnamon-roll"){
+else if(chosenProduct === "walnut-cinnamon-roll"){
     productPrice.innerText = "$ 3.49"
 }
-else if(chosenProduct == "double-chocolate-cinnamon-roll"){
+else if(chosenProduct === "double-chocolate-cinnamon-roll"){
     productPrice.innerText = "$ 3.99"
 }
-else if(chosenProduct == "strawberry-cinnamon-roll"){
+else if(chosenProduct === "strawberry-cinnamon-roll"){
     productPrice.innerText = "$ 3.99"
 }
 // do a else statement here for the sick of letting the code more rigorous
@@ -101,8 +101,8 @@ for (const [glazing, price] of Object.entries(glazingPrices)) {
 const packSizePrices = {
     "1": 1,
     "3":3,
-    "6":6,
-    "12":12,
+    "6":5,
+    "12":10,
 };
 
 console.log("empty line here")
@@ -142,25 +142,25 @@ function packSizeChange(element){
 
 
 function updatePrice(priceChangeGlazing,priceChangePackSize){
-    if (chosenProduct == null){
+    if (chosenProduct === null){
         unitPrice = 2.49
     } 
-    else if(chosenProduct == "original-cinnamon-roll"){
+    else if(chosenProduct === "original-cinnamon-roll"){
         unitPrice = 2.49
     }
-    else if(chosenProduct == "apple-cinnamon-roll"){
+    else if(chosenProduct === "apple-cinnamon-roll"){
         unitPrice = 3.49
     }
-    else if(chosenProduct == "raisin-cinnamon-roll"){
+    else if(chosenProduct === "raisin-cinnamon-roll"){
         unitPrice = 2.99
     }
-    else if(chosenProduct == "walnut-cinnamon-roll"){
+    else if(chosenProduct === "walnut-cinnamon-roll"){
         unitPrice = 3.49
     }
-    else if(chosenProduct == "double-chocolate-cinnamon-roll"){
+    else if(chosenProduct === "double-chocolate-cinnamon-roll"){
         unitPrice = 3.99
     }
-    else if(chosenProduct == "strawberry-cinnamon-roll"){
+    else if(chosenProduct === "strawberry-cinnamon-roll"){
         unitPrice = 3.99
     }
     // do a else statement here for the sick of letting the code more rigorous
