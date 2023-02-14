@@ -75,25 +75,73 @@ else{
 }
 }
 
+
+// new method 
+// implement glazingPrices object
+
+const glazingPrices = {
+    "Keep original": 0,
+    "Suger milk":0,
+    "Vanilla milk":0.5,
+    "Double chocolate":1.5,
+};
+
+const glazingSelect = document.querySelector("select#glazing-options");
+
+for (const [glazing, price] of Object.entries(glazingPrices)) {
+ const option = document.createElement("option");
+ // change option's text and value here
+ option.innerText =glazing
+ console.log(typeof price)
+ option.value = Number(price)
+ console.log(typeof option.value)
+ glazingSelect.appendChild(option); 
+}
+
+const packSizePrices = {
+    "1": 1,
+    "3":3,
+    "6":6,
+    "12":12,
+};
+
+console.log("empty line here")
+const packSizeSelect = document.querySelector("select#packsize-options");
+
+for (const [packSize, price] of Object.entries(packSizePrices)) {
+ const option = document.createElement("option");
+ // change option's text and value here
+ option.innerText =packSize
+ console.log(typeof price)
+ option.value = price
+ console.log(typeof option.value)
+ packSizeSelect.appendChild(option); 
+}
+
 //changing price base on glazing and pack size start here. 
 //set default value for glazing price and pack size
+
+// declare the global variation: priceChangeGlazing & priceChangePackSize
+// those are the default value before changing the drop-down selection
 var priceChangeGlazing = 0
 var priceChangePackSize = 1
 
-// detect the glazing
 function glazingChange(element) {
-    priceChangeGlazing = Number(element.value)
+    // change global variation priceChangeGlazing based on the drop-down selection
+    priceChangeGlazing = element.value
+    console.log("the type of priceChangeGlazing is "+ typeof priceChangeGlazing)
     updatePrice(priceChangeGlazing,priceChangePackSize)
 }
 
-// detect the pack size
 function packSizeChange(element){
-    priceChangePackSize = Number(element.value)
+    // change global variation priceChangeGlazing based on the drop-down selection
+    priceChangePackSize = element.value
+    console.log("the type of priceChangePackSize is "+ typeof priceChangePackSize)
     updatePrice(priceChangeGlazing,priceChangePackSize)
 }
+
 
 function updatePrice(priceChangeGlazing,priceChangePackSize){
-    // setup the single price of different products
     if (chosenProduct == null){
         unitPrice = 2.49
     } 
@@ -120,9 +168,16 @@ function updatePrice(priceChangeGlazing,priceChangePackSize){
         unitPrice = 2.49
     }
     let priceText =  document.querySelector('#total-price')
-    totalPrice = (unitPrice + Number(priceChangeGlazing))*priceChangePackSize
-    console.log("total price is" + totalPrice)
-    // get only two digit
+    console.log(priceChangeGlazing)
+    console.log(typeof priceChangeGlazing)
+    totalPrice = (unitPrice + Number(priceChangeGlazing))*Number(priceChangePackSize)
+    // get only two digits
     totalPrice = totalPrice.toFixed(2)
     priceText.innerText = "$ "+ totalPrice
 }
+
+
+
+
+
+
