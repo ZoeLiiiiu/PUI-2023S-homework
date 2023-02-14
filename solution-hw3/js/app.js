@@ -75,6 +75,7 @@ else{
 }
 }
 
+//changing price base on glazing and pack size start here. 
 //set default value for glazing price and pack size
 var priceChangeGlazing = 0
 var priceChangePackSize = 1
