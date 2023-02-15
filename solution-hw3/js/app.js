@@ -93,7 +93,7 @@ for (const [glazing, price] of Object.entries(glazingPrices)) {
  const option = document.createElement("option");
  // change option's text and value here
  option.innerText =glazing
- option.value = Number(price)
+ option.value = price
  glazingSelect.appendChild(option); 
 }
 
