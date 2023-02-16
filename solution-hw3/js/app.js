@@ -97,6 +97,8 @@ for (const [glazing, price] of Object.entries(glazingPrices)) {
  glazingSelect.appendChild(option); 
 }
 
+// implement packSizePrices object
+
 const packSizePrices = {
     "1": 1,
     "3":3,
@@ -117,7 +119,6 @@ for (const [packSize, price] of Object.entries(packSizePrices)) {
 
 //changing price base on glazing and pack size start here. 
 
-//set default value for glazing price and pack size
 // declare the global variation: priceChangeGlazing & priceChangePackSize
 // those are the default value before changing the drop-down selection
 var priceChangeGlazing = 0
