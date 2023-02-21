@@ -35,11 +35,8 @@ const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 
 const chosenProduct = params.get('roll')
-//console.log('debug starting')
 
 // Update the header text
-// Did't use  headerElement.innerText = chosenProduct because they are of different style
-// chosenProduct is "original-cinnamon-roll", while I want the headerElement.innerText to be "Original Cinnamon Roll"
 const headerElement = document.querySelector('#product-header-text');
 if (chosenProduct == null){
     headerElement.innerText = 'Original Cinnamon Roll'
@@ -51,7 +48,6 @@ else if(chosenProduct == "Double-Chocolate"){
 else{
     headerElement.innerText = chosenProduct + ' Cinnamon Roll'
 }
-
 
 // Update the image
 const productImage = document.querySelector('#image-on-product-detail-page');
@@ -70,16 +66,16 @@ if (chosenProduct === null){
     productPrice.innerText = "$ 2.49"
 }
 else{
-    productPrice.innerText = rolls[chosenProduct].basePrice
+    productPrice.innerText = "$ " + rolls[chosenProduct].basePrice
 }
 
 
 
 // implement glazingPrices object
-//console.log('the code running')
 const glazingPrices = {
     "Keep original": 0,
-    "Suger milk":0,
+    //must assign a different value to "Suger milk" in order to distinguish it from "Keep original"
+    "Suger milk":"0.0",
     "Vanilla milk":0.5,
     "Double chocolate":1.5,
 };
@@ -91,15 +87,11 @@ for (const [glazing, price] of Object.entries(glazingPrices)) {
  const option = document.createElement("option");
  // change option's text and value here
  option.innerText =glazing
- option.key = glazing
  option.value = price
- console.log("create a new element, the key is "+option.key)
- //console.log("create a new element, the innerText is "+option.innerText)
  glazingSelect.appendChild(option); 
 }
 
 // implement packSizePrices object
-
 const packSizePrices = {
     "1": 1,
     "3":3,
@@ -112,12 +104,8 @@ const packSizeSelect = document.querySelector("select#packsize-options");
 
 for (const [packSize, price] of Object.entries(packSizePrices)) {
  const option = document.createElement("option");
- // change option's text and value here
  option.innerText =packSize
- option.key = packSize
  option.value = price
- console.log("create a new element, the key is "+option.key)
- //console.log("create a new element, the innerText is "+option.innerText)
  packSizeSelect.appendChild(option); 
 }
 
@@ -125,30 +113,46 @@ for (const [packSize, price] of Object.entries(packSizePrices)) {
 
 // declare the global variation: priceChangeGlazing & priceChangePackSize
 // those are the default value before changing the drop-down selection
+// priceChangeGlazing and priceChangePackSize are used to caculate price
+// chosenGlazing and chosenPackSize are used to identify the dropdown menu key in the Add to Cart function
 var priceChangeGlazing = 0
 var priceChangePackSize = 1
 var chosenGlazing = "Keep Original"
 var chosenPackSize = "1" 
 
 function glazingChange(element) {
-    // change global variation priceChangeGlazing based on the drop-down selection
-    console.log("change glazing to " + element.value)
-    console.log("change glazing value to " + element.value)
+    // change global variation priceChangeGlazing and chosenGlazing based on the drop-down selection
     priceChangeGlazing = element.value
-    chosenGlazing = element.key
-    //console.log("the element is "+ element)
     updatePrice(priceChangeGlazing,priceChangePackSize)
+    if (element.value === "0"){
+        chosenGlazing = "Keep Original"
+    }
+    else if(element.value === "0.0"){
+        chosenGlazing = "Suger Milk"
+    }
+    else if(element.value === "0.5"){
+        chosenGlazing = "Vanilla Milk"
+    }
+    else{
+        chosenGlazing = "Double chocolate"
+    }
+    //console.log("chosenGlazing is " + chosenGlazing)
 }
 
 function packSizeChange(element){
-    // change global variation priceChangeGlazing based on the drop-down selection
-    //console.log("change packSize to " + element.key)
-    //console.log("the element is "+ element)
     priceChangePackSize = element.value
-    chosenPackSize = element.key
     updatePrice(priceChangeGlazing,priceChangePackSize)
+    //if and else if identify the two edge cases that chosen PackSize are not equal to priceChangePackSize
+    if (element.value === "5"){
+        chosenPackSize = "6"
+    }
+    else if(element.value === "10"){
+        chosenPackSize = "12"
+    }
+    else{
+        chosenPackSize = priceChangePackSize
+    }
 }
-
 
 function updatePrice(priceChangeGlazing,priceChangePackSize){
     // set up product base price
@@ -164,6 +168,8 @@ function updatePrice(priceChangeGlazing,priceChangePackSize){
     totalPrice = totalPrice.toFixed(2)
     priceText.innerText = "$ "+ totalPrice
 }
+
+
 
 // "Add to Cart" function starts here
 
@@ -182,16 +188,16 @@ class Roll {
 const cart = []
 
 function addToCart(){
-    console.log("onclick element is triggered")
     const rollType = chosenProduct
-    var rollGlazing = chosenGlazing
-    var packSize = chosenPackSize
     const basePrice =  rolls[chosenProduct].basePrice
+    rollGlazing = chosenGlazing
+    packSize = chosenPackSize
     const product = new Roll(rollType, rollGlazing, packSize, basePrice)
     cart.push(product)
     console.log(cart)
 }
 
+// let the addToCart() function be triggered by clicking on the btnAddtoCart
 const btnAddToCart = document.querySelector('.add-to-cart-btn');
 btnAddToCart.addEventListener('click', () =>  {addToCart()})
 
