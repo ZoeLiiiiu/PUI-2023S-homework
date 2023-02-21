@@ -41,10 +41,6 @@ const headerElement = document.querySelector('#product-header-text');
 if (chosenProduct == null){
     headerElement.innerText = 'Original Cinnamon Roll'
 }
-// edge case, we don't want the hypon shows in the title
-else if(chosenProduct == "Double-Chocolate"){
-    headerElement.innerText = 'Double Chocolate Cinnamon Roll'
-}
 else{
     headerElement.innerText = chosenProduct + ' Cinnamon Roll'
 }
@@ -74,8 +70,7 @@ else{
 // implement glazingPrices object
 const glazingPrices = {
     "Keep original": 0,
-    //must assign a different value to "Suger milk" in order to distinguish it from "Keep original"
-    "Suger milk":"0.0",
+    "Suger milk":0,
     "Vanilla milk":0.5,
     "Double chocolate":1.5,
 };
@@ -124,34 +119,15 @@ function glazingChange(element) {
     // change global variation priceChangeGlazing and chosenGlazing based on the drop-down selection
     priceChangeGlazing = element.value
     updatePrice(priceChangeGlazing,priceChangePackSize)
-    if (element.value === "0"){
-        chosenGlazing = "Keep Original"
-    }
-    else if(element.value === "0.0"){
-        chosenGlazing = "Suger Milk"
-    }
-    else if(element.value === "0.5"){
-        chosenGlazing = "Vanilla Milk"
-    }
-    else{
-        chosenGlazing = "Double chocolate"
-    }
-    //console.log("chosenGlazing is " + chosenGlazing)
+    // access the key of the glazing selection
+    chosenGlazing = Object.entries(glazingPrices)[element.selectedIndex][0]
 }
 
 function packSizeChange(element){
     priceChangePackSize = element.value
     updatePrice(priceChangeGlazing,priceChangePackSize)
-    //if and else if identify the two edge cases that chosen PackSize are not equal to priceChangePackSize
-    if (element.value === "5"){
-        chosenPackSize = "6"
-    }
-    else if(element.value === "10"){
-        chosenPackSize = "12"
-    }
-    else{
-        chosenPackSize = priceChangePackSize
-    }
+    // access the key of the packsize selection
+    chosenPackSize = Object.entries(packSizePrices)[element.selectedIndex][0]
 }
 
 function updatePrice(priceChangeGlazing,priceChangePackSize){
