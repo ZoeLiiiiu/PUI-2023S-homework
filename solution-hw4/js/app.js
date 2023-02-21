@@ -35,7 +35,7 @@ const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 
 const chosenProduct = params.get('roll')
-console.log('debug starting')
+//console.log('debug starting')
 
 // Update the header text
 // Did't use  headerElement.innerText = chosenProduct because they are of different style
@@ -76,7 +76,7 @@ else{
 
 
 // implement glazingPrices object
-console.log('the code running')
+//console.log('the code running')
 const glazingPrices = {
     "Keep original": 0,
     "Suger milk":0,
@@ -93,6 +93,8 @@ for (const [glazing, price] of Object.entries(glazingPrices)) {
  option.innerText =glazing
  option.key = glazing
  option.value = price
+ console.log("create a new element, the key is "+option.key)
+ //console.log("create a new element, the innerText is "+option.innerText)
  glazingSelect.appendChild(option); 
 }
 
@@ -114,6 +116,8 @@ for (const [packSize, price] of Object.entries(packSizePrices)) {
  option.innerText =packSize
  option.key = packSize
  option.value = price
+ console.log("create a new element, the key is "+option.key)
+ //console.log("create a new element, the innerText is "+option.innerText)
  packSizeSelect.appendChild(option); 
 }
 
@@ -128,18 +132,18 @@ var chosenPackSize = "1"
 
 function glazingChange(element) {
     // change global variation priceChangeGlazing based on the drop-down selection
-    console.log("change glazing to " + element.key)
+    console.log("change glazing to " + element.value)
     console.log("change glazing value to " + element.value)
-    console.log("the element is "+ element)
-    chosenGlazing = element.key
     priceChangeGlazing = element.value
+    chosenGlazing = element.key
+    //console.log("the element is "+ element)
     updatePrice(priceChangeGlazing,priceChangePackSize)
 }
 
 function packSizeChange(element){
     // change global variation priceChangeGlazing based on the drop-down selection
-    console.log("change packSize to " + element.key)
-    console.log("the element is "+ element)
+    //console.log("change packSize to " + element.key)
+    //console.log("the element is "+ element)
     priceChangePackSize = element.value
     chosenPackSize = element.key
     updatePrice(priceChangeGlazing,priceChangePackSize)
@@ -178,6 +182,7 @@ class Roll {
 const cart = []
 
 function addToCart(){
+    console.log("onclick element is triggered")
     const rollType = chosenProduct
     var rollGlazing = chosenGlazing
     var packSize = chosenPackSize
@@ -187,6 +192,6 @@ function addToCart(){
     console.log(cart)
 }
 
-const btnAddToCart = document.querySelector('#add-to-cart-btn')
-//btnAddToCart.addEventListener('click', () =>  {addToCart()})
+const btnAddToCart = document.querySelector('.add-to-cart-btn');
+btnAddToCart.addEventListener('click', () =>  {addToCart()})
 
