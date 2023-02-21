@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Shopping Cart</title>
+    <link rel ="stylesheet" href = "css/style.css">
+    <meta charset="utf-8">
+  </head>
+  
+  <body>
+
+    <!--header section-->
+    <div class = "header">
+      <a href="./product-gallery.html"><img class = "logo" src="asset/logo/logo-01.svg" alt = "logo"></a>
+      <!--source for drawing a horizontal line: 
+      https://html-shark.com/HTML/HorizontalLine.htm#:~:text=Horizontal%20lines%20in%20HTML&text=Horizontal%20lines%20on%20a%20page,color%2C%20thickness%2C%20width%20etc.-->
+      <!--create another section to let the logo and the text displayed side by side-->
+      <div class = "header-text">
+        <div class = "navigator">
+          <p class="products-on-cart-page">
+            <a href="./product-gallery.html">PRODUCTS</a>
+          </p>
+          <p class = "cart-on-cart-page">
+            <a href="./shopping-cart.html">CART</a>
+          </p>
+        </div>
+        <hr class="black-line">
+        <div class = "title">
+          <h1>
+            Shopping Cart
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <!--main-content section-->
+    <div class = "main-content">
+      <div class = "shopping-cart">
+        <div class = "items-to-be-paid">
+          <!--make three sections to let image and text display side by side-->
+          <div class = "items-to-be-paid-image">
+            <img src="asset/products/original-cinnamon-roll.jpg" alt = "original-cinnamon-roll">
+            <p class = "remove">Remove</p>
+          </div>
+          <div class = "items-to-be-paid-text">
+            <p>Original cinnamon roll</p>
+            <p>Glazing:Keep original</p>
+            <p>Pack Size: 1</p>
+          </div>
+          <p class = "price">$ 2.49</p>
+        </div>
+
+        <div class = "items-to-be-paid">
+          <div class = "items-to-be-paid-image">
+            <img src="asset/products/double-chocolate-cinnamon-roll.jpg" alt = "double-chocolate-cinnamon-roll">
+            <p class = "remove">Remove</p>
+          </div>
+          <div class = "items-to-be-paid-text">
+            <p>Double-chocolate cinnamon roll</p>
+            <p>Glazing:Sugar milk</p>
+            <p>Pack Size: 6</p>    
+          </div>            
+          <p class = "price">$ 27.45</p>
+        </div>
+
+        <hr class="black-line">
+
+        <div class = "total-price">
+          <!--divide "total" and "price" so that they lineup with different part-->
+          <p id="total">
+            Total:             
+          </p>
+          <p class="price">
+            $ 29.94
+          </p>
+        </div>
+
+        <button class = "checkout-button">
+          Checkout            
+        </button>
+            
+      </div>
+
+    </div>
+
+  </body>
+
+</html>
