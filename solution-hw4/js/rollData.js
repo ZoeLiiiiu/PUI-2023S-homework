@@ -112,7 +112,7 @@ for (const [packSize, price] of Object.entries(packSizePrices)) {
 // chosenGlazing and chosenPackSize are used to identify the dropdown menu key in the Add to Cart function
 var priceChangeGlazing = 0
 var priceChangePackSize = 1
-var chosenGlazing = "Keep Original"
+var chosenGlazing = "Keep original"
 var chosenPackSize = "1" 
 
 function glazingChange(element) {
