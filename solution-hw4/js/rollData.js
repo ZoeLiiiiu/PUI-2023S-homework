@@ -47,7 +47,7 @@ else{
 
 // Update the image
 const productImage = document.querySelector('#image-on-product-detail-page');
-if (chosenProduct == null){
+if (chosenProduct === null){
     productImage.src = 'asset/products/original-cinnamon-roll.jpg'
     productImage.alt = 'Original Cinnamon Roll'
 } 
