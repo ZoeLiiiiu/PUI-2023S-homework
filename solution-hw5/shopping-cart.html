@@ -4,7 +4,7 @@
     <title>Shopping Cart</title>
     <link rel ="stylesheet" href = "css/style.css">
     <!--<script defer src="js/rollData.js"></script>-->
-    <script defer src="js/cart.js"></script>
+    <script defer src="js/rollData.js"></script>
     <meta charset="utf-8">
   </head>
   
@@ -37,21 +37,23 @@
     <!--main-content section-->
     <div class = "main-content">
       <div class = "shopping-cart">
-        <template id = "items-to-be-paid-template">
-          <div class = "items-to-be-paid">
-            <!--make three sections to let image and text display side by side-->
-            <div class = "items-to-be-paid-image" >
-              <img src="asset/products/original-cinnamon-roll.jpg" alt = "original-cinnamon-roll">
-              <p class = "remove">Remove</p>
+        <div id = "item-to-be-paid-list">
+          <template id = "items-to-be-paid-template">
+            <div class = "items-to-be-paid">
+              <!--make three sections to let image and text display side by side-->
+              <div class = "items-to-be-paid-image" >
+                <img class = "items-to-be-paid-image-src" src="asset/products/original-cinnamon-roll.jpg" alt = "original-cinnamon-roll">
+                <p class = "remove">Remove</p>
+              </div>
+              <div class = "items-to-be-paid-text">
+                <p class = "items-to-be-paid-name">Original cinnamon roll</p>
+                <p class = "items-to-be-paid-glazing">Glazing:Keep original</p>
+                <p class = "items-to-be-paid-pack-size">Pack Size: 1</p>
+              </div>
+              <p class = "price">$ 2.49</p>
             </div>
-            <div class = "items-to-be-paid-text">
-              <p>Original cinnamon roll</p>
-              <p>Glazing:Keep original</p>
-              <p>Pack Size: 1</p>
-            </div>
-            <p class = "price">$ 2.49</p>
-          </div>
-        </template>
+          </template>
+        </div>
 
         <hr class="black-line">
 
