@@ -38,7 +38,7 @@ const chosenProduct = params.get('roll')
 
 // Update the header text
 const headerElement = document.querySelector('#product-header-text');
-if (chosenProduct == null){
+if (chosenProduct == null) {
     headerElement.innerText = 'Original Cinnamon Roll'
 }
 else{
