@@ -185,12 +185,8 @@ const cart = []
 
 // now the function could not add items to the cart page
 // this problem may be solved in the next assignment
-function addToCart(){
+function addToCart(rollType, rollGlazing, packSize, basePrice){
     //console.log("addToCart() is running")
-    const rollType = chosenProduct
-    const basePrice =  rolls[chosenProduct].basePrice
-    rollGlazing = chosenGlazing
-    packSize = chosenPackSize
     const product = new Roll(rollType, rollGlazing, packSize, basePrice)
     cart.push(product)
     console.log(cart)
@@ -213,13 +209,17 @@ function addToCart(){
 // let the addToCart() function be triggered by clicking on the btnAddtoCart
 const btnAddToCart = document.querySelector('.add-to-cart-btn');
 if (btnAddToCart != null){
-  btnAddToCart.addEventListener('click', () =>  {addToCart()})
+  const rollType = chosenProduct
+  const basePrice =  rolls[chosenProduct].basePrice
+  rollGlazing = chosenGlazing
+  packSize = chosenPackSize
+  btnAddToCart.addEventListener('click', () =>  {addToCart(rollType, rollGlazing, packSize, basePrice)})
 }
 
 
 
 // for the cart page starts here
-const defaultCart = {
+/*const defaultCart = {
     'roll1': {
         'type': 'Original',
         'glazing': 'Suger milk',
@@ -248,20 +248,26 @@ const defaultCart = {
         'basePrice': rolls.Apple.basePrice
     }
     
-}
+}*/
+
+const roll1 = addToCart('Original','Suger milk','1',rolls.Original.basePrice)
+const roll2 = addToCart('Walnut','Vanilla milk','12',rolls.Walnut.basePrice)
+const roll3 = addToCart('Raisin','Suger milk','3',rolls.Raisin.basePrice)
+const roll4 = addToCart('Apple','Keep original','3',rolls.Apple.basePrice)
+
 
 // create an array to store the totalPrice of each item
 var totalPrices = 0
 
 // set up the default cart
-for (const [item,information] of Object.entries(defaultCart)){
+/*for (const [item,information] of Object.entries(defaultCart)){
     rollType = information.type
     rollGlazing = information.glazing
     packSize = information.packSize
     basePrice = information.basePrice
     const product = new Roll(rollType, rollGlazing, packSize, basePrice)
     cart.push(product)
-}
+}*/
 
 function createCartItem(item){
     const template = document.querySelector('#items-to-be-paid-template');
@@ -272,6 +278,9 @@ function createCartItem(item){
     const itemsToBePaidListElement = document.querySelector('#item-to-be-paid-list');
     itemsToBePaidListElement.append(item.element)
     updateElement(item)
+    // let the removeCartItem(item) function be trigered only if we pressed the remove button
+    const btnRemove = item.element.querySelector('.remove');
+    btnRemove.addEventListener('click', () =>  {removeCartItem(item)})
     }
 }
 
@@ -309,6 +318,14 @@ console.log("totalPrices array is", totalPrices)
 function updateTotalPrices(){
     totalPricesText = document.querySelector('#total-prices')
     totalPricesText.innerText = '$ ' + totalPrices
+}
+
+function removeCartItem(item){
+    console.log("item is ",item)
+    console.log(cart.indexOf(item))
+    delete cart[cart.indexOf(item)]
+    //deleteItme = cart.splice(cart.indexOf(item),0)
+    item.element.remove()
 }
 
 
