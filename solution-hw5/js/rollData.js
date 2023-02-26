@@ -191,6 +191,8 @@ function addToCart(rollType, rollGlazing, packSize, basePrice){
     cart.push(product)
     console.log(cart)
 
+    
+
     // FOR NEXT ASSIGNMENT: these code is related to local storage, which may be helpful for the next assignment.
 
     /*
@@ -220,6 +222,7 @@ if (btnAddToCart != null){
 
 // for the cart page starts here
 
+// set the default cart
 const roll1 = addToCart('Original','Suger milk','1',rolls.Original.basePrice)
 const roll2 = addToCart('Walnut','Vanilla milk','12',rolls.Walnut.basePrice)
 const roll3 = addToCart('Raisin','Suger milk','3',rolls.Raisin.basePrice)
@@ -244,6 +247,14 @@ function createCartItem(item){
     }
 }
 
+function calculatePrice(item){
+    const glazingPrice = glazingPrices[item.glazing]
+    const packSizePrice = packSizePrices[item.size]
+    const totalPrice = ((item.basePrice + Number(glazingPrice))*Number(packSizePrice)).toFixed(2)
+    return totalPrice
+
+}
+
 function updateElement(item) {
     const itemImage = item.element.querySelector('.items-to-be-paid-image-src');
     const itemName = item.element.querySelector('.items-to-be-paid-name');
@@ -256,23 +267,15 @@ function updateElement(item) {
     itemGlazing.innerText = 'Glazing: ' + item.glazing;
     itemPackSize.innerText = 'Pack Size: ' + item.size;
 
-    const glazingPrice = glazingPrices[item.glazing]
-    const packSizePrice = packSizePrices[item.size]
-
-    const totalPrice = ((item.basePrice + Number(glazingPrice))*Number(packSizePrice)).toFixed(2)
-    itemPrice.innerText = '$ ' +  totalPrice 
-
+    totalPrice = calculatePrice(item)
+    itemPrice.innerText = '$ '+ totalPrice
     totalPrices = Number(totalPrices) + Number(totalPrice) 
-
     updateTotalPrices()
 }
 
 for (const item of cart){
     createCartItem(item)
 }
-
-console.log("totalPrices array is", totalPrices)
-//console.log("sum is", totalPrices.reduce(Math.sum))
 
 
 function updateTotalPrices(){
@@ -281,10 +284,21 @@ function updateTotalPrices(){
 }
 
 function removeCartItem(item){
+    // remove the irem from cart
     console.log("item is ",item)
     console.log(cart.indexOf(item))
+    //TO SOlVE: a better way to delete item
     delete cart[cart.indexOf(item)]
+    // this is not working for now
     //deleteItme = cart.splice(cart.indexOf(item),0)
+
+    //update the totalPrices
+
+    totalPrice = calculatePrice(item)
+    totalPrices = (Number(totalPrices) - Number(totalPrice)).toFixed(2)
+    updateTotalPrices()
+
+    // remove the item from DOM
     item.element.remove()
 }
 
