@@ -176,4 +176,3 @@ function addToCart(){
 // let the addToCart() function be triggered by clicking on the btnAddtoCart
 const btnAddToCart = document.querySelector('.add-to-cart-btn');
 btnAddToCart.addEventListener('click', () =>  {addToCart()})
-
