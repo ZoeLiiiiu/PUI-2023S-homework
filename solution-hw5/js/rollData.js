@@ -39,7 +39,7 @@ const chosenProduct = params.get('roll')
 // Update the header text
 const headerElement = document.querySelector('#product-header-text');
 if (headerElement != null){
-  if (chosenProduct == null, headerElement != null) {
+  if (chosenProduct == null) {
       headerElement.innerText = 'Original Cinnamon Roll'
   }
   else{
@@ -262,40 +262,6 @@ function updateElement(item) {
 
     const totalPrice = ((item.basePrice + Number(glazingPrice))*Number(packSizePrice)).toFixed(2)
     itemPrice.innerText = '$ ' +  totalPrice 
-
-    /*for (const glazingOption in glazingPrices){
-        console.log("glazingOption is " + glazingOption)
-        console.log("item.glazing is " + item.glazing)
-        console.log(glazingOption == item.glazing)
-        if (glazingOption == item.glazing){
-            console.log("enter the if statemnet")
-            glazingPrice = glazingPrices[glazingOption]
-        }
-    }*/
-
-
-
-    /*glazingIndex = (Object.entries(glazingPrices)).indexOf(item.glazing)
-    const glazingPrice = Object.entries(glazingPrices)[glazingIndex + 1][1]
-    console.log("Object.entries(glazingPrices) is " + Object.entries(glazingPrices))
-    console.log("test-pre")
-    console.log(glazingIndex)
-    console.log(glazingPrice)
-
-
-
-
-    sizeIndex = (Object.entries(packSizePrices)).indexOf(item.size)
-    const packSizePrice = Object.entries(packSizePrices)[sizeIndex + 1][1]
-    console.log("Object.entries(packSizePrices) is " + Object.entries(packSizePrices))
-    console.log("type is " + typeof(Object.entries(packSizePrices)[1]))
-    console.log("type is " + typeof(Object.entries(item.size)))
-    console.log("item.size is "+ item.size)
-    console.log("sizeIndex is "+sizeIndex)
-    console.log("sizeIndex is "+sizeIndex)
-
-    console.log("test")
-    console.log(Object.entries(packSizePrices)[6])*/
 
 }
 
