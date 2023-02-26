@@ -1,3 +1,4 @@
+// TO SOLVE: 
 importScripts('rollData.js');
 import {chosenProduct, Roll, rolls, chosenGlazing, chosenPackSize} from "js/rollData.js";
 

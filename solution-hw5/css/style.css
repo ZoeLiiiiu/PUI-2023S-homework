@@ -27,6 +27,9 @@ button {
     color:black
 }
 
+button:hover {
+    cursor:pointer;
+}
 
 
 /* set up header*/

@@ -171,14 +171,22 @@ class Roll {
     }
 }
 
-//export the useful module
-//export {chosenProduct, Roll, rolls, chosenGlazing, chosenPackSize};
+
+// TO SOLVE: export, import function not working
+/*
+
+export the useful module
+export {chosenProduct, Roll, rolls, chosenGlazing, chosenPackSize};
+
+*/
 
 // create the cart array
 const cart = []
 
+// now the function could not add items to the cart page
+// this problem may be solved in the next assignment
 function addToCart(){
-    console.log("addToCart() is running")
+    //console.log("addToCart() is running")
     const rollType = chosenProduct
     const basePrice =  rolls[chosenProduct].basePrice
     rollGlazing = chosenGlazing
@@ -186,8 +194,31 @@ function addToCart(){
     const product = new Roll(rollType, rollGlazing, packSize, basePrice)
     cart.push(product)
     console.log(cart)
+
+    // FOR NEXT ASSIGNMENT: these code is related to local storage, which may be helpful for the next assignment.
+
+    /*
+    
+    const cartString = localStorage.getItem('storedItem');
+    const cartArray = JSON.parse(cartString)
+    cartArray.push(product)
+    const cartStringNew = JSON.stringify(cartArray)
+    localStorage.setItem('storedItem',cartStringNew)
+    //console.log(cart)
+    //saveToLocalStorage()
+    
+    */
 }
 
+// let the addToCart() function be triggered by clicking on the btnAddtoCart
+const btnAddToCart = document.querySelector('.add-to-cart-btn');
+if (btnAddToCart != null){
+  btnAddToCart.addEventListener('click', () =>  {addToCart()})
+}
+
+
+
+// for the cart page starts here
 const defaultCart = {
     'roll1': {
         'type': 'Original',
@@ -219,6 +250,9 @@ const defaultCart = {
     
 }
 
+// create an array to store the totalPrice of each item
+var totalPrices = 0
+
 // set up the default cart
 for (const [item,information] of Object.entries(defaultCart)){
     rollType = information.type
@@ -230,17 +264,13 @@ for (const [item,information] of Object.entries(defaultCart)){
 }
 
 function createCartItem(item){
-    console.log("run createCartItem")
     const template = document.querySelector('#items-to-be-paid-template');
     if (template != null){
         const clone = template.content.cloneNode(true);
     item.element = clone.querySelector('.items-to-be-paid')
-    //console.log(item.element)
 
     const itemsToBePaidListElement = document.querySelector('#item-to-be-paid-list');
     itemsToBePaidListElement.append(item.element)
-    //console.log ("test")
-    //console.log(item)
     updateElement(item)
     }
 }
@@ -263,14 +293,51 @@ function updateElement(item) {
     const totalPrice = ((item.basePrice + Number(glazingPrice))*Number(packSizePrice)).toFixed(2)
     itemPrice.innerText = '$ ' +  totalPrice 
 
+    totalPrices = Number(totalPrices) + Number(totalPrice) 
+
+    updateTotalPrices()
 }
 
 for (const item of cart){
     createCartItem(item)
 }
 
-// let the addToCart() function be triggered by clicking on the btnAddtoCart
-const btnAddToCart = document.querySelector('.add-to-cart-btn');
-if (btnAddToCart != null){
-  btnAddToCart.addEventListener('click', () =>  {addToCart()})
+console.log("totalPrices array is", totalPrices)
+//console.log("sum is", totalPrices.reduce(Math.sum))
+
+
+function updateTotalPrices(){
+    totalPricesText = document.querySelector('#total-prices')
+    totalPricesText.innerText = '$ ' + totalPrices
 }
+
+
+
+// FOR NEXT ASSIGNMENT: these code is related to local storage, which may be helpful for the next assignment.
+
+/*
+
+// save to local storage
+function saveToLocalStorage() {
+    const cartString = JSON.stringify(cart);
+    localStorage.setItem('storedItem',cartString);
+}
+
+function retrieveFromLocalStorage() {
+    const cartString = localStorage.getItem('storedItem');
+    const cartArray = JSON.parse(cartString)
+    for (const item of cartArray){
+        createCartItem(item)
+    }
+}
+
+if (localStorage.getItem('storedItem')==null) {
+    saveToLocalStorage()
+}
+
+if (localStorage.getItem('storedItem')!=null) {
+    //saveToLocalStorage()
+    retrieveFromLocalStorage()
+}
+
+*/
