@@ -219,36 +219,6 @@ if (btnAddToCart != null){
 
 
 // for the cart page starts here
-/*const defaultCart = {
-    'roll1': {
-        'type': 'Original',
-        'glazing': 'Suger milk',
-        'packSize': '1',
-        'basePrice': rolls.Original.basePrice
-    },
-
-    'roll2': {
-        'type': 'Walnut',
-        'glazing':'Vanilla milk',
-        'packSize':'12',
-        'basePrice': rolls.Walnut.basePrice
-    },
-
-    'roll3':{
-        'type': 'Raisin',
-        'glazing': 'Suger milk',
-        'packSize': '3',
-        'basePrice': rolls.Raisin.basePrice
-    },
-
-    'roll4':{
-        'type':'Apple',
-        'glazing': 'Keep original',
-        'packSize': '3',
-        'basePrice': rolls.Apple.basePrice
-    }
-    
-}*/
 
 const roll1 = addToCart('Original','Suger milk','1',rolls.Original.basePrice)
 const roll2 = addToCart('Walnut','Vanilla milk','12',rolls.Walnut.basePrice)
@@ -256,18 +226,8 @@ const roll3 = addToCart('Raisin','Suger milk','3',rolls.Raisin.basePrice)
 const roll4 = addToCart('Apple','Keep original','3',rolls.Apple.basePrice)
 
 
-// create an array to store the totalPrice of each item
+// create a global variable to store the totalPrice of each item
 var totalPrices = 0
-
-// set up the default cart
-/*for (const [item,information] of Object.entries(defaultCart)){
-    rollType = information.type
-    rollGlazing = information.glazing
-    packSize = information.packSize
-    basePrice = information.basePrice
-    const product = new Roll(rollType, rollGlazing, packSize, basePrice)
-    cart.push(product)
-}*/
 
 function createCartItem(item){
     const template = document.querySelector('#items-to-be-paid-template');
