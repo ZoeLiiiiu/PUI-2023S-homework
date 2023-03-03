@@ -157,7 +157,7 @@ function updatePrice(priceChangeGlazing,priceChangePackSize){
 
 
 
-// "Add to Cart" function starts here
+// "Add to Cart" function on product detail page starts here
 
 // create the roll class
 class Roll {
@@ -171,41 +171,16 @@ class Roll {
     }
 }
 
-
-// TO SOLVE: export, import function not working
-/*
-
-export the useful module
-export {chosenProduct, Roll, rolls, chosenGlazing, chosenPackSize};
-
-*/
-
 // create the cart array
 const cart = []
 
-// now the function could not add items to the cart page
-// this problem may be solved in the next assignment
+// now the function can only print the cart array in the console, and the data will not be stored when reloading the page
+// LocalStorage is not impliment yet. 
 function addToCart(rollType, rollGlazing, packSize, basePrice){
     //console.log("addToCart() is running")
     const product = new Roll(rollType, rollGlazing, packSize, basePrice)
     cart.push(product)
     console.log(cart)
-
-    
-
-    // FOR NEXT ASSIGNMENT: these code is related to local storage, which may be helpful for the next assignment.
-
-    /*
-    
-    const cartString = localStorage.getItem('storedItem');
-    const cartArray = JSON.parse(cartString)
-    cartArray.push(product)
-    const cartStringNew = JSON.stringify(cartArray)
-    localStorage.setItem('storedItem',cartStringNew)
-    //console.log(cart)
-    //saveToLocalStorage()
-    
-    */
 }
 
 // let the addToCart() function be triggered by clicking on the btnAddtoCart
@@ -229,30 +204,32 @@ const roll3 = addToCart('Raisin','Suger milk','3',rolls.Raisin.basePrice)
 const roll4 = addToCart('Apple','Keep original','3',rolls.Apple.basePrice)
 
 
-// create a global variable to store the totalPrice of each item
+// create a global variable to store the totalPrices of all items
 var totalPrices = 0
 
+// display cart items on the page
 function createCartItem(item){
     const template = document.querySelector('#items-to-be-paid-template');
     if (template != null){
         const clone = template.content.cloneNode(true);
-    item.element = clone.querySelector('.items-to-be-paid')
+        item.element = clone.querySelector('.items-to-be-paid')
 
-    const itemsToBePaidListElement = document.querySelector('#item-to-be-paid-list');
-    itemsToBePaidListElement.append(item.element)
-    updateElement(item)
-    // let the removeCartItem(item) function be trigered only if we pressed the remove button
-    const btnRemove = item.element.querySelector('.remove');
-    btnRemove.addEventListener('click', () =>  {removeCartItem(item)})
+        const itemsToBePaidListElement = document.querySelector('#item-to-be-paid-list');
+        itemsToBePaidListElement.append(item.element)
+        // let the item show on the cart page properly
+        updateElement(item)
+        // let the removeCartItem(item) function be trigered only if we pressed the remove button of the relative item
+        const btnRemove = item.element.querySelector('.remove');
+        btnRemove.addEventListener('click', () =>  {removeCartItem(item)})
     }
 }
 
+// calculate the total price of a single item
 function calculatePrice(item){
     const glazingPrice = glazingPrices[item.glazing]
     const packSizePrice = packSizePrices[item.size]
     const totalPrice = ((item.basePrice + Number(glazingPrice))*Number(packSizePrice)).toFixed(2)
     return totalPrice
-
 }
 
 function updateElement(item) {
@@ -273,62 +250,24 @@ function updateElement(item) {
     updateTotalPrices()
 }
 
+// using for loops to call the createCartItem() function to the current items in the cart. 
 for (const item of cart){
     createCartItem(item)
 }
 
-
+// update the totalprices shown on the page.
 function updateTotalPrices(){
     totalPricesText = document.querySelector('#total-prices')
     totalPricesText.innerText = '$ ' + totalPrices
 }
 
 function removeCartItem(item){
-    // remove the irem from cart
-    console.log("item is ",item)
-    console.log(cart.indexOf(item))
-    //TO SOlVE: a better way to delete item
-    delete cart[cart.indexOf(item)]
-    // this is not working for now
-    //deleteItme = cart.splice(cart.indexOf(item),0)
-
+    // remove the item from cart array
+    cart.splice(cart.indexOf(item),1)
     //update the totalPrices
-
     totalPrice = calculatePrice(item)
     totalPrices = (Number(totalPrices) - Number(totalPrice)).toFixed(2)
     updateTotalPrices()
-
     // remove the item from DOM
     item.element.remove()
 }
-
-
-
-// FOR NEXT ASSIGNMENT: these code is related to local storage, which may be helpful for the next assignment.
-
-/*
-
-// save to local storage
-function saveToLocalStorage() {
-    const cartString = JSON.stringify(cart);
-    localStorage.setItem('storedItem',cartString);
-}
-
-function retrieveFromLocalStorage() {
-    const cartString = localStorage.getItem('storedItem');
-    const cartArray = JSON.parse(cartString)
-    for (const item of cartArray){
-        createCartItem(item)
-    }
-}
-
-if (localStorage.getItem('storedItem')==null) {
-    saveToLocalStorage()
-}
-
-if (localStorage.getItem('storedItem')!=null) {
-    //saveToLocalStorage()
-    retrieveFromLocalStorage()
-}
-
-*/
