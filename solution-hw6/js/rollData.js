@@ -171,75 +171,38 @@ class Roll {
     }
 }
 
-
-// TO SOLVE: export, import function not working
-/*
-
-export the useful module
-export {chosenProduct, Roll, rolls, chosenGlazing, chosenPackSize};
-
-*/
-
-// create the cart array
-const cart = []
-
-// now the function could not add items to the cart page
-// this problem may be solved in the next assignment
-function addToCart(rollType, rollGlazing, packSize, basePrice){
-    //console.log("addToCart() is running")
-    const product = new Roll(rollType, rollGlazing, packSize, basePrice)
+// add to cart function
+function addToCart(rollType, chosenGlazing, chosenPackSize, basePrice){
+    //create a Roll instance containing all of the current product information
+    const product = new Roll(rollType, chosenGlazing, chosenPackSize, basePrice)
+    // add the Roll instance to the cart array
     cart.push(product)
-    console.log(cart)
-
-    
-
-    // FOR NEXT ASSIGNMENT: these code is related to local storage, which may be helpful for the next assignment.
-
-    /*
-    
-    const cartString = localStorage.getItem('storedItem');
-    const cartArray = JSON.parse(cartString)
-    cartArray.push(product)
-    const cartStringNew = JSON.stringify(cartArray)
-    localStorage.setItem('storedItem',cartStringNew)
-    //console.log(cart)
-    //saveToLocalStorage()
-    
-    */
+    // save the updated cart to local storage
+    saveToLocalStorage()
+    // print the current contents of the cart in local storage
+    printCartInLocalStorage()
 }
 
 // let the addToCart() function be triggered by clicking on the btnAddtoCart
 const btnAddToCart = document.querySelector('.add-to-cart-btn');
 if (btnAddToCart != null){
-  const rollType = chosenProduct
-  const basePrice =  rolls[chosenProduct].basePrice
-  rollGlazing = chosenGlazing
-  packSize = chosenPackSize
-  btnAddToCart.addEventListener('click', () =>  {addToCart(rollType, rollGlazing, packSize, basePrice)})
+    const rollType = chosenProduct
+    const basePrice =  rolls[chosenProduct].basePrice
+    btnAddToCart.addEventListener('click', () =>  {addToCart(rollType, chosenGlazing, chosenPackSize, basePrice)})
 }
-
-
-
-// for the cart page starts here
-
-// set the default cart
-const roll1 = addToCart('Original','Suger milk','1',rolls.Original.basePrice)
-const roll2 = addToCart('Walnut','Vanilla milk','12',rolls.Walnut.basePrice)
-const roll3 = addToCart('Raisin','Suger milk','3',rolls.Raisin.basePrice)
-const roll4 = addToCart('Apple','Keep original','3',rolls.Apple.basePrice)
-
 
 // create a global variable to store the totalPrice of each item
 var totalPrices = 0
 
+// display cart items on the page
 function createCartItem(item){
     const template = document.querySelector('#items-to-be-paid-template');
     if (template != null){
         const clone = template.content.cloneNode(true);
-    item.element = clone.querySelector('.items-to-be-paid')
+        item.element = clone.querySelector('.items-to-be-paid')
 
-    const itemsToBePaidListElement = document.querySelector('#item-to-be-paid-list');
-    itemsToBePaidListElement.append(item.element)
+        const itemsToBePaidListElement = document.querySelector('#item-to-be-paid-list');
+        itemsToBePaidListElement.append(item.element)
     updateElement(item)
     // let the removeCartItem(item) function be trigered only if we pressed the remove button
     const btnRemove = item.element.querySelector('.remove');
@@ -247,12 +210,12 @@ function createCartItem(item){
     }
 }
 
+// calculate the total price of a single item
 function calculatePrice(item){
     const glazingPrice = glazingPrices[item.glazing]
     const packSizePrice = packSizePrices[item.size]
     const totalPrice = ((item.basePrice + Number(glazingPrice))*Number(packSizePrice)).toFixed(2)
     return totalPrice
-
 }
 
 function updateElement(item) {
@@ -269,14 +232,9 @@ function updateElement(item) {
 
     totalPrice = calculatePrice(item)
     itemPrice.innerText = '$ '+ totalPrice
-    totalPrices = Number(totalPrices) + Number(totalPrice) 
+    totalPrices = (Number(totalPrices) + Number(totalPrice)).toFixed(2)
     updateTotalPrices()
 }
-
-for (const item of cart){
-    createCartItem(item)
-}
-
 
 function updateTotalPrices(){
     totalPricesText = document.querySelector('#total-prices')
@@ -284,51 +242,50 @@ function updateTotalPrices(){
 }
 
 function removeCartItem(item){
-    // remove the irem from cart
-    console.log("item is ",item)
-    console.log(cart.indexOf(item))
-    //TO SOlVE: a better way to delete item
-    delete cart[cart.indexOf(item)]
-    // this is not working for now
-    //deleteItme = cart.splice(cart.indexOf(item),0)
-
+    // remove the item from cart array
+    cart.splice(cart.indexOf(item),1)
     //update the totalPrices
-
     totalPrice = calculatePrice(item)
     totalPrices = (Number(totalPrices) - Number(totalPrice)).toFixed(2)
     updateTotalPrices()
-
+    // Convert the updated cart to JSON, save it in the local storage
+    saveToLocalStorage()
+    //print the cart in local storage
+    printCartInLocalStorage()
     // remove the item from DOM
     item.element.remove()
 }
 
+// attempt to retrive the cart from the local storage
+if (localStorage.getItem('storedItem')!=null){
+    var cart = retrieveFromLocalStorage()
+}
+// if no cart exists in the storage create an empty cart
+else{
+    var cart = []
+}
 
-
-// FOR NEXT ASSIGNMENT: these code is related to local storage, which may be helpful for the next assignment.
-
-/*
 
 // save to local storage
 function saveToLocalStorage() {
+    // convert the cart to JSON
     const cartString = JSON.stringify(cart);
+    // save the cart to the local storage
     localStorage.setItem('storedItem',cartString);
+}
+
+function printCartInLocalStorage(){
+    const cartString = localStorage.getItem('storedItem')
+    const cartArray = JSON.parse(cartString)
+    console.log(cartArray)
 }
 
 function retrieveFromLocalStorage() {
     const cartString = localStorage.getItem('storedItem');
     const cartArray = JSON.parse(cartString)
+    // Populate the DOM with all of the items in the current cart
     for (const item of cartArray){
         createCartItem(item)
     }
+    return cartArray
 }
-
-if (localStorage.getItem('storedItem')==null) {
-    saveToLocalStorage()
-}
-
-if (localStorage.getItem('storedItem')!=null) {
-    //saveToLocalStorage()
-    retrieveFromLocalStorage()
-}
-
-*/
