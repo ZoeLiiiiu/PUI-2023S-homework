@@ -236,6 +236,7 @@ function updateElement(item) {
     updateTotalPrices()
 }
 
+// change the text of the total price
 function updateTotalPrices(){
     totalPricesText = document.querySelector('#total-prices')
     totalPricesText.innerText = '$ ' + totalPrices
