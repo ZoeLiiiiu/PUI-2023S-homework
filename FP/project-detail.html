@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Product Details Page</title>
+    <!--css-->
+    <link rel ="stylesheet" href = "css/style.css">
+    <!--javascript-->
+    <script defer src="js/javascript.js"></script>
+    <meta charset="utf-8">
+  </head>
+  
+  <body>
+
+    <!--header section-->
+    <div class = "header">
+      <a href="./architecture-gallery.html"><img class = "logo" src="asset/logo.jpg" alt = "logo"></a>
+      <!--source for drawing a horizontal line: 
+      https://html-shark.com/HTML/HorizontalLine.htm#:~:text=Horizontal%20lines%20in%20HTML&text=Horizontal%20lines%20on%20a%20page,color%2C%20thickness%2C%20width%20etc.-->
+      <!--create another section to let the logo and the text displayed side by side-->
+      <div class = "header-text">
+        <div class = "navigator">
+          <p class="architecture">
+            <a href="./architecture-gallery.html">Architecture</a>
+          </p>
+          <p class = "art">
+            <a href="./art-gallery.html">Art</a>
+          </p>
+          <p class = "about-me">
+            <a href="./about-me.html">About Me</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!--main-content section--> 
+    <div class = "main-content">
+
+      <img class = "image-on-product-detail-page" src="" alt = ""
+      id = "image-on-product-detail-page">
+
+      <!--detailed-content section-->
+      <!--creat a new section to to let the image and the text displayed side by side-->
+      <div class = "detailed-content">
+
+        <p>
+          <span>Customize our delicious,</span> 
+          <span>hand-made cinammon roll to you liking!</span>
+        </p>
+        
+        <!-- a section for dropdown menu -->
+        <!--source: https://www.geeksforgeeks.org/how-to-set-the-default-value-for-an-html-select-element/-->
+        <div class="dropdown" id = "glazing-dropdown">
+
+          <p>
+            Glazing:
+          </p>
+
+          <select class = "dropdown-box-on-product-detail-page"
+                  id="glazing-options"
+                  onchange="glazingChange(this)">
+                  <!-- options populated dynamically -->
+          </select>
+
+        </div>
+
+        <!-- another section for dropdown menu -->
+        <div class="dropdown" id = "pick-size-dropdown">
+
+          <p>
+            Pack size:
+          </p>
+
+          <select class = "dropdown-box-on-product-detail-page"
+                  id = "packsize-options"
+                  onchange = "packSizeChange(this)">
+                  <!-- options populated dynamically -->
+          </select>
+
+        </div>
+
+        <!-- section for add-to-cart-->
+        <div class = "add-to-cart">
+          <div class="add-to-cart-left">
+            <p class="price-to-be-paid" id = "total-price"> </p>
+          </div>
+          <button class="add-to-cart-btn"> Add to Cart </button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>

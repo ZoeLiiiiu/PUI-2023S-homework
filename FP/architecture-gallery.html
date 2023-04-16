@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Architecture Gallery</title>
+    <!--css-->
+    <link rel ="stylesheet" href = "css/style.css">
+    <!--javascript-->
+    <meta charset="utf-8">
+  </head>
+  
+  <body>
+
+    <!--header section-->
+    <div class = "header">
+      <a href="./architecture-gallery.html"><img class = "logo" src="asset/logo.jpg" alt = "logo"></a>
+      <!--source for drawing a horizontal line: 
+      https://html-shark.com/HTML/HorizontalLine.htm#:~:text=Horizontal%20lines%20in%20HTML&text=Horizontal%20lines%20on%20a%20page,color%2C%20thickness%2C%20width%20etc.-->
+      <!--create another section to let the logo and the text displayed side by side-->
+      <div class = "header-text">
+        <div class = "navigator">
+          <p class="architecture">
+            <a href="./architecture-gallery.html">Architecture</a>
+          </p>
+          <p class = "art">
+            <a href="./art-gallery.html">Art</a>
+          </p>
+          <p class = "about-me">
+            <a href="./about-me.html">About Me</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!--item section-->
+    <div class = "notable-project">
+      <a href="./project-detail.html?project=Sledding Hill Culinary Center"><img src="asset/architecture/Sledding Hill Culinary Center.png" alt = "Sledding Hill Culinary Center"></a>
+    </div>
+    <div class = "items">
+      <!--create the item-box class to control the spacing between items-->
+      <!--now each page leads to their own -->
+      <!--a utlize of URL Parameters-->
+      <div class = "row">
+        <div class = "bigger-item" id = "theater">
+          <a href="./project-detail.html?project=S. Craig St. Theater"><img src="asset/architecture/S. Craig St. Theater.jpg" alt = "S. Craig St. Theater"></a>
+        </div>
+
+        <div class = "smaller-item" id = "resting-spot">
+          <a href="./project-detail.html?project=Resting Spot in Boreal Forest"><img src="asset/architecture/Resting Spot in Boreal Forest.png" alt = "Resting Spot in Boreal Forest"></a>
+        </div>
+
+      </div>
+      
+      <div class = "row">
+        <div class = "smaller-item" id = "claw">
+          <a href="./project-detail.html?project=Claw"><img src="asset/architecture/Claw.png" alt = "Claw"></a>
+        </div>
+ 
+        <div class = "bigger-item" id = "mobile-home">
+          <a href="./project-detail.html?project=Mobile Home"><img src="asset/architecture/Mobile Home.jpg" alt = "double-chocolate-cinnamon-roll"></a>
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>
