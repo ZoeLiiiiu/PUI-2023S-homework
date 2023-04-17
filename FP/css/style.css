@@ -53,46 +53,21 @@ a {
 /*making sure that the correct of navigator is being highlighted*/
 /*source: https://www.computerhope.com/issues/ch001391.htm*/
 /*use javascript to fix this part later: https://www.youtube.com/watch?v=mP2LnkOqLHk*/
-.architecture {
-    font-weight: 600;
-    margin: 30px 50px 30px 50px;
+
+.navigator a:hover{
+    font-weight:600;
+    color:gray
 }
 
-.art{
-    margin: 30px 50px 30px 50px;
+.navigator a.active {
+    font-weight:600;
 }
 
-.about-me{
-    margin: 30px 50px 30px 50px;
-}
-
-.architecture-on-art {
-    margin: 30px 50px 30px 50px;
-}
-
-.art-on-art{
-    font-weight: 600;
-    margin: 30px 50px 30px 50px;
-}
-
-.about-me-on-art{
+.navigator-element {
     margin: 30px 50px 30px 50px;
 }
 
 
-.architecture-on-about {
-    margin: 30px 50px 30px 50px;
-}
-
-.art-on-about {
-    margin: 30px 50px 30px 50px;
-}
-
-.about-me-on-about{
-    font-weight: 600;
-    margin: 30px 50px 30px 50px;
-
-}
 
 
 
@@ -102,8 +77,6 @@ a {
     font-size: 28px;
     /*control the spacing between title and navigator*/
     margin-top: 20px;
-    /*control the spacing between title and main-content*/
-    margin-bottom: 100px;
     margin-left: 20px;
 }
 
@@ -198,7 +171,20 @@ enabling the hover highlight
 
 
 
-/*style fo the product-detail-page start here*/
+/*style fo the project-detail-page start here*/
+.main-content{
+    background-color: aquamarine;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.white-box{
+    height: 180px;
+}
+
+#project-detail-image{
+    width:800px
+}
 
 
 

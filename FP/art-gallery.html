@@ -5,10 +5,11 @@
     <!--css-->
     <link rel ="stylesheet" href = "css/style.css">
     <!--javascript-->
+    <script defer src="js/navigator.js"></script>
     <meta charset="utf-8">
   </head>
   
-  <body>
+  <body id="art">
 
     <!--header section-->
     <!--the header contains logo, navigator, and title if applicable-->
@@ -16,35 +17,35 @@
       <div class = "navigator-and-logo">
       <!--create another section to let the logo and the text displayed side by side-->
         <a href="./architecture-gallery.html"><img class = "logo" src="asset/logo.jpg" alt = "logo"></a>
-        <div class = "navigator">
-          <p class="architecture-on-art">
-            <a href="./architecture-gallery.html">Architecture</a>
+        <nav class = "navigator">
+          <p class="navigator-element">
+            <a data-active = "architecture" href="./architecture-gallery.html">Architecture</a>
           </p>
-          <p class = "art-on-art">
-            <a href="./art-gallery.html">Art</a>
+          <p class = "navigator-element">
+            <a data-active = "art" href="./art-gallery.html">Art</a>
           </p>
-          <p class = "about-me-on-art">
-            <a href="./about-me.html">About Me</a>
+          <p class = "navigator-element">
+            <a data-active = "about-me" href="./about-me.html">About Me</a>
           </p>
-        </div>
+        </nav>
       </div>
     </div>
     
     <!--page content start here-->
     <!--a section for the notable project-->
     <div class = "notable-project">
-      <a href="./project-detail.html?project=Water"><img src="asset/art/Water.jpg" alt = "Water"></a>
+      <a href="./project-detail.html?project=Water"><img src="asset/Water.jpg" alt = "Water"></a>
     </div>
     <!--a section for other projects-->
     <div class = "projects">
       <div class = "row">
         
         <div class = "bigger-item" id = "water-town">
-          <a href="./project-detail.html?project=Water Town"><img src="asset/art/Water Town.jpg" alt = "Water Town"></a>
+          <a href="./project-detail.html?project=Water Town"><img src="asset/Water Town.jpg" alt = "Water Town"></a>
         </div>
 
         <div class = "smaller-item" id = "hutong-soho">
-          <a href="./project-detail.html?project=Hutong and Soho"><img src="asset/art/Hutong and Soho.jpg" alt = "Hutong and Soho"></a>
+          <a href="./project-detail.html?project=Hutong and Soho"><img src="asset/Hutong and Soho.jpg" alt = "Hutong and Soho"></a>
         </div>
 
       </div>
@@ -52,11 +53,11 @@
       <div class = "row">
 
         <div class = "smaller-item" id = "cathedral">
-          <a href="./project-detail.html?project=Cathedral Facade"><img src="asset/art/Cathedral Facade.jpg" alt = "Cathedral Facade"></a>
+          <a href="./project-detail.html?project=Cathedral Facade"><img src="asset/Cathedral Facade.jpg" alt = "Cathedral Facade"></a>
         </div>
 
         <div class = "bigger-item" id = "our-old-days">
-          <a href="./project-detail.html?project=Our Old Days"><img src="asset/art/Our Old Days.jpg" alt = "Our Old Days"></a>
+          <a href="./project-detail.html?project=Our Old Days"><img src="asset/Our Old Days.jpg" alt = "Our Old Days"></a>
         </div>
  
       </div>

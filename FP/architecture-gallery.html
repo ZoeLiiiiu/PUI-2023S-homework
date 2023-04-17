@@ -5,10 +5,11 @@
     <!--css-->
     <link rel ="stylesheet" href = "css/style.css">
     <!--javascript-->
+    <script defer src="js/navigator.js"></script>
     <meta charset="utf-8">
   </head>
   
-  <body>
+  <body id="architecture">
 
     <!--header section-->
     <!--the header contains logo, navigator, and title if applicable-->
@@ -17,14 +18,14 @@
       <!--create another section to let the logo and the text displayed side by side-->
         <a href="./architecture-gallery.html"><img class = "logo" src="asset/logo.jpg" alt = "logo"></a>
         <nav class = "navigator">
-          <p class="architecture">
-            <a href="./architecture-gallery.html">Architecture</a>
+          <p class="navigator-element">
+            <a data-active = "architecture" href="./architecture-gallery.html">Architecture</a>
           </p>
-          <p class = "art">
-            <a href="./art-gallery.html">Art</a>
+          <p class = "navigator-element">
+            <a data-active = "art" href="./art-gallery.html">Art</a>
           </p>
-          <p class = "about-me">
-            <a href="./about-me.html">About Me</a>
+          <p class = "navigator-element">
+            <a data-active = "about-me" href="./about-me.html">About Me</a>
           </p>
         </nav>
       </div>
@@ -33,27 +34,27 @@
     <!--page content start here-->
     <!--a section for the notable project-->
     <div class = "notable-project">
-      <a href="./project-detail.html?project=Sledding Hill Culinary Center"><img src="asset/architecture/Sledding Hill Culinary Center.png" alt = "Sledding Hill Culinary Center"></a>
+      <a href="./project-detail.html?project=Sledding Hill Culinary Center"><img src="asset/Sledding Hill Culinary Center.png" alt = "Sledding Hill Culinary Center"></a>
     </div>
     <!--a section for other projects-->
     <div class = "projects">
       <div class = "row">
         <div class = "bigger-item" id = "theater">
-          <a href="./project-detail.html?project=S. Craig St. Theater"><img src="asset/architecture/S. Craig St. Theater.jpg" alt = "S. Craig St. Theater"></a>
+          <a href="./project-detail.html?project=S. Craig St. Theater"><img src="asset/S. Craig St. Theater.jpg" alt = "S. Craig St. Theater"></a>
         </div>
 
         <div class = "smaller-item" id = "resting-spot">
-          <a href="./project-detail.html?project=Resting Spot in Boreal Forest"><img src="asset/architecture/Resting Spot in Boreal Forest.png" alt = "Resting Spot in Boreal Forest"></a>
+          <a href="./project-detail.html?project=Resting Spot in Boreal Forest"><img src="asset/Resting Spot in Boreal Forest.png" alt = "Resting Spot in Boreal Forest"></a>
         </div>
       </div>
       
       <div class = "row">
         <div class = "smaller-item" id = "claw">
-          <a href="./project-detail.html?project=Claw"><img src="asset/architecture/Claw.png" alt = "Claw"></a>
+          <a href="./project-detail.html?project=Claw"><img src="asset/Claw.png" alt = "Claw"></a>
         </div>
  
         <div class = "bigger-item" id = "mobile-home">
-          <a href="./project-detail.html?project=Mobile Home"><img src="asset/architecture/Mobile Home.jpg" alt = "double-chocolate-cinnamon-roll"></a>
+          <a href="./project-detail.html?project=Mobile Home"><img src="asset/Mobile Home.jpg" alt = "double-chocolate-cinnamon-roll"></a>
         </div>
       </div>
     </div>
