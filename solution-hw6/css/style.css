@@ -100,13 +100,13 @@ button:hover {
 
 /*the style of title of all three pages*/
 
-.title h1 {
+/*.title h1 {
     font-size: 28px;
     font-weight: 500;
     margin-top: 100px;
     /*control the spacing between title and main-content*/
-    margin-bottom: 100px;
-}
+    /*margin-bottom: 100px;
+}*/
 
 #product-header-text.title{
     font-size: 28px;
