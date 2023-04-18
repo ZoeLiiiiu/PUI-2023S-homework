@@ -22,12 +22,12 @@ a {
     position:fixed;
     background-color: white;
     min-width: 100%;
-    margin-top: 0px;
+    margin-top: -10px;
 }
 
 .logo {
-    width: 80px;
-    margin: 8px;
+    width: 50px;
+    margin: 8px 20px 8px 20px;
 }
 
 .navigator-and-logo{
@@ -38,6 +38,7 @@ a {
     flex-grow: 1;
     /*make sure the logo and the text is in the center*/
     align-items: center;
+    height: 70px;
 }
 
 .navigator {
@@ -45,7 +46,6 @@ a {
     /*with out it, the logo would go too close to navigator*/
     flex-grow: 1;
     text-align: center;
-    margin-top: 20px;
     display: flex;
     justify-content: flex-end;
 }
@@ -67,23 +67,60 @@ a {
     margin: 30px 50px 30px 50px;
 }
 
+/* setup the contact information*/
 
+.contact-information{
+    background-color: gray;
+    padding: 20px 20px 50px 20px
+}
+
+.contact-information-sub-section{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    
+}
+
+/* setup the icon*/
+.fa-instagram{
+    color:black
+}
+
+.contact-text{
+    margin-left: 10px;
+}
 
 
 
 /*the style of title*/
 
 .title{
+    width:60%;
     font-size: 28px;
     /*control the spacing between title and navigator*/
-    margin-top: 20px;
-    margin-left: 20px;
+    margin-top: 10px;
+    margin-left: 20%;
+    margin-bottom: 10px;
 }
 
+.title p{
+    font-size: 28px;
+}
 
 /*the style of the gallery page starts here*/
+.thumbnail-container{
+    height: 425px;
+    position: relative;
+}
+.white-box-on-gallery{
+    height: 60px;
+}
 
-
+.projects{
+    width:90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
 
 .row{
     height:460px;
@@ -91,16 +128,52 @@ a {
     justify-content: space-evenly;
 }
 
+
 .notable-project{
     /*control the distance between notable project and other projects*/
     margin-bottom: 50px;
+    position: absolute;
+    z-index: -1;
+    width:100%;
+    object-fit: cover;
+    object-position: 0 70%;
+    height: 400px;
 }
 
 .notable-project img{
     width:100%;
     object-fit: cover;
     object-position: 0 70%;
-    height: 550px;
+    height: 400px;
+}
+
+.overlay{
+    background-color: yellow;
+    opacity: 0;
+    margin: 50px;
+    width: calc(100% - 100px);
+    height: 300px;
+    z-index: 1;
+    position: absolute;
+}
+
+/* why the hover part is not working?*/
+.overlay:hover{
+    background-color:white;
+    opacity: 1;
+    margin: 50px;
+    width: calc(100% - 100px);
+    height: 300px;
+    z-index: 1;
+    position: absolute;
+}
+
+.header{
+    position:fixed;
+    background-color: white;
+    min-width: 100%;
+    margin-top: -10px;
+    z-index: 2;
 }
 
 /*NOT USEFUL FOR NOW
@@ -173,13 +246,12 @@ enabling the hover highlight
 
 /*style fo the project-detail-page start here*/
 .main-content{
-    background-color: aquamarine;
-    margin-left: 20px;
-    margin-right: 20px;
+    width: 60%;
+    margin: auto;
 }
 
 .white-box{
-    height: 180px;
+    height: 120px;
 }
 
 #project-detail-image{
@@ -189,5 +261,21 @@ enabling the hover highlight
 
 
 
-/*style for shopping cart starts here*/
-/* temp delete all
+/*style for About-me starts here*/
+.my-information{
+    width:60%;
+    margin:auto;
+    display:flex;
+    align-items: flex-end;
+}
+#profile-image{
+    width:600px;
+    height:600px;
+    object-fit: cover;
+    object-position: 50% 50%;
+
+}
+
+#introduction{
+    margin-left: 30px;
+}

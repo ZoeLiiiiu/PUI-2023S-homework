@@ -6,7 +6,12 @@
     <link rel ="stylesheet" href = "css/style.css">
     <!--javascript-->
     <script defer src="js/navigator.js"></script>
+    <!--the script that enables you to send an email-->
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
     <meta charset="utf-8">
+    <!--icon libraries-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   
   <body id="architecture">
@@ -33,9 +38,19 @@
     
     <!--page content start here-->
     <!--a section for the notable project-->
-    <div class = "notable-project">
-      <a href="./project-detail.html?project=Sledding Hill Culinary Center"><img src="asset/Sledding Hill Culinary Center.png" alt = "Sledding Hill Culinary Center"></a>
+    <!-- overlay the element-->
+    <div class = "white-box-on-gallery">
     </div>
+    <div class="thumbnail-container">
+      <div class = "notable-project">
+        <a href="./project-detail.html?project=Sledding Hill Culinary Center"><img src="asset/Sledding Hill Culinary Center.jpg" alt = "Sledding Hill Culinary Center"></a>
+      </div>
+  
+      <div class = "overlay">
+      </div>
+      
+    </div>
+
     <!--a section for other projects-->
     <div class = "projects">
       <div class = "row">
@@ -44,7 +59,7 @@
         </div>
 
         <div class = "smaller-item" id = "resting-spot">
-          <a href="./project-detail.html?project=Resting Spot in Boreal Forest"><img src="asset/Resting Spot in Boreal Forest.png" alt = "Resting Spot in Boreal Forest"></a>
+          <a href="./project-detail.html?project=Resting Spot in Boreal Forest"><img src="asset/Resting Spot in Boreal Forest.jpg" alt = "Resting Spot in Boreal Forest"></a>
         </div>
       </div>
       
@@ -58,6 +73,79 @@
         </div>
       </div>
     </div>
+
+    <!--contact information start here-->
+    <div class = "contact-information">
+      <p>
+        Contact Me
+      </p>
+      <div class = "contact-information-sub-section">
+        <span>&#9993;</span>
+        <a href="mailto:disha@uplers.com" class = "contact-text">
+          shiyueli@andrew.cmu.edu
+        </a>
+      </div>
+      <div class = "contact-information-sub-section">
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="https://www.instagram.com/zoe_liiiiu/" class = "contact-text">
+          Zoe_Liiiu
+        </a>
+      </div>
+    </div>
+
+    <!--Form Code--> 
+    <!-- could not figure this part out, need to ask TA-->
+    <!--
+    <form method="post" action="contactform.php">
+
+
+      <textarea name="message"></textarea>
+      
+      
+      <input type="submit">
+      
+      
+    </form>
+    -->
+
+
+    
+    <form action="mailto:shiyueli@andrew.cmu.edu"
+     method="POST"
+     enctype="text/plain"
+     name="EmailForm">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name=""><br>
+      <label for="ContactComment">Message:</label><br>
+      <textarea name="body" id="ContactComment" rows="6" cols="20"></textarea>
+      <input type="submit" value="Send">
+    </form>
+  
+
+
+<!--
+    <div class="container">
+      <div>
+        <p>Contact Me</p>
+      </div>
+      <div class="row">
+        <div class="column">
+          <form action="/action_page.php">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            <label for="country">Country</label>
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
+    </div>
+  -->
+  
+
 
   </body>
 </html>
