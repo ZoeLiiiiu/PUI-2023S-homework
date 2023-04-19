@@ -2,6 +2,7 @@ Overall
 1. figure out where to use library
 2. Build the my information section (should able users to send email)
 3. Does the icon libraries count as library?
+4. may need to compress the image to make things work faster
 
 Gallery Page: 
 1. figure out the hovering 
