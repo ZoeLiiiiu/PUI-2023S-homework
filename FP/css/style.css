@@ -119,7 +119,7 @@ a {
 }
 
 /*the style of the gallery page starts here*/
-.thumbnail-container{
+.thumbnail-container-notable-project{
     height: 425px;
     position: relative;
 }
@@ -168,6 +168,18 @@ a {
     position: absolute;
 }
 
+/*why this is not working?*/
+.thumbnail-container-notable-project:hover + .overlay-notable{
+    background-color:white;
+    opacity: 0.7;
+    width: calc(100% - 600px);
+    height: 300px;
+    margin: 50px 300px 50px 300px;
+    z-index: 1;
+    position: absolute;
+    transition-duration: 0.1s
+}
+
 .overlay-notable:hover{
     background-color:white;
     opacity: 0.7;
@@ -178,6 +190,30 @@ a {
     position: absolute;
     transition-duration: 0.1s
 }
+
+/*THIS PART IS PROBLEMATIC!! FIX IT LATTER!!*
+.overlay-bigger{
+    background-color: white;
+    opacity: 0;
+    width: calc(100% - 100px);
+    margin: 50px;
+    height: 300px;
+    z-index: 1;
+    position: absolute;
+}
+
+.overlay-notable:hover{
+    background-color:white;
+    opacity: 0.7;
+    width: calc(100% - 100px);
+    height: 300px;
+    margin: 50px;
+    z-index: 1;
+    position: absolute;
+    transition-duration: 0.1s
+}*/
+
+
 
 .header{
     position:fixed;
