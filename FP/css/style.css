@@ -1,371 +1,711 @@
-/* set up default elements for all webpage */
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
 
-body {
-    font-family: Roboto,Arial,Helvetica,sans-serif;
+    /* set up default elements for all webpage */
+
+    body {
+        font-family: Roboto,Arial,Helvetica,sans-serif;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    /*adjust the style of hyper-linl*/
+    /*source: https://www.w3schools.com/css/css_link.asp*/
+    a {
+        color: inherit;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+
+    /* set up header*/
+    .header{
+        position:fixed;
+        background-color: white;
+        min-width: 100%;
+        margin-top: -10px;
+    }
+
+    .logo {
+        width: 50px;
+        margin: 8px 20px 8px 20px;
+    }
+
+    .navigator-and-logo{
+        display:flex;
+        justify-content: flex-end;
+        /*this part enables navigator bar to line up with the right margin of the page*/
+        flex-grow: 1;
+        flex-grow: 1;
+        /*make sure the logo and the text is in the center*/
+        align-items: center;
+        height: 70px;
+    }
+
+    .navigator {
+        /*this part makes sure that logo goes to left margin and navigator goes to right margin*/
+        /*with out it, the logo would go too close to navigator*/
+        flex-grow: 1;
+        text-align: center;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    /*making sure that the correct of navigator is being highlighted*/
+    /*source: https://www.computerhope.com/issues/ch001391.htm*/
+    /*use javascript to fix this part later: https://www.youtube.com/watch?v=mP2LnkOqLHk*/
+
+    .navigator a:hover{
+        font-weight:600;
+        color:gray
+    }
+
+    .navigator a.active {
+        font-weight:600;
+    }
+
+    .navigator-element {
+        margin: 30px 50px 30px 50px;
+    }
+
+    /* setup the contact information*/
+
+
+
+    .contact-information{
+        background-color: lightgray;
+        padding: 20px 20px 50px 20px;
+        padding-left: 5%;
+    }
+
+    .contact-information-sub-section{
+        display: flex;
+        align-items: center;
+        height: 30px;
+        
+    }
+
+    .contact-text{
+        text-decoration: underline;
+    }
+
+    #contact-me{
+        font-weight: 600
+    }
+
+    /* setup the icon*/
+    .fa-instagram{
+        color:black
+    }
+
+    .contact-text{
+        margin-left: 10px;
+    }
+
+
+
+    /*the style of title*/
+
+    .title{
+        width:60%;
+        font-size: 28px;
+        /*control the spacing between title and navigator*/
+        margin-top: 10px;
+        margin-left: 20%;
+        margin-bottom: 10px;
+    }
+
+    .title p{
+        font-size: 28px;
+    }
+
+    /*the style of the gallery page starts here*/
+    .thumbnail-container-notable-project{
+        height: 425px;
+        position: relative;
+    }
+    .white-box-on-gallery{
+        height: 60px;
+    }
+
+    .projects{
+        width:90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .row{
+        height:460px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+
+    .notable-project{
+        /*control the distance between notable project and other projects*/
+        margin-bottom: 50px;
+        position: absolute;
+        z-index: -1;
+        width:100%;
+        object-fit: cover;
+        object-position: 0 70%;
+        height: 400px;
+    }
+
+    .notable-project img{
+        width:100%;
+        object-fit: cover;
+        object-position: 0 70%;
+        height: 400px;
+    }
+
+    .overlay-notable{
+        background-color: white;
+        opacity: 0;
+        width: calc(100% - 600px);
+        margin: 50px 300px 50px 300px;
+        height: 300px;
+        z-index: 1;
+        position: absolute;
+    }
+
+    /*why this is not working?*/
+    .thumbnail-container-notable-project:hover + .overlay-notable{
+        background-color:white;
+        opacity: 0.7;
+        width: calc(100% - 600px);
+        height: 300px;
+        margin: 50px 300px 50px 300px;
+        z-index: 1;
+        position: absolute;
+        transition-duration: 0.1s
+    }
+
+    .overlay-notable:hover{
+        background-color:white;
+        opacity: 0.7;
+        width: calc(100% - 600px);
+        height: 300px;
+        margin: 50px 300px 50px 300px;
+        z-index: 1;
+        position: absolute;
+        transition-duration: 0.1s
+    }
+
+    /*THIS PART IS PROBLEMATIC!! FIX IT LATTER!!*/
+
+    .overlay-bigger{
+        background-color: yellow;
+        opacity: 1;
+        width: calc(100% - 100px);
+        margin: 50px;
+        height: 300px;
+        z-index: 1;
+        position: absolute;
+        text-align: center;
+    }
+
+    .overlay-smaller{
+        background-color: yellow;
+        opacity: 1;
+        width: calc(100% - 100px);
+        margin: 50px;
+        height: 300px;
+        z-index: 1;
+        position: absolute;
+        text-align: center;
+    }
+
+
+
+
+    .header{
+        position:fixed;
+        background-color: white;
+        min-width: 100%;
+        margin-top: -10px;
+        z-index: 2;
+    }
+
+    .information-on-gallery{
+        text-align: center;
+    }
+
+    /*NOT USEFUL FOR NOW
+    /*
+    .projects p {
+        margin: 2px auto 2px auto;
+        text-align: left;
+        margin-left: 4px;
+        font-size: 24px;
+    }
+
+    .item-name {
+        text-decoration: underline;
+        text-decoration-color: darkolivegreen;
+        text-decoration-thickness: 0.96px;
+    }
+
+    .individual-item {
+        padding-bottom: 4px;
+        margin-bottom: 52px;
+        width: 300px;
+        margin: auto;
+    } 
+
+    enabling the hover highlight
+    .individual-item:hover {
+        background-color: yellow;
+    }
+
+    .individual-item:hover .item-name{
+        font-weight: 600;
+    }*/
+
+    .bigger-item-container{
+        width: 60%;
+        overflow: hidden;
+        margin: 25px 15px 25px 15px;
+        height:400px;
+        position:relative
+    }
+
+    .bigger-item{
+        margin-bottom: 50px;
+        position: absolute;
+        z-index: -1;
+        width:100%;
+        object-fit: cover;
+        object-position: 0 70%;
+        height: 400px;
+    }
+
+    .bigger-item img{
+        margin: auto;
+        object-fit: cover;
+        object-position: 50% 50%;
+        width: 100%;
+    }
+
+    .smaller-item-container{
+        width: 40%;
+        overflow: hidden;
+        margin: 25px 15px 25px 15px;
+        position: relative
+    }
+
+    .smaller-item{
+        margin-bottom: 50px;
+        position: absolute;
+        z-index: -1;
+        width:100%;
+        object-fit: cover;
+        object-position: 0 70%;
+        height: 400px;
+    }
+
+
+    .smaller-item img{
+        margin: auto;
+        object-fit: cover;
+        object-position: 50% 50%;
+        width: 100%;
+        min-height: 400px;
+    }
+
+    .notable-project{
+        /*control the distance between notable project and other projects*/
+        margin-bottom: 50px;
+        position: absolute;
+        z-index: -1;
+        width:100%;
+        object-fit: cover;
+        object-position: 0 70%;
+        height: 400px;
+    }
+
+
+
+
+
+    /*style fo the project-detail-page start here*/
+    .main-content{
+        width: 60%;
+        margin: auto;
+    }
+
+    .white-box{
+        height: 120px;
+    }
+
+    #project-detail-image{
+        width:800px
+    }
+
+
+
+
+    /*style for About-me starts here*/
+    .my-information{
+        width:60%;
+        margin:auto;
+        display:flex;
+        align-items: flex-end;
+    }
+    #profile-image{
+        width:600px;
+        height:600px;
+        object-fit: cover;
+        object-position: 50% 50%;
+
+    }
+
+    #introduction{
+        margin-left: 30px;
+    }
 }
 
-p {
-    font-size: 18px;
-}
-
-/*adjust the style of hyper-linl*/
-/*source: https://www.w3schools.com/css/css_link.asp*/
-a {
-    color: inherit;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-
-/* set up header*/
-.header{
-    position:fixed;
-    background-color: white;
-    min-width: 100%;
-    margin-top: -10px;
-}
-
-.logo {
-    width: 50px;
-    margin: 8px 20px 8px 20px;
-}
-
-.navigator-and-logo{
-    display:flex;
-    justify-content: flex-end;
-    /*this part enables navigator bar to line up with the right margin of the page*/
-    flex-grow: 1;
-    flex-grow: 1;
-    /*make sure the logo and the text is in the center*/
-    align-items: center;
-    height: 70px;
-}
-
-.navigator {
-    /*this part makes sure that logo goes to left margin and navigator goes to right margin*/
-    /*with out it, the logo would go too close to navigator*/
-    flex-grow: 1;
-    text-align: center;
-    display: flex;
-    justify-content: flex-end;
-}
-
-/*making sure that the correct of navigator is being highlighted*/
-/*source: https://www.computerhope.com/issues/ch001391.htm*/
-/*use javascript to fix this part later: https://www.youtube.com/watch?v=mP2LnkOqLHk*/
-
-.navigator a:hover{
-    font-weight:600;
-    color:gray
-}
-
-.navigator a.active {
-    font-weight:600;
-}
-
-.navigator-element {
-    margin: 30px 50px 30px 50px;
-}
-
-/* setup the contact information*/
-
-
-
-.contact-information{
-    background-color: lightgray;
-    padding: 20px 20px 50px 20px;
-    padding-left: 5%;
-}
-
-.contact-information-sub-section{
-    display: flex;
-    align-items: center;
-    height: 30px;
-    
-}
-
-.contact-text{
-    text-decoration: underline;
-}
-
-#contact-me{
-    font-weight: 600
-}
-
-/* setup the icon*/
-.fa-instagram{
-    color:black
-}
-
-.contact-text{
-    margin-left: 10px;
-}
-
-
-
-/*the style of title*/
-
-.title{
-    width:60%;
-    font-size: 28px;
-    /*control the spacing between title and navigator*/
-    margin-top: 10px;
-    margin-left: 20%;
-    margin-bottom: 10px;
-}
-
-.title p{
-    font-size: 28px;
-}
-
-/*the style of the gallery page starts here*/
-.thumbnail-container-notable-project{
-    height: 425px;
-    position: relative;
-}
-.white-box-on-gallery{
-    height: 60px;
-}
-
-.projects{
-    width:90%;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-
-.row{
-    height:460px;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-
-.notable-project{
-    /*control the distance between notable project and other projects*/
-    margin-bottom: 50px;
-    position: absolute;
-    z-index: -1;
-    width:100%;
-    object-fit: cover;
-    object-position: 0 70%;
-    height: 400px;
-}
-
-.notable-project img{
-    width:100%;
-    object-fit: cover;
-    object-position: 0 70%;
-    height: 400px;
-}
-
-.overlay-notable{
-    background-color: white;
-    opacity: 0;
-    width: calc(100% - 600px);
-    margin: 50px 300px 50px 300px;
-    height: 300px;
-    z-index: 1;
-    position: absolute;
-}
-
-/*why this is not working?*/
-.thumbnail-container-notable-project:hover + .overlay-notable{
-    background-color:white;
-    opacity: 0.7;
-    width: calc(100% - 600px);
-    height: 300px;
-    margin: 50px 300px 50px 300px;
-    z-index: 1;
-    position: absolute;
-    transition-duration: 0.1s
-}
-
-.overlay-notable:hover{
-    background-color:white;
-    opacity: 0.7;
-    width: calc(100% - 600px);
-    height: 300px;
-    margin: 50px 300px 50px 300px;
-    z-index: 1;
-    position: absolute;
-    transition-duration: 0.1s
-}
-
-/*THIS PART IS PROBLEMATIC!! FIX IT LATTER!!*/
-.link-bigger{
-    width:60%
-}
-
-.link-smaller{
-    width: 40%;
-}
-
-
-.overlay-bigger{
-    background-color: yellow;
-    opacity: 1;
-    width: calc(100% - 100px);
-    margin: 50px;
-    height: 300px;
-    z-index: 1;
-    position: absolute;
-    text-align: center;
-}
-
-.overlay-smaller{
-    background-color: yellow;
-    opacity: 1;
-    width: calc(100% - 100px);
-    margin: 50px;
-    height: 300px;
-    z-index: 1;
-    position: absolute;
-    text-align: center;
-}
-
-
-
-
-.header{
-    position:fixed;
-    background-color: white;
-    min-width: 100%;
-    margin-top: -10px;
-    z-index: 2;
-}
-
-.information-on-gallery{
-    text-align: center;
-}
-
-/*NOT USEFUL FOR NOW
-/*
-.projects p {
-    margin: 2px auto 2px auto;
-    text-align: left;
-    margin-left: 4px;
-    font-size: 24px;
-}
-
-.item-name {
-    text-decoration: underline;
-    text-decoration-color: darkolivegreen;
-    text-decoration-thickness: 0.96px;
-}
-
-.individual-item {
-    padding-bottom: 4px;
-    margin-bottom: 52px;
-    width: 300px;
-    margin: auto;
-} 
-
-enabling the hover highlight
-.individual-item:hover {
-    background-color: yellow;
-}
-
-.individual-item:hover .item-name{
-    font-weight: 600;
-}*/
-
-.bigger-item-container{
-    overflow: hidden;
-    margin: 25px 15px 25px 15px;
-    height:400px;
-    position:relative
-}
-
-.bigger-item{
-    margin-bottom: 50px;
-    position: absolute;
-    z-index: -1;
-    width:100%;
-    object-fit: cover;
-    object-position: 0 70%;
-    height: 400px;
-}
-
-.bigger-item img{
-    margin: auto;
-    object-fit: cover;
-    object-position: 50% 50%;
-    width: 100%;
-    min-height: 400px;
-}
-
-.smaller-item-container{
-    overflow: hidden;
-    margin: 25px 15px 25px 15px;
-    position: relative
-}
-
-.smaller-item{
-    margin-bottom: 50px;
-    position: absolute;
-    z-index: -1;
-    width:100%;
-    object-fit: cover;
-    object-position: 0 70%;
-    height: 400px;
-}
-
-
-.smaller-item img{
-    margin: auto;
-    object-fit: cover;
-    object-position: 50% 50%;
-    width: 100%;
-    min-height: 400px;
-}
-
-.notable-project{
-    /*control the distance between notable project and other projects*/
-    margin-bottom: 50px;
-    position: absolute;
-    z-index: -1;
-    width:100%;
-    object-fit: cover;
-    object-position: 0 70%;
-    height: 400px;
-}
-
-
-
-
-
-/*style fo the project-detail-page start here*/
-.main-content{
-    width: 60%;
-    margin: auto;
-}
-
-.white-box{
-    height: 120px;
-}
-
-#project-detail-image{
-    width:800px
-}
-
-
-
-
-/*style for About-me starts here*/
-.my-information{
-    width:60%;
-    margin:auto;
-    display:flex;
-    align-items: flex-end;
-}
-#profile-image{
-    width:600px;
-    height:600px;
-    object-fit: cover;
-    object-position: 50% 50%;
-
-}
-
-#introduction{
-    margin-left: 30px;
+
+
+@media only screen and (max-width: 600px) {
+    /* For mobile phone: */
+        /* For tablets: */
+
+    /* set up default elements for all webpage */
+
+    body {
+        font-family: Roboto,Arial,Helvetica,sans-serif;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    /*adjust the style of hyper-linl*/
+    /*source: https://www.w3schools.com/css/css_link.asp*/
+    a {
+        color: inherit;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+
+    /* set up header*/
+    .header{
+        position:fixed;
+        background-color: white;
+        min-width: 100%;
+        margin-top: -10px;
+    }
+
+    .logo {
+        width: 50px;
+        margin: 8px 20px 8px 20px;
+    }
+
+    .navigator-and-logo{
+        display:flex;
+        justify-content: flex-end;
+        /*this part enables navigator bar to line up with the right margin of the page*/
+        flex-grow: 1;
+        flex-grow: 1;
+        /*make sure the logo and the text is in the center*/
+        align-items: center;
+        height: 70px;
+    }
+
+    .navigator {
+        /*this part makes sure that logo goes to left margin and navigator goes to right margin*/
+        /*with out it, the logo would go too close to navigator*/
+        flex-grow: 1;
+        text-align: center;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    /*making sure that the correct of navigator is being highlighted*/
+    /*source: https://www.computerhope.com/issues/ch001391.htm*/
+    /*use javascript to fix this part later: https://www.youtube.com/watch?v=mP2LnkOqLHk*/
+
+    .navigator a:hover{
+        font-weight:600;
+        color:gray
+    }
+
+    .navigator a.active {
+        font-weight:600;
+    }
+
+    .navigator-element {
+        margin: 30px 50px 30px 50px;
+    }
+
+    /* setup the contact information*/
+
+
+
+    .contact-information{
+        background-color: lightgray;
+        padding: 20px 20px 50px 20px;
+        padding-left: 5%;
+    }
+
+    .contact-information-sub-section{
+        display: flex;
+        align-items: center;
+        height: 30px;
+        
+    }
+
+    .contact-text{
+        text-decoration: underline;
+    }
+
+    #contact-me{
+        font-weight: 600
+    }
+
+    /* setup the icon*/
+    .fa-instagram{
+        color:black
+    }
+
+    .contact-text{
+        margin-left: 10px;
+    }
+
+
+
+    /*the style of title*/
+
+    .title{
+        width:60%;
+        font-size: 28px;
+        /*control the spacing between title and navigator*/
+        margin-top: 10px;
+        margin-left: 20%;
+        margin-bottom: 10px;
+    }
+
+    .title p{
+        font-size: 28px;
+    }
+
+    /*the style of the gallery page starts here*/
+    .thumbnail-container-notable-project{
+        height: 425px;
+        position: relative;
+    }
+    .white-box-on-gallery{
+        height: 60px;
+    }
+
+    .projects{
+        width:90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .row{
+        height:460px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+
+    .notable-project{
+        /*control the distance between notable project and other projects*/
+        margin-bottom: 50px;
+        position: absolute;
+        z-index: -1;
+        width:100%;
+        object-fit: cover;
+        object-position: 0 70%;
+        height: 400px;
+    }
+
+    .notable-project img{
+        width:100%;
+        object-fit: cover;
+        object-position: 0 70%;
+        height: 400px;
+    }
+
+    .overlay-notable{
+        background-color: white;
+        opacity: 0;
+        width: calc(100% - 600px);
+        margin: 50px 300px 50px 300px;
+        height: 300px;
+        z-index: 1;
+        position: absolute;
+    }
+
+    /*why this is not working?*/
+    .thumbnail-container-notable-project:hover + .overlay-notable{
+        background-color:white;
+        opacity: 0.7;
+        width: calc(100% - 600px);
+        height: 300px;
+        margin: 50px 300px 50px 300px;
+        z-index: 1;
+        position: absolute;
+        transition-duration: 0.1s
+    }
+
+    .overlay-notable:hover{
+        background-color:white;
+        opacity: 0.7;
+        width: calc(100% - 600px);
+        height: 300px;
+        margin: 50px 300px 50px 300px;
+        z-index: 1;
+        position: absolute;
+        transition-duration: 0.1s
+    }
+
+    /*THIS PART IS PROBLEMATIC!! FIX IT LATTER!!*/
+
+    .overlay-bigger{
+        background-color: yellow;
+        opacity: 1;
+        width: calc(100% - 100px);
+        margin: 50px;
+        height: 300px;
+        z-index: 1;
+        position: absolute;
+        text-align: center;
+    }
+
+    .overlay-smaller{
+        background-color: yellow;
+        opacity: 1;
+        width: calc(100% - 100px);
+        margin: 50px;
+        height: 300px;
+        z-index: 1;
+        position: absolute;
+        text-align: center;
+    }
+
+
+
+
+    .header{
+        position:fixed;
+        background-color: white;
+        min-width: 100%;
+        margin-top: -10px;
+        z-index: 2;
+    }
+
+    .information-on-gallery{
+        text-align: center;
+    }
+
+
+    .bigger-item-container{
+        width: 50%;
+        overflow: hidden;
+        margin: 25px 15px 25px 15px;
+        height:400px;
+        position:relative
+    }
+
+    .bigger-item{
+        margin-bottom: 50px;
+        position: absolute;
+        z-index: -1;
+        width:100%;
+        object-fit: cover;
+        object-position: 0 70%;
+        height: 400px;
+    }
+
+    .bigger-item img{
+        margin: auto;
+        object-fit: cover;
+        object-position: 50% 50%;
+        width: 100%;
+    }
+
+    .smaller-item-container{
+        width: 50%;
+        overflow: hidden;
+        margin: 25px 15px 25px 15px;
+        position: relative
+    }
+
+    .smaller-item{
+        margin-bottom: 50px;
+        position: absolute;
+        z-index: -1;
+        width:100%;
+        object-fit: cover;
+        object-position: 0 70%;
+        height: 400px;
+    }
+
+
+    .smaller-item img{
+        margin: auto;
+        object-fit: cover;
+        object-position: 50% 50%;
+        width: 100%;
+        min-height: 400px;
+    }
+
+    .notable-project{
+        /*control the distance between notable project and other projects*/
+        margin-bottom: 50px;
+        position: absolute;
+        z-index: -1;
+        width:100%;
+        object-fit: cover;
+        object-position: 0 70%;
+        height: 400px;
+    }
+
+
+
+
+
+    /*style fo the project-detail-page start here*/
+    .main-content{
+        width: 60%;
+        margin: auto;
+    }
+
+    .white-box{
+        height: 120px;
+    }
+
+    #project-detail-image{
+        width:800px
+    }
+
+
+
+
+    /*style for About-me starts here*/
+    .my-information{
+        width:60%;
+        margin:auto;
+        display:flex;
+        align-items: flex-end;
+    }
+    #profile-image{
+        width:600px;
+        height:600px;
+        object-fit: cover;
+        object-position: 50% 50%;
+
+    }
+
+    #introduction{
+        margin-left: 30px;
+    }
+
 }
