@@ -191,27 +191,38 @@ a {
     transition-duration: 0.1s
 }
 
-/*THIS PART IS PROBLEMATIC!! FIX IT LATTER!!*
-.overlay-bigger{
-    background-color: white;
-    opacity: 0;
-    width: calc(100% - 100px);
-    margin: 50px;
-    height: 300px;
-    z-index: 1;
-    position: absolute;
+/*THIS PART IS PROBLEMATIC!! FIX IT LATTER!!*/
+.link-bigger{
+    width:60%
 }
 
-.overlay-notable:hover{
-    background-color:white;
-    opacity: 0.7;
+.link-smaller{
+    width: 40%;
+}
+
+
+.overlay-bigger{
+    background-color: yellow;
+    opacity: 1;
     width: calc(100% - 100px);
-    height: 300px;
     margin: 50px;
+    height: 300px;
     z-index: 1;
     position: absolute;
-    transition-duration: 0.1s
-}*/
+    text-align: center;
+}
+
+.overlay-smaller{
+    background-color: yellow;
+    opacity: 1;
+    width: calc(100% - 100px);
+    margin: 50px;
+    height: 300px;
+    z-index: 1;
+    position: absolute;
+    text-align: center;
+}
+
 
 
 
@@ -258,22 +269,21 @@ enabling the hover highlight
     font-weight: 600;
 }*/
 
-.bigger-item{
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.bigger-item-container{
     overflow: hidden;
-    margin: 25px 15px 25px 15px
+    margin: 25px 15px 25px 15px;
+    height:400px;
+    position:relative
 }
 
-.smaller-item{
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    margin: 25px 15px 25px 15px
+.bigger-item{
+    margin-bottom: 50px;
+    position: absolute;
+    z-index: -1;
+    width:100%;
+    object-fit: cover;
+    object-position: 0 70%;
+    height: 400px;
 }
 
 .bigger-item img{
@@ -284,6 +294,23 @@ enabling the hover highlight
     min-height: 400px;
 }
 
+.smaller-item-container{
+    overflow: hidden;
+    margin: 25px 15px 25px 15px;
+    position: relative
+}
+
+.smaller-item{
+    margin-bottom: 50px;
+    position: absolute;
+    z-index: -1;
+    width:100%;
+    object-fit: cover;
+    object-position: 0 70%;
+    height: 400px;
+}
+
+
 .smaller-item img{
     margin: auto;
     object-fit: cover;
@@ -291,6 +318,18 @@ enabling the hover highlight
     width: 100%;
     min-height: 400px;
 }
+
+.notable-project{
+    /*control the distance between notable project and other projects*/
+    margin-bottom: 50px;
+    position: absolute;
+    z-index: -1;
+    width:100%;
+    object-fit: cover;
+    object-position: 0 70%;
+    height: 400px;
+}
+
 
 
 

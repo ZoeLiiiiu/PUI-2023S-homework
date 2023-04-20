@@ -39,54 +39,71 @@
     <!--page content start here-->
     <!--a section for the notable project-->
     <!-- overlay the element-->
+    <!--should have a better way to figure out the link-->
     <div class = "white-box-on-gallery">
     </div>
-    <a href="./project-detail.html?project=Sledding Hill Culinary Center">
       <div class="thumbnail-container-notable-project">
         <div class = "notable-project">
-          <img src="asset/Sledding Hill Culinary Center.jpg" alt = "Sledding Hill Culinary Center">
+          <a href="./project-detail.html?project=Sledding Hill Culinary Center">
+            <img src="asset/Sledding Hill Culinary Center.jpg" alt = "Sledding Hill Culinary Center">    
+          </a>
         </div>
+        <a href="./project-detail.html?project=Sledding Hill Culinary Center">
           <div class = "overlay-notable">
             <div class="information-on-gallery">
               <p class="project-title-on-gallery">Sledding Hill Culinary Center</p>
               <p class="project-title-on-gallery">2022</p>
             </div>
-          </div>
+        </div>
+        </a>
       </div>
-    </a>
 
     <!--a section for other projects-->
     <div class = "projects">
       <div class = "row">
-        <a href="./project-detail.html?project=S. Craig St. Theater">
-          <div class = "bigger-item" id = "theater">
-            <img src="asset/S. Craig St. Theater.jpg" alt = "S. Craig St. Theater">
-              <div>
-                <div class = "overlay-bigger">
-                  <div class="information-on-gallery">
-                    <p class="project-title-on-gallery">S. Craig St. Theater</p>
-                    <p class="project-title-on-gallery">2022</p>
-                  </div>
-                </div>
+        <a class = "link-bigger" href="./project-detail.html?project=S. Craig St. Theater">
+          <div class = "bigger-item-container" id = "theater">
+            <div class = "bigger-item">
+              <img src="asset/S. Craig St. Theater.jpg" alt = "S. Craig St. Theater">
+            </div>
+            <div class = "overlay-bigger">
+              <div class="information-on-gallery">
+                <p class="project-title-on-gallery">S. Craig St. Theater</p>
+                <p class="project-title-on-gallery">2022</p>
               </div>
+            </div>
           </div>
         </a>
 
-        <div class = "smaller-item" id = "resting-spot">
-          <a href="./project-detail.html?project=Resting Spot in Boreal Forest"><img src="asset/Resting Spot in Boreal Forest.jpg" alt = "Resting Spot in Boreal Forest"></a>
-        </div>
+        <!--
+        <a class = "link-smaller" href="./project-detail.html?project=Resting Spot in Boreal Forest">
+          <div class = "smaller-item-container" id = "resting-spot">
+            <div class = "smaller-item">
+              <img src="asset/Resting Spot in Boreal Forest.jpg" alt = "Resting Spot in Boreal Forest">
+            </div>
+            <div class = "overlay-smaller">
+              <div class="information-on-gallery">
+                <p class="project-title-on-gallery">S. Craig St. Theater</p>
+                <p class="project-title-on-gallery">2022</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        -->
       </div>
       
+      <!--
       <div class = "row">
-        <div class = "smaller-item" id = "claw">
+        <div class = "smaller-item-container" id = "claw">
           <a href="./project-detail.html?project=Claw"><img src="asset/Claw.png" alt = "Claw"></a>
         </div>
  
-        <div class = "bigger-item" id = "mobile-home">
+        <div class = "bigger-item-container" id = "mobile-home">
           <a href="./project-detail.html?project=Mobile Home"><img src="asset/Mobile Home.jpg" alt = "double-chocolate-cinnamon-roll"></a>
         </div>
       </div>
     </div>
+  -->
 
     <!--contact information start here-->
     <div class = "contact-information">
