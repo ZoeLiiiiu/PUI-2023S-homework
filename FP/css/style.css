@@ -79,6 +79,7 @@
         background-color: lightgray;
         padding: 20px 20px 50px 20px;
         padding-left: 5%;
+        margin-top: 30px;
     }
 
     .contact-information-sub-section{
@@ -173,6 +174,7 @@
     }
 
     /*why this is not working?*/
+    /*
     .thumbnail-container-notable-project:hover + .overlay-notable{
         background-color:white;
         opacity: 0.7;
@@ -183,6 +185,7 @@
         position: absolute;
         transition-duration: 0.1s
     }
+    */
 
     .overlay-notable:hover{
         background-color:white;
@@ -198,8 +201,19 @@
     /*THIS PART IS PROBLEMATIC!! FIX IT LATTER!!*/
 
     .overlay-bigger{
-        background-color: yellow;
-        opacity: 1;
+        background-color: white;
+        opacity: 0;
+        width: calc(100% - 100px);
+        margin: 50px;
+        height: 300px;
+        z-index: 1;
+        position: absolute;
+        text-align: center;
+    }
+
+    .overlay-bigger:hover{
+        background-color: white;
+        opacity: 0.7;
         width: calc(100% - 100px);
         margin: 50px;
         height: 300px;
@@ -209,8 +223,19 @@
     }
 
     .overlay-smaller{
-        background-color: yellow;
-        opacity: 1;
+        background-color: white;
+        opacity: 0;
+        width: calc(100% - 100px);
+        margin: 50px;
+        height: 300px;
+        z-index: 1;
+        position: absolute;
+        text-align: center;
+    }
+
+    .overlay-smaller:hover{
+        background-color: white;
+        opacity: 0.7;
         width: calc(100% - 100px);
         margin: 50px;
         height: 300px;
