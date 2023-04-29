@@ -3,6 +3,10 @@
 
     /* set up default elements for all webpage */
 
+    .test-white-box{
+        height: 1000px;
+    }
+
     body {
         font-family: Roboto,Arial,Helvetica,sans-serif;
     }
@@ -91,7 +95,9 @@
 
     .contact-text{
         text-decoration: underline;
+        font-size: 18px;
     }
+
 
     #contact-me{
         font-weight: 600
@@ -117,9 +123,29 @@
         margin-top: 10px;
         margin-left: 20%;
         margin-bottom: 10px;
+        padding-left: 0px;
+        border-left: 0px;
+        text-align: left;
     }
 
+    .title-on-about-me{
+        width:60%;
+        font-size: 28px;
+        /*control the spacing between title and navigator*/
+        margin-top: 10px;
+        margin-left: calc(20% - 125px);
+        margin-bottom: 10px;
+        padding-left: 0px;
+        border-left: 0px;
+        text-align: left;
+    }
+
+
     .title p{
+        font-size: 28px;
+    }
+
+    .title-on-about-me p{
         font-size: 28px;
     }
 

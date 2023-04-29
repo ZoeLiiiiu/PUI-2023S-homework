@@ -4,9 +4,15 @@
     <title>Art Gallery</title>
     <!--css-->
     <link rel ="stylesheet" href = "css/style.css">
+    <link rel ="stylesheet" href = "css/style-mobile.css">
     <!--javascript-->
     <script defer src="js/navigator.js"></script>
-    <meta charset="utf-8">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   </head>
   
   <body id="art">
@@ -33,36 +39,107 @@
     
     <!--page content start here-->
     <!--a section for the notable project-->
-    <div class = "notable-project">
-      <a href="./project-detail.html?project=Water"><img src="asset/Water.jpg" alt = "Water"></a>
+    <!-- overlay the element-->
+    <!--should have a better way to figure out the link-->
+    <div class = "white-box-on-gallery">
     </div>
+    <a href="./project-detail.html?project=Water">
+      <div class="thumbnail-container-notable-project">
+        <div class = "notable-project">
+            <img src="asset/Water.jpg" alt = "The Mix Media Project: Water">    
+        </div>
+          <div class = "overlay-notable">
+            <div class="information-on-gallery">
+              <p class="project-title-on-gallery">Water</p>
+              <p class="project-title-on-gallery-large-only">2020</p>
+            </div>
+          </div>
+      </div>
+    </a>
+
     <!--a section for other projects-->
     <div class = "projects">
       <div class = "row">
-        
-        <div class = "bigger-item" id = "water-town">
-          <a href="./project-detail.html?project=Water Town"><img src="asset/Water Town.jpg" alt = "Water Town"></a>
+        <div class = "bigger-item-container" id = "hutong-and-soho">
+          <div class = "bigger-item">
+            <img src="asset/Hutong and Soho.jpg" alt = "A Pencil Sketch the hutongs and the galaxy soho in Beijing in an artistic composition">
+          </div>
+          <a class = "link-bigger" href="./project-detail.html?project=Hutong and Soho">
+            <div class = "overlay-bigger">
+              <div class="information-on-gallery">
+                <p class="project-title-on-gallery">Hutong and Soho</p>
+                <p class="project-title-on-gallery-large-only">2020</p>
+              </div>
+            </div>
+          </a>
         </div>
 
-        <div class = "smaller-item" id = "hutong-soho">
-          <a href="./project-detail.html?project=Hutong and Soho"><img src="asset/Hutong and Soho.jpg" alt = "Hutong and Soho"></a>
+        <div class = "smaller-item-container" id = "water-town">
+          <div class = "smaller-item">
+            <img src="asset/Water Town.jpg" alt = "An acrylic painting shows the abstract geometric shapes in blue and pink">
+          </div>
+          <a href="./project-detail.html?project=Water Town">
+            <div class = "overlay-smaller">
+              <div class="information-on-gallery">
+                <p class="project-title-on-gallery">Water Town</p>
+                <p class="project-title-on-gallery-large-only">2020</p>
+              </div>
+            </div>
+          </a>
         </div>
 
       </div>
       
+    
       <div class = "row">
-
-        <div class = "smaller-item" id = "cathedral">
-          <a href="./project-detail.html?project=Cathedral Facade"><img src="asset/Cathedral Facade.jpg" alt = "Cathedral Facade"></a>
-        </div>
-
-        <div class = "bigger-item" id = "our-old-days">
-          <a href="./project-detail.html?project=Our Old Days"><img src="asset/Our Old Days.jpg" alt = "Our Old Days"></a>
+        <div class = "smaller-item-container" id = "cathedral">
+          <div class = "smaller-item">
+            <img src="asset/Cathedral Facade.jpg" alt = "A pencil sketch showing the facade of a cathedral">
+          </div>
+          <a href="./project-detail.html?project=Cathedral Facade">
+            <div class = "overlay-smaller">
+              <div class="information-on-gallery">
+                <p class="project-title-on-gallery">Cathedral Facade</p>
+                <p class="project-title-on-gallery-large-only">2022</p>
+              </div>
+            </div>
+          </a>
         </div>
  
+        <div class = "bigger-item-container" id = "our-old-days">
+          <div class = "bigger-item">
+            <img src="asset/Our Old Days.jpg" alt = "An acrylic painting in bright color showing a middle school and the snack block nearby">
+          </div>
+          <a class = "link-bigger" href="./project-detail.html?project=Our Old Days">
+            <div class = "overlay-bigger">
+              <div class="information-on-gallery">
+                <p class="project-title-on-gallery">Our Old Days</p>
+                <p class="project-title-on-gallery-large-only">2020</p>
+              </div>
+            </div>
+          </a>
+          
+        </div>
       </div>
-
     </div>
+  
 
+    <!--contact information start here-->
+    <div class = "contact-information">
+      <p id="contact-me">
+        Contact Me
+      </p>
+      <div class = "contact-information-sub-section">
+        <span>&#9993;</span>
+        <a href="mailto:disha@uplers.com" class = "contact-text">
+          shiyueli@andrew.cmu.edu
+        </a>
+      </div>
+      <div class = "contact-information-sub-section">
+        <i class="fa fa-instagram"></i>
+        <a href ="https://www.instagram.com/zoe_liiiiu/" class = "contact-text">Zoe_Liiiu</a>
+      </div>
+    </div>
+  
   </body>
 </html>
