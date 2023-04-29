@@ -311,39 +311,21 @@
 
     .information-on-gallery{
         text-align: center;
-        opacity: 2;
+        margin-top: 100px;
     }
 
-    /*NOT USEFUL FOR NOW
-    /*
-    .projects p {
-        margin: 2px auto 2px auto;
-        text-align: left;
-        margin-left: 4px;
+    .information-on-gallery-notable{
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    .project-title-on-gallery{
+        font-size: 28px;
+    }
+
+    .project-title-on-gallery-large-only{
         font-size: 24px;
     }
-
-    .item-name {
-        text-decoration: underline;
-        text-decoration-color: darkolivegreen;
-        text-decoration-thickness: 0.96px;
-    }
-
-    .individual-item {
-        padding-bottom: 4px;
-        margin-bottom: 52px;
-        width: 300px;
-        margin: auto;
-    } 
-
-    enabling the hover highlight
-    .individual-item:hover {
-        background-color: yellow;
-    }
-
-    .individual-item:hover .item-name{
-        font-weight: 600;
-    }*/
 
     .bigger-item-container{
         width: 60%;
@@ -448,5 +430,5 @@
 }
 
 .resume-and-portfolio{
-    text-decoration: underline    
+    text-decoration: underline;
 }

@@ -131,7 +131,6 @@
     .title-on-about-me{
         margin-left: -70px;
         margin-top: 5px;
-        font-weight: 600;
     }
 
     .title-on-gallery{
@@ -146,12 +145,11 @@
     }
 
     .information-on-gallery-notable p{
-        font-size: 14px;
-        font-weight: 600;
+        font-size: 15px;
         color: black;
     }
 
-    .information-on-gallery-notable p{
+    .information-on-gallery p{
         font-size: 12px;
     }
 
@@ -320,6 +318,15 @@
     #introduction{
         width: 90%;
         margin: auto;
+    }
+
+    .resume-and-portfolio{
+        text-decoration: underline;
+        text-align: center;
+    }
+
+    .self-introduction{
+        margin-bottom: 20px;
     }
 
 }
