@@ -148,6 +148,15 @@
         text-align: left;
     }
 
+    .title-on-gallery{
+        width:100%;
+        font-size: 28px;
+        /*control the spacing between title and navigator*/
+        margin-bottom: 15px;
+        text-align: left;
+        text-align: center;
+    }
+
 
     .title p{
         font-size: 28px;
@@ -435,7 +444,9 @@
 
     #introduction{
         margin-left: 30px;
-        text-align: justify;
     }
 }
 
+.resume-and-portfolio{
+    text-decoration: underline    
+}

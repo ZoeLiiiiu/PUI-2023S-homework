@@ -131,10 +131,28 @@
     .title-on-about-me{
         margin-left: -70px;
         margin-top: 5px;
+        font-weight: 600;
+    }
+
+    .title-on-gallery{
+        text-align: left;
+        margin-left: -70px;
+        margin-top: 5px;
+        margin-bottom: 10px;
     }
 
     .title p{
         font-size: 20px;
+    }
+
+    .information-on-gallery-notable p{
+        font-size: 14px;
+        font-weight: 600;
+        color: black;
+    }
+
+    .information-on-gallery-notable p{
+        font-size: 12px;
     }
 
     /*the style of the gallery page starts here*/
@@ -302,7 +320,6 @@
     #introduction{
         width: 90%;
         margin: auto;
-        text-align: justify;
     }
 
 }
