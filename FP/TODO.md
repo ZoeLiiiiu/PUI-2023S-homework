@@ -6,6 +6,7 @@ Gallery Page:
 1. notable project hovering - not working
 2. refine regular hovering
 3. refine alt text
+4. figure out the click construction, now the image is not clicakble
 
 Project Detail Page:
 1. the quikest way: build the class and finish the navigation

@@ -1,0 +1,12 @@
+@media only screen and (max-width: 599px) {
+    /* For mobile phone: */
+
+    /* set up default elements for all webpage */
+
+
+.logo {
+    width: 50px;
+    margin: 8px 20px 8px 20px;
+    background-color: brown;
+}
+}

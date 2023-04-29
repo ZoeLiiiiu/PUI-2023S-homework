@@ -21,6 +21,8 @@
     }
 
 
+
+
     /* set up header*/
     .header{
         position:fixed;
@@ -75,13 +77,22 @@
 
     /* setup the contact information*/
 
-
-
     .contact-information{
         background-color: lightgray;
         padding: 20px 20px 40px 20px;
         padding-left: 5%;
         margin-top: 30px;
+    }
+
+    .contact-information-on-about-me{
+        background-color: lightgray;
+        padding: 20px 20px 40px 20px;
+        padding-left: 5%;
+        margin-top: 30px;
+        bottom: 0px;
+        position: absolute;
+        right:0px;
+        left: 0px;
     }
 
     .contact-information-sub-section{
@@ -111,16 +122,19 @@
     /*the style of title*/
 
     .title{
-        width:60%;
         font-size: 28px;
         /*control the spacing between title and navigator*/
         margin-top: 10px;
-        margin-left: 20%;
         margin-bottom: 10px;
     }
 
+    .title-on-about-me{
+        margin-left: -70px;
+        margin-top: 5px;
+    }
+
     .title p{
-        font-size: 28px;
+        font-size: 20px;
     }
 
     /*the style of the gallery page starts here*/
@@ -257,7 +271,7 @@
     }
 
     .white-box{
-        height: 120px;
+        height: 50px;
     }
 
     #project-detail-image{
@@ -269,21 +283,26 @@
 
     /*style for About-me starts here*/
     .my-information{
-        width:60%;
+        width:100%;
         margin:auto;
-        display:flex;
-        align-items: flex-end;
     }
     #profile-image{
-        width:600px;
-        height:600px;
+        width:300px;
+        height:300px;
         object-fit: cover;
         object-position: 50% 50%;
+        margin-left: calc(50% - 150px);
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
 
     }
 
     #introduction{
-        margin-left: 30px;
+        width: 90%;
+        margin: auto;
+        text-align: justify;
     }
 
 }
