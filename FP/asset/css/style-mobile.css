@@ -1,0 +1,325 @@
+/*THIS PART IS WORKING!! YEAH!!!! JUST NEED TO REFINE THE STYLE*/
+@media only screen and (max-width: 599px) {
+    /* For mobile phone: */
+
+    /* set up default elements for all webpage */
+
+    body {
+        font-family: Roboto,Arial,Helvetica,sans-serif;
+    }
+
+    p {
+        font-size: 11px;
+    }
+
+    /*adjust the style of hyper-linl*/
+    /*source: https://www.w3schools.com/css/css_link.asp*/
+    a {
+        color: inherit;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+
+
+
+    /* set up header*/
+    .header{
+        position:fixed;
+        background-color: white;
+        min-width: 100%;
+        margin-top: -10px;
+        z-index: 2;
+    }
+
+    .logo {
+        width: 20px;
+        margin: 10px;
+    }
+
+    .navigator-and-logo{
+        display:flex;
+        justify-content: flex-end;
+        /*this part enables navigator bar to line up with the right margin of the page*/
+        flex-grow: 1;
+        flex-grow: 1;
+        /*make sure the logo and the text is in the center*/
+        align-items: center;
+        height: 30px;
+        margin-top: 5px;
+    }
+
+    .navigator {
+        /*this part makes sure that logo goes to left margin and navigator goes to right margin*/
+        /*with out it, the logo would go too close to navigator*/
+        flex-grow: 1;
+        text-align: center;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    /*making sure that the correct of navigator is being highlighted*/
+    /*source: https://www.computerhope.com/issues/ch001391.htm*/
+    /*use javascript to fix this part later: https://www.youtube.com/watch?v=mP2LnkOqLHk*/
+
+    .navigator a:hover{
+        font-weight:600;
+        color:gray
+    }
+
+    .navigator a.active {
+        font-weight:600;
+    }
+
+    .navigator-element {
+        margin: 10px 30px 10px 30px;
+    }
+
+    /* setup the contact information*/
+
+    .contact-information{
+        background-color: lightgray;
+        padding: 20px 20px 40px 20px;
+        padding-left: 5%;
+        margin-top: 30px;
+    }
+
+    .contact-information-on-about-me{
+        background-color: lightgray;
+        padding: 20px 20px 40px 20px;
+        padding-left: 5%;
+        margin-top: 30px;
+        bottom: 0px;
+        position: absolute;
+        right:0px;
+        left: 0px;
+    }
+
+    .contact-information-sub-section{
+        display: flex;
+        align-items: center;
+        height: 30px;
+        
+    }
+
+    .contact-text{
+        text-decoration: underline;
+        margin-left: 10px;
+        font-size:11px;
+    }
+
+    #contact-me{
+        font-weight: 600
+    }
+
+    /* setup the icon*/
+    .fa-instagram{
+        color:black
+    }
+
+
+
+    /*the style of title*/
+
+    .title{
+        font-size: 28px;
+        /*control the spacing between title and navigator*/
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .title-on-about-me{
+        margin-left: -70px;
+        margin-top: 5px;
+        font-weight: 600;
+    }
+
+    .title-on-gallery{
+        text-align: left;
+        margin-left: -70px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    .title p{
+        font-size: 20px;
+    }
+
+    .information-on-gallery-notable p{
+        font-size: 14px;
+        font-weight: 600;
+        color: black;
+    }
+
+    .information-on-gallery-notable p{
+        font-size: 12px;
+    }
+
+    /*the style of the gallery page starts here*/
+    .thumbnail-container-notable-project{
+        height: 190px;
+        position: relative;
+    }
+    .white-box-on-gallery{
+        height: 25px;
+    }
+
+    .projects{
+        width:90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    /*this part define the image container size */
+    .notable-project{
+        /*control the distance between notable project and other projects*/
+        z-index: -1;
+        width:100%;
+        object-fit: cover;
+        object-position: 0 70%;
+        height: 180px;
+        overflow: hidden;
+    }
+
+    /* this part define the image size */
+    .notable-project img{
+        width:100%;
+        object-fit: cover;
+        object-position: 0 70%;
+        height: 180px;
+    }
+
+    .overlay-notable{
+        background-color: white;
+        opacity: 0.7;
+        width: 100%;
+        height: 30px;
+        z-index: 1;
+        position: absolute;
+        text-align: center;
+    }
+
+    /*THIS PART IS PROBLEMATIC!! FIX IT LATTER!!*/
+
+    .overlay-bigger{
+        background-color: white;
+        width: calc(100% - 100px);
+        height: 20px;
+        text-align: center;
+        position: absolute;
+    }
+
+    .overlay-smaller{
+        background-color: white;
+        width: calc(100% - 100px);
+        height: 20px;
+        text-align: center;
+        position: absolute;
+    }
+
+
+    .information-on-gallery{
+        text-align: center;
+        opacity: 2;
+    }
+
+    .project-title-on-gallery{
+        margin-top: 5px;
+    }
+
+    .project-title-on-gallery-large-only{
+        display: none;
+    }
+
+
+    .bigger-item-container{
+        overflow: hidden;
+        margin: 35px 15px 25px 15px;
+        height:200px;
+    }
+
+    .bigger-item{
+        width:100%;
+        object-fit: cover;
+        object-position: 0 70%;
+        overflow: hidden;
+        height: 200px;
+        border-radius: 10px;
+    }
+
+    .bigger-item img{
+        margin: auto;
+        object-fit: cover;
+        object-position: 50% 50%;
+        width: 100%;
+        min-height: 200px;
+    }
+
+    .smaller-item-container{
+        height: 200px;
+        overflow: hidden;
+        margin: 35px 15px 25px 15px;
+    }
+
+    .smaller-item{
+        width:100%;
+        object-fit: cover;
+        object-position: 50% 20%;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+
+    .smaller-item img{
+        margin: auto;
+        object-fit: cover;
+        object-position: 50% 20%;
+        width: 100%;
+        min-height: 200px;
+    }
+
+
+
+
+    /*style fo the project-detail-page start here*/
+    .main-content{
+        width: 60%;
+        margin: auto;
+    }
+
+    .white-box{
+        height: 50px;
+    }
+
+    #project-detail-image{
+        width:800px
+    }
+
+
+
+
+    /*style for About-me starts here*/
+    .my-information{
+        width:100%;
+        margin:auto;
+    }
+    #profile-image{
+        width:300px;
+        height:300px;
+        object-fit: cover;
+        object-position: 50% 50%;
+        margin-left: calc(50% - 150px);
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+
+    }
+
+    #introduction{
+        width: 90%;
+        margin: auto;
+    }
+
+}
