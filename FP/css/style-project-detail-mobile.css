@@ -1,0 +1,65 @@
+@media only screen and (max-width: 599px) {
+
+.basic-information{
+  margin-top: 20px;
+}
+
+.basic-information p{
+    margin: 2px;
+    font-style: italic;
+}
+
+.basic-information{
+  margin-bottom: 50px;
+}
+
+.image img{
+    max-width: 80%;
+    text-align: center;
+    margin-left: 10%;
+    border-radius: 10px;
+}
+
+.image{
+  margin-bottom: 50px;
+}
+
+.image-flex{
+    justify-content: center;
+}
+
+
+#walk-through{
+    display: none;
+}
+
+.annotation{
+  display: none;
+}
+
+
+.annotation-mobile{
+  display: block;
+  text-align: center;
+  margin: 5px;
+  font-style: italic;
+}
+
+.landscape-images-left{
+  width: 100%;
+}
+
+.landscape-images-right{
+  width: 100%;
+}
+
+.description{
+  margin-bottom: 50px;
+
+}
+
+.big-image{
+  width: calc(70% + 60px);
+  margin-left: calc(15% - 30px);
+}
+}

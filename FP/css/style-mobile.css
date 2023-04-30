@@ -122,16 +122,12 @@
     /*the style of title*/
 
     .title{
-        font-size: 28px;
-        /*control the spacing between title and navigator*/
-        margin-top: 10px;
+        text-align: left;
         margin-bottom: 10px;
-    }
-
-    .title-on-about-me{
         margin-left: -70px;
         margin-top: 5px;
     }
+
 
     .title-on-gallery{
         text-align: left;
@@ -221,6 +217,10 @@
         opacity: 2;
     }
 
+    .information-on-gallery h2, h4{
+        font-weight: 500;
+    }
+
     .project-title-on-gallery{
         margin-top: 5px;
     }
@@ -282,8 +282,10 @@
 
     /*style fo the project-detail-page start here*/
     .main-content{
-        width: 60%;
+        width: 100%;
         margin: auto;
+        margin-left:10px;
+        margin-right: 10px;
     }
 
     .white-box{

@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Product Details Page</title>
+    <title>Architecture Gallery</title>
     <!--css-->
     <link rel ="stylesheet" href = "css/style.css">
     <link rel ="stylesheet" href = "css/style-mobile.css">
+    <link rel = "stylesheet" href="css/style-project-detail.css">
+    <link rel = "stylesheet" href="css/style-project-detail-mobile.css">
+    <link rel = "stylesheet" href="css/style-for-modal.css">
+
     <!--javascript-->
+    <script defer src="js/modalImage.js"></script>
     <script defer src="js/navigator.js"></script>
-    <script defer src="js/javascript.js"></script>
-    <meta charset="utf-8">
+    <!--the script that enables you to send an email-->
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+    <!--icon libraries-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- import the library here-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script>
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js"></script>
-    
+        
     <script src = "js/animation.js"></script>
-
-
 
   </head>
   
   <body id="architecture">
 
-
-        <!--header section-->
+    <!--header section-->
     <!--the header contains logo, navigator, and title if applicable-->
     <div class = "header">
       <div class = "navigator-and-logo">
       <!--create another section to let the logo and the text displayed side by side-->
-        <a href=".architecture-gallery.html"><img class = "logo" src="asset/logo.jpg" alt = "logo"></a>
+        <a href="./architecture-gallery.html"><img class = "logo" src="asset/logo.jpg" alt = "logo of Shiyue's personal website"></a>
         <nav class = "navigator">
           <p class="navigator-element">
             <a data-active = "architecture" href="./architecture-gallery.html">Architecture</a>
@@ -43,28 +50,163 @@
           </p>
         </nav>
       </div>
-      <div class = "title" id="project-title">
-        <p>
-          PlaceHolder
-      </p>
+      <div class = "title">
+        <h1>
+          Sledding Hill Culinary Center
+        </h1>
       </div>
     </div>
-    
+
     <!--main-content section--> 
     <div class = "main-content">
       <div class = "white-box">
       </div>
-      <img id = "project-detail-image" src="asset/Sledding Hill Culinary Center.png" alt = "Sledding Hill Culinary Center">
       <div class="basic-information">
-        <p>
-          basic information place holder
+        <p>Academic Project</p>
+        <p>Architecture Design Studio 3</p>
+        <p>Time: 10/2022-12/2022</p>
+        <p>Duration: 9 weeks</p>
+        <p>Instructor: Elijah Hughes</p>
+        <p>Project Partner(s): Camila Martinez</p>
+        <p>Software Used: Rhino, Adobe Photoshop, Adobe Illustrator, Enscape</p>
+      </div>
+
+      <div class = "image">
+        <div class = "image-flex">
+          <!-- Trigger the Modal -->
+          <img id="experiential" src="asset/culinary-center/experiential-drawing.png" alt="Experiential Drawing">
+
+          <img id="walk-through" src="asset/culinary-center/walk-through.png" alt="Walk through Drawing">
+
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+
+          <!-- The Close Button -->
+          <span class="close" id = "close1">&times;</span>
+
+          <!-- Modal Content (The Image) -->
+          <!-- create two for two different styles-->
+          <img class="modal-content-for-portrait" id="img01" alt="container for modal image">
+
+
+          <!-- Modal Caption (Image Text) -->
+          <div id="caption" class = "caption"></div>
+          </div>
+
+         </div>
+
+         <div>
+          <p class = "annotation"> the Experiential Drawing (Left) and the Walk-through Drawing (Right)</p>
+         </div>
+
+      </div>
+
+
+      <div class="description">
+        <p>The project is a culinary center located on Sledding Hill in Pittsburgh. 
+          The building has both public and private areas. 
+          The public area opens to a lobby, such leads to rooms such as a café and a dining room. 
+          Further back, in the more private area, rooms like classrooms, lecture theaters, teaching kitchens, and changing rooms can be found. 
         </p>
       </div>
-      <div class="description">
-        <p>description place holder</p>
+
+      <div class = "image">
+        <div class = "image-flex">
+          <!-- Trigger the Modal -->
+          <img class = "landscape-images-left" id="plan-level-1" src="asset/culinary-center/plan-level-1.png" alt="Groud Level Plan">
+          <div class = "annotation-mobile-container">
+            <p class = "annotation-mobile"> Groud Level Plan</p>
+          </div>
+          <img class = "landscape-images-right" id="plan-level-2" src="asset/culinary-center/plan-level-2.png" alt="Second Level Plan">
+          <div class = "annotation-mobile-container">
+            <p class = "annotation-mobile"> Second Level Plan</p>
+          </div>
+        </div>
+
+        <div>
+          <p class = "annotation"> Groud Level Plan (Left) and Second Level Plan (Right)</p>
+        </div>
+
       </div>
 
+      <div class="description">
+        <p>We have two design strategies: 
+          1. blurring the boundary between interior and exterior to bring surrounding natural features in, and 2
+          . making the building more inviting to the public. Our building organization has two focal points with a circulation spine tying them together. 
+          The two focal points are the public area and the outdoor courtyard, which implements the two strategies: community and nature. 
+          The two strategies come from the philosophy of our chef, Jeong Kwan. 
+          She believes that food has the power to connect the community and emphasizes the importance of taking the ingredients from nature.
+        </p>
+      </div>
+
+      <div class = "image">
+        <div class = "image-flex">
+          <!-- Trigger the Modal -->
+          <img class = "landscape-images-left" id="axon-1" src="asset/culinary-center/axon-1.png" alt="Southeast Axonometric">
+          <img class = "landscape-images-right" id="axon-2" src="asset/culinary-center/axon-2.png" alt="Southwest Axonometric">
+        </div>
+
+        <div>
+          <p class = "annotation"> Southeast Axonometric (Left) and Southwest Axonometric (Right)</p>
+        </div>
+
+      </div>
+
+
+      <div class="description">
+        <p>The most public-facing part of the site is located near the intersection of the main street and the trail.
+          This area includes the lobby and the cafe. 
+          The walls of the cafe and lobby are made of glass so that they are visible and accessible to the public. 
+          The outdoor seating and the farmer's market serve as an extension of the lobby, connecting the main road and serving to further bring in the community.
+        </p>
+      </div>
+
+      <div class = "image">
+
+        <img class = "big-image" id = "conceptual-diagram" src = "asset/culinary-center/conceptual-diagam-01.png" alt = "The Conceptual Diagram Showing Design Process">
+        
+        <!-- The Modal -->
+        <div id="myModal2" class="modal">
+
+         <!-- The Close Button -->
+         <span class="close" id = "close2">&times;</span>
+
+         <!-- Modal Content (The Image) -->
+         <!-- create two for two different styles-->
+         <img class="modal-content-for-landscape" id="img02" alt = "container for the second modal image">
+
+
+         <!-- Modal Caption (Image Text) -->
+         <div id="caption2" class = "caption"></div>
+         </div>
+
+         <div>
+          <p class = "annotation"> Southeast Axonometric (Left) and Southwest Axonometric (Right)</p>
+        </div>
+
+     </div>
+    
     </div>
 
-  </body>
+
+  <!--contact information start here-->
+    <div class = "contact-information">
+      <p id="contact-me">
+        Contact Me
+      </p>
+      <div class = "contact-information-sub-section">
+        <span>&#9993;</span>
+        <a href="mailto:disha@uplers.com" class = "contact-text">
+          shiyueli@andrew.cmu.edu
+        </a>
+      </div>
+      <div class = "contact-information-sub-section">
+        <i class="fa fa-instagram"></i>
+        <a href ="https://www.instagram.com/zoe_liiiiu/" class = "contact-text">Zoe_Liiiu</a>
+      </div>
+    </div>
+  
+
+
+    </body>
 </html>

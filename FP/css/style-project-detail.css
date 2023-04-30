@@ -1,0 +1,67 @@
+@media only screen and (min-width: 600px) {
+
+.basic-information p{
+    margin: 3px;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+.basic-information{
+  margin-bottom: 50px;
+}
+
+.image img{
+    max-width: 100%;
+    text-align: center;
+}
+
+.image{
+  margin-bottom: 50px;
+}
+
+.image-flex{
+    display:flex;
+    justify-content: center;
+}
+
+#experiential{
+    width: 50%;
+    margin-right: 30px;
+}
+
+#walk-through{
+    width:20%;
+    margin-left: 30px;
+}
+
+.annotation{
+  opacity: 0.8;
+  text-align: center;
+  margin: 20px;
+  font-style: italic;
+}
+
+.landscape-images-left{
+  width: 35%;
+  margin-right: 30px;
+}
+
+.landscape-images-right{
+  width: 35%;
+  margin-left: 30px;
+}
+
+.description{
+  margin-bottom: 50px;
+
+}
+
+.big-image{
+  width: calc(70% + 60px);
+  margin-left: calc(15% - 30px);
+}
+}
+
+.annotation-mobile{
+  display: none;
+}
