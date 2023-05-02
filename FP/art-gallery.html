@@ -2,23 +2,26 @@
 <html lang="en">
   <head>
     <title>Art Gallery</title>
-    <!--css-->
-    <link rel ="stylesheet" href = "css/style.css">
-    <link rel ="stylesheet" href = "css/style-mobile.css">
-    <!--javascript-->
-    <script defer src="js/navigator.js"></script>
-
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- import the library here-->
+    <!--css-->
+    <!--responsive design: style for laptop-->
+    <link rel ="stylesheet" href = "css/style.css">
+    <!--responsive design: style for mobile device-->
+    <link rel ="stylesheet" href = "css/style-mobile.css">
+    <!--icon libraries-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- style of the animation text from textillate-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!--javascript-->
+    <!--the behavior of navigation bar-->
+    <script defer src="js/navigator.js"></script>
+    <!-- import the library: textillate.js-->
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script>
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js"></script>
-        
+    <!--define the animation-->        
     <script src = "js/animation.js"></script>
 
 
@@ -52,19 +55,23 @@
     </div>
     
     <!--page content start here-->
+
+    <!-- the whitebox div make the main contant section not overlapping the navigation section -->
+    <div class = "white-box"></div>
+
     <!--a section for the notable project-->
-    <!-- overlay the element-->
-    <!--should have a better way to figure out the link-->
-    <div class = "white-box">
-    </div>
     <a href="./water.html">
+      <!--the div that contain all the contents of the notable project-->
       <div class="thumbnail-container-notable-project">
+        <!--the div that contain the image-->
         <div class = "notable-project">
             <img src="asset/art-gallery/water.jpg" alt = "The Mix Media Project: Water">    
         </div>
+        <!--the white box with information-->
           <div class = "overlay-notable">
-            <div class="information-on-gallery-notable">
-              <h2 class="project-title-on-gallery-notable">Water</h2>
+            <!--the div contain information-->
+            <div class="information-on-gallery">
+              <h2 class="project-title-on-gallery">Water</h2>
               <h3 class="project-title-on-gallery-large-only">2020</h3>
             </div>
           </div>
@@ -73,64 +80,80 @@
 
     <!--a section for other projects-->
     <div class = "projects">
+      <!--the rows that contain a bigger container and a small container-->
       <div class = "row">
+        <!--the bigger item-->
         <div class = "bigger-item-container" id = "hutong-and-soho">
           <a class = "link-bigger" href="./hutong-and-soho.html">
+            <!--the div that contain the bigger item image-->
             <div class = "bigger-item">
               <img src="asset/art-gallery/hutong-and-soho.jpg" alt = "A Pencil Sketch the hutongs and the galaxy soho in Beijing in an artistic composition">
             </div>
-              <div class = "overlay-bigger">
-                <div class="information-on-gallery">
-                  <h4 class="project-title-on-gallery">Hutong and Soho</h4>
-                  <h5 class="project-title-on-gallery-large-only">2020</h5>
-                </div>
+            <!--the white box with information-->
+            <div class = "overlay-bigger">
+              <!--the div contain information-->
+              <div class="information-on-gallery">
+                <h4 class="project-title-on-gallery">Hutong and Soho</h4>
+                <h5 class="project-title-on-gallery-large-only">2020</h5>
               </div>
+            </div>
           </a>
         </div>
 
+         <!--the smaller item-->
         <div class = "smaller-item-container" id = "water-town">
           <a href="./water-town.html">
+            <!--the div that contain the smaller item image-->
             <div class = "smaller-item">
               <img src="asset/art-gallery/water-town.jpg" alt = "An acrylic painting shows the abstract geometric shapes in blue and pink">
             </div>
-              <div class = "overlay-smaller">
-                <div class="information-on-gallery">
-                  <h4 class="project-title-on-gallery">Water Town</h4>
-                  <h5 class="project-title-on-gallery-large-only">2020</h5>
-                </div>
+            <!--the white box with information-->
+            <div class = "overlay-smaller">
+              <!--the div contain information-->
+              <div class="information-on-gallery">
+                <h4 class="project-title-on-gallery">Water Town</h4>
+                <h5 class="project-title-on-gallery-large-only">2020</h5>
               </div>
+            </div>
           </a>
         </div>
 
       </div>
       
-    
+      <!--the smaller item-->
       <div class = "row">
         <div class = "smaller-item-container" id = "cathedral">
           <a href="./cathedral-facade.html">
+            <!--the div that contain the smaller item image-->
             <div class = "smaller-item">
               <img src="asset/art-gallery/cathedral-facade.jpg" alt = "A pencil sketch showing the facade of a cathedral">
             </div>
-              <div class = "overlay-smaller">
-                <div class="information-on-gallery">
-                  <h4 class="project-title-on-gallery">Cathedral Facade</h4>
-                  <h5 class="project-title-on-gallery-large-only">2022</h5>
-                </div>
+            <!--the white box with information-->
+            <div class = "overlay-smaller">
+              <!--the div contain information-->
+              <div class="information-on-gallery">
+                <h4 class="project-title-on-gallery">Cathedral Facade</h4>
+                <h5 class="project-title-on-gallery-large-only">2022</h5>
               </div>
+            </div>
           </a>
         </div>
- 
+        
+        <!--the bigger item-->
         <div class = "bigger-item-container" id = "our-old-days">
           <a class = "link-bigger" href="./our-old-days.html">
+            <!--the div that contain the smaller item image-->
             <div class = "bigger-item">
               <img src="asset/art-gallery/our-old-days.jpg" alt = "An acrylic painting in bright color showing a middle school and the snack block nearby">
             </div>
-              <div class = "overlay-bigger">
-                <div class="information-on-gallery">
-                  <h4 class="project-title-on-gallery">Our Old Days</h4>
-                  <h5 class="project-title-on-gallery-large-only">2020</h5>
-                </div>
+            <!--the white box with information-->
+            <div class = "overlay-bigger">
+              <!--the div contain information-->
+              <div class="information-on-gallery">
+                <h4 class="project-title-on-gallery">Our Old Days</h4>
+                <h5 class="project-title-on-gallery-large-only">2020</h5>
               </div>
+            </div>
           </a>
           
         </div>
@@ -144,12 +167,15 @@
         Contact Me
       </p>
       <div class = "contact-information-sub-section">
+        <!--implement the mail icon-->
         <span>&#9993;</span>
-        <a href="mailto:disha@uplers.com" class = "contact-text">
+        <!--enable the user to send me a email-->
+        <a href="mailto:shiyueli@andrew.cmu.edu" class = "contact-text">
           shiyueli@andrew.cmu.edu
         </a>
       </div>
       <div class = "contact-information-sub-section">
+         <!--implement the ins icon-->
         <i class="fa fa-instagram"></i>
         <a href ="https://www.instagram.com/zoe_liiiiu/" class = "contact-text">Zoe_Liiiu</a>
       </div>

@@ -1,8 +1,8 @@
+/*Responsive Design: for tablets*/
+/*set up the style of projects gallery page and profile page*/
 @media only screen and (min-width: 600px) {
-    /* For tablets: */
 
     /* set up default elements for all webpage */
-
 
     body {
         font-family: Roboto,Arial,Helvetica,sans-serif;
@@ -21,7 +21,9 @@
     }
 
 
+
     /* set up header*/
+
     .header{
         position:fixed;
         background-color: white;
@@ -57,8 +59,6 @@
 
     /*making sure that the correct of navigator is being highlighted*/
     /*source: https://www.computerhope.com/issues/ch001391.htm*/
-    /*use javascript to fix this part later: https://www.youtube.com/watch?v=mP2LnkOqLHk*/
-
     .navigator a:hover{
         font-weight:600;
         color:gray
@@ -72,9 +72,9 @@
         margin: 30px 50px 30px 50px;
     }
 
+
+
     /* setup the contact information*/
-
-
 
     .contact-information{
         background-color: lightgray;
@@ -82,11 +82,13 @@
         padding-left: 5%;
         margin-top: 30px;
     }
-
+    
+    /*apply to the pages where on labtop the user need to scroll down to see the whole page, but on mobile device the users do not*/
     #contact-information-bottom-exception{
         position: relative;
     }
 
+    /*apply to the page that the user do not need to scroll, make sure the contact information is at the bottom of the page*/
     .contact-information-bottom{
         background-color: lightgray;
         padding: 20px 20px 50px 20px;
@@ -97,7 +99,8 @@
         left: 0;
         right: 0;
     }
-
+    
+    /* make sure the sub-section is lineup properly*/
     .contact-information-sub-section{
         display: flex;
         align-items: center;
@@ -105,35 +108,29 @@
         
     }
 
+    /* use the underline to indicate the texts are clickable*/
     .contact-text{
         text-decoration: underline;
         font-size: 18px;
+        margin-left: 10px;
     }
 
-
+    /*give the contact me title some specific style*/
     #contact-me{
         font-weight: 600
-    }
-
-    /* setup the icon*/
-    .fa-instagram{
-        color:black
-    }
-
-    .contact-text{
-        margin-left: 10px;
     }
 
 
 
     /*the style of title*/
 
-
+    /*apply to titles on project detail and about-me page*/
     .title{
         width:60%;
         font-size: 28px;
         /*control the spacing between title and navigator*/
         margin-top: 10px;
+        /* make sure the title line-up with the content*/
         margin-left: calc(20% - 140px);
         margin-bottom: 10px;
         padding-left: 0px;
@@ -141,29 +138,27 @@
         text-align: left;
     }
 
+    /*apply to titles on project gallery and about-me page*/
     .title-on-gallery{
         width:100%;
         font-size: 28px;
         /*control the spacing between title and navigator*/
         margin-bottom: 15px;
         text-align: left;
+        /*center the title*/
         text-align: center;
     }
 
 
-    .title p{
-        font-size: 28px;
-    }
-
-    .title-on-about-me p{
-        font-size: 28px;
-    }
 
     /*the style of the gallery page starts here*/
+
     .thumbnail-container-notable-project{
         height: 425px;
         position: relative;
     }
+
+    /*define the height of the white-box to make sure the navigation bar and the page content wouldn't overlap*/
     .white-box-on-gallery{
         height: 60px;
     }
@@ -180,11 +175,11 @@
         justify-content: space-evenly;
     }
 
-
     .notable-project{
         /*control the distance between notable project and other projects*/
         margin-bottom: 50px;
         position: absolute;
+        /*let the notable project image go at the bottoms when overlap happening*/
         z-index: -1;
         width:100%;
         object-fit: cover;
@@ -192,6 +187,7 @@
         height: 400px;
     }
 
+    /*define the style of the notable-project img*/
     .notable-project img{
         width:100%;
         object-fit: cover;
@@ -199,16 +195,20 @@
         height: 400px;
     }
 
+    /*define style of the white-box overlaying on the notable project image*/
     .overlay-notable{
         background-color: white;
+        /*not display unless hovering*/
         opacity: 0;
         width: calc(100% - 600px);
         margin: 50px 300px 50px 300px;
         height: 300px;
+        /*go on top while overlaping*/
         z-index: 1;
         position: absolute;
     }
 
+    /*while hovering on the notable project, the white box contains information will show up*/
     .thumbnail-container-notable-project:hover .overlay-notable{
         background-color:white;
         opacity: 0.7;
@@ -220,18 +220,22 @@
         transition-duration: 0.1s
     }
 
+    /*define style of the white-box overlaying on the bigger project image*/
     .overlay-bigger{
         background-color: white;
+        /*not display unless hovering*/
         opacity: 0;
         width: calc(100% - 100px);
         margin: 50px;
         height: 300px;
+        /*go on top while overlaping*/
         z-index: 1;
         position: absolute;
         text-align: center;
     }
 
-    .overlay-bigger:hover{
+    /*while hovering on the project, the white box contains information will show up*/
+    .bigger-item-container:hover .overlay-bigger{
         background-color: white;
         opacity: 0.7;
         width: calc(100% - 100px);
@@ -242,6 +246,7 @@
         text-align: center;
     }
 
+    /*define style of the white-box overlaying on the smaller project image*/
     .overlay-smaller{
         background-color: white;
         opacity: 0;
@@ -253,7 +258,8 @@
         text-align: center;
     }
 
-    .overlay-smaller:hover{
+    /*while hovering on the project, the white box contains information will show up*/
+    .smaller-item-container:hover .overlay-smaller{
         background-color: white;
         opacity: 0.7;
         width: calc(100% - 100px);
@@ -264,31 +270,25 @@
         text-align: center;
     }
 
+    /*define the style of project information in white box*/
     .information-on-gallery{
         text-align: center;
         margin-top: 100px;
     }
 
-    .information-on-gallery-notable{
-        text-align: center;
-        margin-top: 100px;
-    }
-
+    /*define the project title font size*/
     .project-title-on-gallery{
         font-size: 28px;
         font-weight: 500;
     }
 
-    .project-title-on-gallery-notable{
-        font-size: 28px;
-        font-weight: 500;
-    }
-
+    /*define the font size of the year*/
     .project-title-on-gallery-large-only{
         font-size: 24px;
         font-weight: 500;
     }
 
+    /*define the size of bigger item container to add hiearchy to the page*/
     .bigger-item-container{
         width: 60%;
         overflow: hidden;
@@ -296,16 +296,16 @@
         position:relative
     }
 
+    /*define the container for the bigger item image*/
     .bigger-item{
         margin-bottom: 50px;
         position: absolute;
+        /*make sure it is at the bottom when overlay*/
         z-index: -1;
-        width:100%;
-        object-fit: cover;
-        object-position: 0 70%;
         height: 400px;
     }
 
+    /*define the style of bigger item image*/
     .bigger-item img{
         margin: auto;
         object-fit: cover;
@@ -313,6 +313,7 @@
         width: 100%;
     }
 
+    /*define the size of bigger item container to add hiearchy to the page*/
     .smaller-item-container{
         width: 40%;
         overflow: hidden;
@@ -320,77 +321,57 @@
         position: relative
     }
 
+    /*define the container for the smaller item image*/
     .smaller-item{
         margin-bottom: 50px;
         position: absolute;
+        /*make sure it is at the bottom when overlay*/
         z-index: -1;
-        width:100%;
-        object-fit: cover;
-        object-position: 0 70%;
         height: 400px;
     }
 
-
+    /*define the style of bigger item image*/
     .smaller-item img{
         margin: auto;
         object-fit: cover;
         object-position: 50% 50%;
         width: 100%;
-        min-height: 400px;
+        /*add this part here because some smaller-item image has a width way larger than the height*/
+        /*make sure the image fully occupied the container*/
+        min-height: 100%;
     }
 
-    .notable-project{
-        /*control the distance between notable project and other projects*/
-        margin-bottom: 50px;
-        position: absolute;
-        z-index: -1;
-        width:100%;
-        object-fit: cover;
-        object-position: 0 70%;
-        height: 400px;
-    }
-
-
-
-
-
-    /*style fo the project-detail-page start here*/
-    .main-content{
-        width: 60%;
-        margin: auto;
-    }
-
+    /*define the height of the white box to avoid the main content overlap the navigation bar*/
     .white-box{
         height: 120px;
     }
 
-    #project-detail-image{
-        width:800px
-    }
-
-
 
 
     /*style for About-me starts here*/
+
+    /* the container that contain the profile picture, the self-introduction text, and the link to resume and portfolio*/
     .my-information{
         width:60%;
         margin:auto;
         display:flex;
         align-items: flex-end;
     }
+
     #profile-image{
         width:600px;
         height:600px;
         object-fit: cover;
         object-position: 50% 50%;
-
     }
 
     #introduction{
+        /*define the margin between the self-introduction text and the profile image*/
         margin-left: 30px;
     }
-}
 
-.resume-and-portfolio{
-    text-decoration: underline;
+    .resume-and-portfolio{
+        /*make the link to resume and portfolio underline  to indicate that here is an active link*/
+        text-decoration: underline;
+    }
 }

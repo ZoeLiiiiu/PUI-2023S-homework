@@ -1,5 +1,10 @@
 @media only screen and (min-width: 600px) {
 
+.main-content{
+    width: 60%;
+    margin: auto;
+}
+
 .basic-information p{
     margin: 3px;
     opacity: 0.8;

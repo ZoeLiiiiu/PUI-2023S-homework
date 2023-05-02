@@ -1,6 +1,6 @@
-/*THIS PART IS WORKING!! YEAH!!!! JUST NEED TO REFINE THE STYLE*/
+/*Responsive Design: for tablets*/
+/*set up the style of projects gallery page and profile page*/
 @media only screen and (max-width: 599px) {
-    /* For mobile phone: */
 
     /* set up default elements for all webpage */
 
@@ -75,8 +75,11 @@
         margin: 10px 30px 10px 30px;
     }
 
+
+
     /* setup the contact information*/
 
+    /*apply to the page that the user need to scroll*/
     .contact-information{
         background-color: lightgray;
         padding: 20px 20px 40px 20px;
@@ -84,6 +87,7 @@
         margin-top: 30px;
     }
 
+    /*apply to the page that the user do not need to scroll, make sure the contact information is at the bottom of the page*/
     .contact-information-bottom{
         background-color: lightgray;
         padding: 20px 20px 40px 20px;
@@ -95,6 +99,7 @@
         left: 0px;
     }
 
+    /* make sure the sub-section is lineup properly*/
     .contact-information-sub-section{
         display: flex;
         align-items: center;
@@ -102,28 +107,28 @@
         
     }
 
+    /* use the underline to indicate the texts are clickable*/
     .contact-text{
         text-decoration: underline;
         margin-left: 10px;
         font-size:11px;
     }
 
+    /*give the contact me title some specific style*/
     #contact-me{
         font-weight: 600
-    }
-
-    /* setup the icon*/
-    .fa-instagram{
-        color:black
     }
 
 
 
     /*the style of title*/
 
+    /*apply to titles on project gallery and about-me page*/
     .title{
         text-align: left;
+        /*control the spacing between title and navigator*/
         margin-bottom: 10px;
+        /* make sure the title line-up with the content*/
         margin-left: -70px;
         margin-top: 5px;
     }
@@ -132,6 +137,7 @@
     .title-on-gallery{
         text-align: left;
         margin-left: -70px;
+        /*control the spacing between title and navigator*/
         margin-top: 5px;
         margin-bottom: 10px;
     }
@@ -140,31 +146,41 @@
         font-size: 20px;
     }
 
+
+
+    /*the style of the gallery page starts here*/
+
+    /*define the title of the notable project*/
     .project-title-on-gallery-notable{
         font-size: 15px;
         color: black;
     }
 
+    /*define the title of the notable project*/
     .project-title-on-gallery {
+        /* the font size is a bit smaller than the notable project to emphasis hiearchy*/
         font-size: 12px;
     }
 
-    /*the style of the gallery page starts here*/
-    .thumbnail-container-notable-project{
-        height: 190px;
-        position: relative;
-    }
-    .white-box-on-gallery{
-        height: 25px;
+    /*define the height of the white-box, make sure the navigation bar and the main content do not overlap*/
+    .white-box{
+        height: 50px;
     }
 
+    /*define the width of other projects, let the width be smaller than the notable project to empahsis hiearchy*/
     .projects{
         width:90%;
         margin-left: 5%;
         margin-right: 5%;
     }
 
-    /*this part define the image container size */
+     /*define theh style of the container that contain everything of the notable project*/
+    .thumbnail-container-notable-project{
+        height: 190px;
+        position: relative;
+    }
+
+    /*define the image container size */
     .notable-project{
         /*control the distance between notable project and other projects*/
         z-index: -1;
@@ -175,7 +191,7 @@
         overflow: hidden;
     }
 
-    /* this part define the image size */
+    /* define the notable image size */
     .notable-project img{
         width:100%;
         object-fit: cover;
@@ -183,17 +199,15 @@
         height: 180px;
     }
 
+    /*those div doesn't overlay anymore, now they are the regular container of the project titles*/
     .overlay-notable{
         background-color: white;
-        opacity: 0.7;
         width: 100%;
         height: 30px;
         z-index: 1;
         position: absolute;
         text-align: center;
     }
-
-    /*THIS PART IS PROBLEMATIC!! FIX IT LATTER!!*/
 
     .overlay-bigger{
         background-color: white;
@@ -214,21 +228,21 @@
 
     .information-on-gallery{
         text-align: center;
-        opacity: 2;
     }
 
     .information-on-gallery h2, h4{
         font-weight: 500;
     }
 
+    /*define the margin between the project image and project title*/
     .project-title-on-gallery{
         margin-top: 5px;
     }
 
+    /*only display the project title, not the project year*/
     .project-title-on-gallery-large-only{
         display: none;
     }
-
 
     .bigger-item-container{
         overflow: hidden;
@@ -268,7 +282,6 @@
         border-radius: 10px;
     }
 
-
     .smaller-item img{
         margin: auto;
         object-fit: cover;
@@ -280,30 +293,15 @@
 
 
 
-    /*style fo the project-detail-page start here*/
-    .main-content{
-        width: 100%;
-        margin: auto;
-        margin-left:10px;
-        margin-right: 10px;
-    }
-
-    .white-box{
-        height: 50px;
-    }
-
-    #project-detail-image{
-        width:800px
-    }
-
-
-
-
     /*style for About-me starts here*/
+
+    /*define the style of the container that contain the profile image, the introduction text, and the link to portfolio and resume*/
     .my-information{
         width:100%;
         margin:auto;
     }
+
+    /*define the style of the profile image*/
     #profile-image{
         width:300px;
         height:300px;
@@ -314,15 +312,17 @@
         margin-top: 20px;
         margin-bottom: 20px;
         border-radius: 10px;
-
     }
 
+    /*define the style of the introduction paragraph*/
     #introduction{
+        /*adjust the margin*/
         width: 90%;
         margin: auto;
     }
 
     .resume-and-portfolio{
+        /*make sure the link to resume and profile are underlined to indicate that the link is active*/
         text-decoration: underline;
         text-align: center;
     }

@@ -1,5 +1,14 @@
 @media only screen and (max-width: 599px) {
 
+  
+
+.main-content{
+  width: 100%;
+  margin: auto;
+  margin-left:10px;
+  margin-right: 10px;
+}
+
 .basic-information{
   margin-top: 20px;
 }
