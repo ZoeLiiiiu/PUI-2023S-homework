@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Water Towns in “Jiangnan”</title>
+    <!--css-->
+    <link rel ="stylesheet" href = "css/style.css">
+    <link rel ="stylesheet" href = "css/style-mobile.css">
+    <link rel = "stylesheet" href="css/style-project-detail.css">
+    <link rel = "stylesheet" href="css/style-project-detail-mobile.css">
+    <link rel = "stylesheet" href="css/style-for-modal.css">
+
+    <!--javascript-->
+    <!--<script defer src="js/modalImage-water.js"></script>-->
+    <script defer src="js/modalImage.js"></script>
+    <script defer src="js/navigator.js"></script>
+    <!--the script that enables you to send an email-->
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+    <!--icon libraries-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- import the library here-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js"></script>
+        
+    <script src = "js/animation.js"></script>
+
+  </head>
+  
+  <body id="art">
+
+    <!--header section-->
+    <!--the header contains logo, navigator, and title if applicable-->
+    <div class = "header">
+      <div class = "navigator-and-logo">
+      <!--create another section to let the logo and the text displayed side by side-->
+        <a href="./architecture-gallery.html"><img class = "logo" src="asset/logo.jpg" alt = "logo of Shiyue's personal website"></a>
+        <nav class = "navigator">
+          <p class="navigator-element">
+            <a data-active = "architecture" href="./architecture-gallery.html">Architecture</a>
+          </p>
+          <p class = "navigator-element">
+            <a data-active = "art" href="./art-gallery.html">Art</a>
+          </p>
+          <p class = "navigator-element">
+            <a data-active = "about-me" href="./about-me.html">About Me</a>
+          </p>
+        </nav>
+      </div>
+      <div class = "title">
+        <h1>
+          Water Towns in “Jiangnan”
+        </h1>
+      </div>
+    </div>
+
+    <!--main-content section--> 
+    <div class = "main-content">
+      <div class = "white-box">
+      </div>
+      <div class="basic-information">
+        <p>Individual Work</p>
+        <p>Time: 07/2020</p>
+        <p>Duration: 2 weeks</p>
+        <p>Material: Card Board, Voile, Gouache on Paper</p>
+      </div>
+
+      <div class = "image">
+        <div class = "image-flex">
+          <!-- Trigger the Modal -->
+          <img class = "myImages landscape-images-left" src="asset/water-town/model-1.jpg" alt="Water Town Model Overall View">
+          <div>
+            <p class = "annotation-mobile"> Water Town Model Overall View</p>
+          </div>
+
+
+          <img class = "myImages landscape-images-right" src="asset/water-town/model-2.jpg" alt="Water Town Model Detail View">
+          <div>
+            <p class = "annotation-mobile"> Water Town Model Detail View</p>
+          </div>
+
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+
+          <!-- The Close Button -->
+          <span class="close" id = "close1">&times;</span>
+
+          <!-- Modal Content (The Image) -->
+          <!-- create two for two different styles-->
+          <img class="modal-content-for-portrait" id="img01" alt="first modal image">
+
+
+          <!-- Modal Caption (Image Text) -->
+          <div id="caption" class = "caption"></div>
+          </div>
+
+         </div>
+
+         <div class = "annotation">
+          <p> Water Town Model </p>
+          <p> Size: 12 x 12 x 12 in. </p>
+        </div>
+
+      </div>
+
+
+      <div class="description">
+        <p>In this project, I extract shapes of trapezoid from the houses in
+          Wu Guanzhong's ink wash paintings about landscapes and
+          waterscapes in Jiangnan, an area in south China. By
+          reconstructing the layout of the buildings and adding elements
+          to create a sense of futuristic city, I try to display the dramatic
+          mixture of traditions and imaginary technological cityscape.
+        </p>
+      </div>
+
+      <div class = "image">
+        <div class = "image-flex">
+          <!-- Trigger the Modal -->
+          <img class = "myImages landscape-images-left" src="asset/water-town/drawing-1.jpg" alt="The Conceptual Drawing of the Entire Water Town">
+          <div>
+            <p class = "annotation-mobile"> The Conceptual Drawing of the Entire Water Town</p>
+          </div>
+          <img class = "myImages landscape-images-right" src="asset/water-town/drawing-2.jpg" alt="The Conceptual Drawing of the Water Town Detail">
+          <div>
+            <p class = "annotation-mobile"> The Conceptual Drawing of the Water Town Detail</p>
+          </div>
+        </div>
+        
+        <div class = "annotation">
+          <p> The Conceptual Drawing of the Water Town </p>
+          <p> Size: 21 x 15 in. </p>
+        </div>
+
+      </div>
+
+      <div class="description">
+        <p>Inspired by the color in Pezo von Ellrichshausen's painting, I
+          aim to use a new approach to express the project "Jiangnan." I
+          rearrange the structure of the “houses” and the colors,
+          highlighting the curved stream surrounding the straight shaped
+          elements.
+        </p>
+      </div>
+
+      
+    
+    </div>
+
+
+  <!--contact information start here-->
+    <div class = "contact-information">
+      <p id="contact-me">
+        Contact Me
+      </p>
+      <div class = "contact-information-sub-section">
+        <span>&#9993;</span>
+        <a href="mailto:disha@uplers.com" class = "contact-text">
+          shiyueli@andrew.cmu.edu
+        </a>
+      </div>
+      <div class = "contact-information-sub-section">
+        <i class="fa fa-instagram"></i>
+        <a href ="https://www.instagram.com/zoe_liiiiu/" class = "contact-text">Zoe_Liiiu</a>
+      </div>
+    </div>
+  
+
+
+    </body>
+</html>

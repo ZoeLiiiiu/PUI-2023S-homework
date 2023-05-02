@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Architecture Gallery</title>
+    <title>Sledding Hill Culinary Center</title>
     <!--css-->
     <link rel ="stylesheet" href = "css/style.css">
     <link rel ="stylesheet" href = "css/style-mobile.css">
@@ -11,6 +11,7 @@
 
     <!--javascript-->
     <script defer src="js/modalImage.js"></script>
+    <script defer src="js/modalImageBig.js"></script>
     <script defer src="js/navigator.js"></script>
     <!--the script that enables you to send an email-->
     <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
@@ -63,7 +64,8 @@
       </div>
       <div class="basic-information">
         <p>Academic Project</p>
-        <p>Architecture Design Studio 3</p>
+        <p>Group Work</p>
+        <p>Class: Architecture Design Studio 3</p>
         <p>Time: 10/2022-12/2022</p>
         <p>Duration: 9 weeks</p>
         <p>Instructor: Elijah Hughes</p>
@@ -74,10 +76,11 @@
       <div class = "image">
         <div class = "image-flex">
           <!-- Trigger the Modal -->
-          <img id="experiential" src="asset/culinary-center/experiential-drawing.png" alt="Experiential Drawing">
-
-          <img id="walk-through" src="asset/culinary-center/walk-through.png" alt="Walk through Drawing">
-
+          <img class = "myImages" id="experiential" src="asset/culinary-center/experiential-drawing.png" alt="Experiential Drawing">
+          <div class = "annotation-mobile-container">
+            <p class = "annotation-mobile"> The Experiential Drawing</p>
+          </div>
+          <img class = "myImages" id="walk-through" src="asset/culinary-center/walk-through.png" alt="Walk through Drawing">
           <!-- The Modal -->
           <div id="myModal" class="modal">
 
@@ -86,17 +89,17 @@
 
           <!-- Modal Content (The Image) -->
           <!-- create two for two different styles-->
-          <img class="modal-content-for-portrait" id="img01" alt="container for modal image">
+          <img class="modal-content-for-portrait" id="img01" alt="first modal image">
 
 
           <!-- Modal Caption (Image Text) -->
           <div id="caption" class = "caption"></div>
           </div>
 
-         </div>
+        </div>
 
-         <div>
-          <p class = "annotation"> the Experiential Drawing (Left) and the Walk-through Drawing (Right)</p>
+         <div class = "annotation">
+          <p> the Experiential Drawing (Left) and the Walk-through Drawing (Right)</p>
          </div>
 
       </div>
@@ -113,18 +116,18 @@
       <div class = "image">
         <div class = "image-flex">
           <!-- Trigger the Modal -->
-          <img class = "landscape-images-left" id="plan-level-1" src="asset/culinary-center/plan-level-1.png" alt="Groud Level Plan">
+          <img class = "myImages landscape-images-left" id="plan-level-1" src="asset/culinary-center/plan-level-1.png" alt="Groud Level Plan">
           <div class = "annotation-mobile-container">
             <p class = "annotation-mobile"> Groud Level Plan</p>
           </div>
-          <img class = "landscape-images-right" id="plan-level-2" src="asset/culinary-center/plan-level-2.png" alt="Second Level Plan">
+          <img class = "myImages landscape-images-right" id="plan-level-2" src="asset/culinary-center/plan-level-2.png" alt="Second Level Plan">
           <div class = "annotation-mobile-container">
             <p class = "annotation-mobile"> Second Level Plan</p>
           </div>
         </div>
 
-        <div>
-          <p class = "annotation"> Groud Level Plan (Left) and Second Level Plan (Right)</p>
+        <div  class = "annotation">
+          <p> Groud Level Plan (Left) and Second Level Plan (Right)</p>
         </div>
 
       </div>
@@ -142,12 +145,18 @@
       <div class = "image">
         <div class = "image-flex">
           <!-- Trigger the Modal -->
-          <img class = "landscape-images-left" id="axon-1" src="asset/culinary-center/axon-1.png" alt="Southeast Axonometric">
-          <img class = "landscape-images-right" id="axon-2" src="asset/culinary-center/axon-2.png" alt="Southwest Axonometric">
+          <img class = "myImages landscape-images-left" id="axon-1" src="asset/culinary-center/axon-1.png" alt="Southeast Axonometric">
+          <div class = "annotation-mobile-container">
+            <p class = "annotation-mobile"> Southeast Axonometric</p>
+          </div>
+          <img class = "myImages landscape-images-right" id="axon-2" src="asset/culinary-center/axon-2.png" alt="Southwest Axonometric">
+          <div class = "annotation-mobile-container">
+            <p class = "annotation-mobile"> Southwest Axonometric</p>
+          </div>
         </div>
 
-        <div>
-          <p class = "annotation"> Southeast Axonometric (Left) and Southwest Axonometric (Right)</p>
+        <div class = "annotation">
+          <p> Southeast Axonometric (Left) and Southwest Axonometric (Right)</p>
         </div>
 
       </div>
@@ -163,26 +172,26 @@
 
       <div class = "image">
 
-        <img class = "big-image" id = "conceptual-diagram" src = "asset/culinary-center/conceptual-diagam-01.png" alt = "The Conceptual Diagram Showing Design Process">
+        <img class = "myImagesBig big-image" id = "conceptual-diagram" src = "asset/culinary-center/conceptual-diagam-01.png" alt = "The Conceptual Diagram Showing Design Process">
         
         <!-- The Modal -->
-        <div id="myModal2" class="modal">
+        <div id="myModalBig" class="modal">
 
          <!-- The Close Button -->
-         <span class="close" id = "close2">&times;</span>
+         <span class="close" id = "closeBig">&times;</span>
 
          <!-- Modal Content (The Image) -->
          <!-- create two for two different styles-->
-         <img class="modal-content-for-landscape" id="img02" alt = "container for the second modal image">
+         <img class="modal-content-for-landscape" id="imgBig" alt = "the second modal image">
 
 
          <!-- Modal Caption (Image Text) -->
-         <div id="caption2" class = "caption"></div>
-         </div>
+         <div id="captionBig" class = "caption"></div>
+         </div>       
 
-         <div>
-          <p class = "annotation"> Southeast Axonometric (Left) and Southwest Axonometric (Right)</p>
-        </div>
+         <div class = "annotation-on-both">
+          <p> The Conceptual Diagram Showing Design Process</p>
+         </div>
 
      </div>
     

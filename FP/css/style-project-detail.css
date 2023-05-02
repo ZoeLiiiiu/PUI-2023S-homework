@@ -13,11 +13,13 @@
 .image img{
     max-width: 100%;
     text-align: center;
+    cursor: zoom-in;
 }
 
 .image{
   margin-bottom: 50px;
 }
+
 
 .image-flex{
     display:flex;
@@ -25,30 +27,53 @@
 }
 
 #experiential{
-    width: 50%;
-    margin-right: 30px;
+    width: 55%;
+    margin-right: 10px;
 }
 
 #walk-through{
-    width:20%;
-    margin-left: 30px;
+    width:25%;
+    margin-left: 10px;
 }
 
-.annotation{
+#claw-iteration{
+  width: 50%;
+  margin-left: 25%;
+}
+
+.annotation, .annotation-on-both{
   opacity: 0.8;
   text-align: center;
   margin: 20px;
   font-style: italic;
 }
 
+.annotation p, .annotation-on-both p{
+  margin: 3px;
+}
+
 .landscape-images-left{
-  width: 35%;
-  margin-right: 30px;
+  width: 40%;
+  margin-right: 10px;
 }
 
 .landscape-images-right{
-  width: 35%;
-  margin-left: 30px;
+  width: 40%;
+  margin-left: 10px;
+}
+
+.column-left{
+  width: calc(80% / 3);
+  margin-right: 10px;
+}
+
+.column-middle{
+  width: calc(80% / 3)
+}
+
+.column-right{
+  width: calc(80% / 3);
+  margin-left: 10px;
 }
 
 .description{
@@ -57,8 +82,8 @@
 }
 
 .big-image{
-  width: calc(70% + 60px);
-  margin-left: calc(15% - 30px);
+  width: calc(80% + 20px);
+  margin-left: calc(10% - 10px);
 }
 }
 

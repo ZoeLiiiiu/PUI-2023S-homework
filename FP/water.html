@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The Water</title>
+    <!--css-->
+    <link rel ="stylesheet" href = "css/style.css">
+    <link rel ="stylesheet" href = "css/style-mobile.css">
+    <link rel = "stylesheet" href="css/style-project-detail.css">
+    <link rel = "stylesheet" href="css/style-project-detail-mobile.css">
+    <link rel = "stylesheet" href="css/style-for-modal.css">
+
+    <!--javascript-->
+    <!--<script defer src="js/modalImage-water.js"></script>-->
+    <script defer src="js/modalImage.js"></script>
+    <script defer src="js/navigator.js"></script>
+    <!--the script that enables you to send an email-->
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+    <!--icon libraries-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- import the library here-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js"></script>
+        
+    <script src = "js/animation.js"></script>
+
+  </head>
+  
+  <body id="art">
+
+    <!--header section-->
+    <!--the header contains logo, navigator, and title if applicable-->
+    <div class = "header">
+      <div class = "navigator-and-logo">
+      <!--create another section to let the logo and the text displayed side by side-->
+        <a href="./architecture-gallery.html"><img class = "logo" src="asset/logo.jpg" alt = "logo of Shiyue's personal website"></a>
+        <nav class = "navigator">
+          <p class="navigator-element">
+            <a data-active = "architecture" href="./architecture-gallery.html">Architecture</a>
+          </p>
+          <p class = "navigator-element">
+            <a data-active = "art" href="./art-gallery.html">Art</a>
+          </p>
+          <p class = "navigator-element">
+            <a data-active = "about-me" href="./about-me.html">About Me</a>
+          </p>
+        </nav>
+      </div>
+      <div class = "title">
+        <h1>
+          The Water
+        </h1>
+      </div>
+    </div>
+
+    <!--main-content section--> 
+    <div class = "main-content">
+      <div class = "white-box">
+      </div>
+      <div class="basic-information">
+        <p>Individual Work</p>
+        <p>Time: 06/2020-07/2020</p>
+        <p>Duration: 5 weeks</p>
+        <p>Material: Iron Wire, Plastic Film, Optical Fiber, Pencil Sketch on Paper</p>
+      </div>
+
+      <div class = "image">
+        <div class = "big-image">
+          <!-- Trigger the Modal -->
+          <img class = "myImages" id="water-model" src="asset/water/model.jpg" alt="The sculpture representing a stream flowing out of a box">
+
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+
+          <!-- The Close Button -->
+          <span class="close" id = "close1">&times;</span>
+
+          <!-- Modal Content (The Image) -->
+          <!-- create two for two different styles-->
+          <img class="modal-content-for-portrait" id="img01" alt="first modal image">
+
+
+          <!-- Modal Caption (Image Text) -->
+          <div id="caption" class = "caption"></div>
+          </div>
+
+         </div>
+
+         <div class = "annotation-on-both">
+          <p> The sculpture representing a stream flowing out of a box </p>
+          <p> Size: 14 x 14 x 14 in. </p>
+        </div>
+
+      </div>
+
+
+      <div class="description">
+        <p>Inspired by " ... and its frail image just disappeared, like water
+          in water” by Jorge Luis Borges, I try to explore the relationship
+          between water and life through this project. Curving streams of
+          wires and plastic films flow out of an iron frame, suggesting
+          that life is like water, which could go outside of box.
+          Meanwhile, one of the streams forms a closed loop,
+          symbolizing that life, like water, is cyclical.
+        </p>
+      </div>
+
+      <div class = "image">
+        <div class = "big-image">
+          <!-- Trigger the Modal -->
+          <img class = "myImages" id="water-digital-collage" src="asset/water/digital-collage.jpg" alt="The Digital Collage of the Sculpture">
+        </div>
+        <div>
+            <p class = "annotation-on-both"> The Digital Collage of the Sculpture</p>
+        </div>
+        <div class = "big-image">
+          <img class = "myImages" id="water-sketch" src="asset/water/sketch.jpg" alt="The Conceptual Pencil Sketch">
+        </div>
+        <div class = "annotation-on-both">
+            <p> The Conceptual Pencil Sketch</p>
+            <p> Size: 21 x 15 in. </p>
+        </div>
+
+
+      </div>
+
+      <div class="description">
+        <p>I hope to emphasize the fluidity of the water. Inspired by
+          Cubism, I put four different perspectives of the model in the
+          same picture, and combine their water streams together to
+          create a sense of flow as a unity.
+        </p>
+      </div>
+
+
+      </div>
+
+      
+    
+
+  <!--contact information start here-->
+    <div class = "contact-information">
+      <p id="contact-me">
+        Contact Me
+      </p>
+      <div class = "contact-information-sub-section">
+        <span>&#9993;</span>
+        <a href="mailto:disha@uplers.com" class = "contact-text">
+          shiyueli@andrew.cmu.edu
+        </a>
+      </div>
+      <div class = "contact-information-sub-section">
+        <i class="fa fa-instagram"></i>
+        <a href ="https://www.instagram.com/zoe_liiiiu/" class = "contact-text">Zoe_Liiiu</a>
+      </div>
+    </div>
+  
+
+
+    </body>
+</html>

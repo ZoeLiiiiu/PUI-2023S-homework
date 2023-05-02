@@ -83,7 +83,7 @@
         margin-top: 30px;
     }
 
-    .contact-information-on-about-me{
+    .contact-information-bottom{
         background-color: lightgray;
         padding: 20px 20px 50px 20px;
         padding-left: 5%;
@@ -205,9 +205,7 @@
         position: absolute;
     }
 
-    /*why this is not working?*/
-    /*START*/
-    .notable-project img:hover + .overlay-notable{
+    .thumbnail-container-notable-project:hover .overlay-notable{
         background-color:white;
         opacity: 0.7;
         width: calc(100% - 600px);
@@ -217,42 +215,6 @@
         position: absolute;
         transition-duration: 0.1s
     }
-
-    .notable-project:hover + .overlay-notable{
-        background-color:white;
-        opacity: 0.7;
-        width: calc(100% - 600px);
-        height: 300px;
-        margin: 50px 300px 50px 300px;
-        z-index: 1;
-        position: absolute;
-        transition-duration: 0.1s
-    }
-
-    .thumbnail-container-notable-project:hover + .overlay-notable{
-        background-color:white;
-        opacity: 0.7;
-        width: calc(100% - 600px);
-        height: 300px;
-        margin: 50px 300px 50px 300px;
-        z-index: 1;
-        position: absolute;
-        transition-duration: 0.1s
-    }
-    /*END*/
-        
-    .overlay-notable:hover{
-        background-color:white;
-        opacity: 0.7;
-        width: calc(100% - 600px);
-        height: 300px;
-        margin: 50px 300px 50px 300px;
-        z-index: 1;
-        position: absolute;
-        transition-duration: 0.1s
-    }
-
-    /*THIS PART IS PROBLEMATIC!! FIX IT LATTER!!*/
 
     .overlay-bigger{
         background-color: white;
