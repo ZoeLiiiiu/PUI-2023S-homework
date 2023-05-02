@@ -6,4 +6,4 @@ Repository link: https://github.com/ZoeLiiiiu/PUI-2023S-homework
 
 # PUI FP
 
-PDF Write-up: https://github.com/ZoeLiiiiu/PUI-2023S-homework/blob/main/FP/PUI%20FP4%20Write-up.pdf
+PDF Write-up: https://github.com/ZoeLiiiiu/PUI-2023S-homework/blob/main/FP/PUI-FP4-Write-up.pdf
