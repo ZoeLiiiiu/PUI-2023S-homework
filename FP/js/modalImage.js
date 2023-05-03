@@ -1,6 +1,6 @@
 // create references to the modal...
 var modal = document.getElementById('myModal');
-// to all images -- note I'm using a class!
+// to all images
 var images = document.getElementsByClassName('myImages');
 // the image in the modal
 var modalImg = document.getElementById("img01");
@@ -18,8 +18,10 @@ for (var i = 0; i < images.length; i++) {
   }
 }
 
+//get the cross icon
 var span = document.getElementsByClassName("close")[0];
 
+//set the display to none while click on the cross
 span.onclick = function() {
   modal.style.display = "none";
 }

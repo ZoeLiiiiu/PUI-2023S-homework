@@ -1,3 +1,4 @@
+// enable the annimation of the title 
 
 $(function () {
     $('.title').textillate(

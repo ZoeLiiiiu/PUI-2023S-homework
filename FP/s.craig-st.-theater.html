@@ -2,31 +2,31 @@
 <html lang="en">
   <head>
     <title>S. Craig St. Theater</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!--css-->
     <link rel ="stylesheet" href = "css/style.css">
     <link rel ="stylesheet" href = "css/style-mobile.css">
     <link rel = "stylesheet" href="css/style-project-detail.css">
     <link rel = "stylesheet" href="css/style-project-detail-mobile.css">
+    <!--the style for image zoom-in function-->
     <link rel = "stylesheet" href="css/style-for-modal.css">
-
-    <!--javascript-->
-    <script defer src="js/modalImage.js"></script>
-    <script defer src="js/modalImageBig.js"></script>
-    <script defer src="js/navigator.js"></script>
-    <!--the script that enables you to send an email-->
-    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+    <!-- style of the animation text from textillate-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!--icon libraries-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--javascript-->
+    <!--define the behavior for image zoom-in function-->
+    <script defer src="js/modalImage.js"></script>
+    <!--define the behavior for navigation bar-->
+    <script defer src="js/navigator.js"></script>
 
-    <!-- import the library here-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- import the library: textillate.js-->
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script>
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js"></script>
-        
+    <!--define the animation-->  
     <script src = "js/animation.js"></script>
 
   </head>
@@ -60,8 +60,12 @@
 
     <!--main-content section--> 
     <div class = "main-content">
+
+      <!--white box make sure the main content and the navigation bar do not overlap--> 
       <div class = "white-box">
       </div>
+
+      <!--basic information section--> 
       <div class="basic-information">
         <p>Academic Project</p>
         <p>Individual Work</p>
@@ -72,16 +76,20 @@
         <p>Software Used: Rhino, Adobe Photoshop, Adobe Illustrator, Keyshot, Twinmotion, Adobe Premiere</p>
       </div>
 
+      <!--the div that contain everything related to image-->
       <div class = "image">
+        <!--the image displays on its own in a column-->
         <div class = "big-image">
           <!-- Trigger the Modal -->
           <img class = "myImages" src="asset/s.craig-st.theater/experimental-drawing.jpg" alt="The Experiential Drawing">
         </div>
+        <!--annotation shows on both device-->
         <div>
           <p class = "annotation-on-both"> The Experiential Drawing</p>
         </div>
       </div>     
 
+      <!--description-->
       <div class="description">
         <p>The theater is located on S. Craig St. in Oakland, Pittsburgh. 
           I aimed to use design elements to attract visitors to view and interact with the building. 
@@ -98,24 +106,30 @@
         </p>
       </div>
 
+      <!--the div that contain everything related to image-->
       <div class = "image">
+        <!--three images display in a row-->
         <div class = "image-flex">
           <!-- Trigger the Modal -->
           <img class = "myImages column-left" src="asset/s.craig-st.theater/top-plan.png" alt="Top Level Plan">
 
+          <!--annotation shows only on mobile device-->
           <div class = "annotation-mobile-container">
             <p class = "annotation-mobile"> Top Level Plan</p>
           </div>
 
           <img class = "myImages column-middle" src="asset/s.craig-st.theater/mid-level-plan.png" alt="Middle Level Plan">
 
+          <!--annotation shows only on mobile device-->
           <div class = "annotation-mobile-container">
             <p class = "annotation-mobile"> Middle Level Plan</p>
           </div>
 
-          <img class = "myImages column-middle" src="asset/s.craig-st.theater/floor-plan.png" alt="Ground Level Plan">
+          <img class = "myImages column-right" src="asset/s.craig-st.theater/floor-plan.png" alt="Ground Level Plan">
 
+          <!--annotation shows only on mobile device-->
           <div class = "annotation-mobile-container">
+
             <p class = "annotation-mobile">Ground</p>
           </div>
           <!-- The Modal -->
@@ -125,9 +139,7 @@
           <span class="close" id = "close1">&times;</span>
 
           <!-- Modal Content (The Image) -->
-          <!-- create two for two different styles-->
           <img class="modal-content-for-portrait" id="img01" alt="first modal image">
-
 
           <!-- Modal Caption (Image Text) -->
           <div id="caption" class = "caption"></div>
@@ -135,29 +147,35 @@
 
         </div>
 
+        <!--annotation shows only on laptop device-->
          <div class = "annotation">
           <p> Top Level Plan (Left), Middle Level Plan (Middle), and Ground Level Plan (Right)</p>
          </div>
 
       </div>
 
+       <!--the div that contain everything related to image-->
       <div class = "image">
+        <!--three images display in a row-->
         <div class = "image-flex">
           <!-- Trigger the Modal -->
           <img class = "myImages column-left" src="asset/s.craig-st.theater/long-elevation.png" alt="Long Elevation">
 
+          <!--annotation shows only on mobile device-->
           <div class = "annotation-mobile-container">
             <p class = "annotation-mobile"> Long Elevation</p>
           </div>
 
           <img class = "myImages column-middle" src="asset/s.craig-st.theater/short-front-elevation.png" alt="Front Elevation">
 
+          <!--annotation shows only on mobile device-->
           <div class = "annotation-mobile-container">
             <p class = "annotation-mobile"> Front Elevation</p>
           </div>
 
-          <img class = "myImages column-middle" src="asset/s.craig-st.theater/short-back-elevation.png" alt="Back Elevation">
+          <img class = "myImages column-right" src="asset/s.craig-st.theater/short-back-elevation.png" alt="Back Elevation">
 
+          <!--annotation shows only on mobile device-->
           <div class = "annotation-mobile-container">
             <p class = "annotation-mobile">Back Elevation</p>
           </div>
@@ -165,76 +183,94 @@
 
         </div>
 
+         <!--annotation shows only on laptop device-->
          <div class = "annotation">
           <p> Long Elevation (Left), Front Elevation (Middle), and Back Elevation (Right)</p>
          </div>
 
       </div>
 
+      <!--the div that contain everything related to image-->
       <div class = "image">
+        <!--three images display in a row-->
         <div class = "image-flex">
+
           <!-- Trigger the Modal -->
           <img class = "myImages column-left" src="asset/s.craig-st.theater/long-section.png" alt="Long Section">
 
+          <!--annotation shows only on mobile device-->
           <div class = "annotation-mobile-container">
             <p class = "annotation-mobile"> Long Section</p>
           </div>
 
           <img class = "myImages column-middle" src="asset/s.craig-st.theater/short-section-1.png" alt="Short Section 1">
 
+          <!--annotation shows only on mobile device-->
           <div class = "annotation-mobile-container">
             <p class = "annotation-mobile"> Short Section 1</p>
           </div>
 
-          <img class = "myImages column-middle" src="asset/s.craig-st.theater/short-section-2.png" alt="Short Section 2">
+          <img class = "myImages column-right" src="asset/s.craig-st.theater/short-section-2.png" alt="Short Section 2">
 
+          <!--annotation shows only on mobile device-->
           <div class = "annotation-mobile-container">
             <p class = "annotation-mobile">Short Section 2</p>
           </div>
           
-
         </div>
 
+        <!--annotation shows only on laptop device-->
          <div class = "annotation">
           <p> Long Section (Left), Short Section 1 (Middle), and Short Section 2 (Right)</p>
          </div>
 
       </div>
 
+      <!--the image has a special margin on the mobile device (make it feel like it is a group with one image below)-->
       <div class = "image" id="image-special-margin">
+        <!--two images show in a column-->
         <div class = "image-flex">
           <!-- Trigger the Modal -->
           <img class = "myImages landscape-images-left" src="asset/s.craig-st.theater/render1.png" alt="Aerial View Render">
+          <!--annotation shows only on mobile device-->
           <div class = "annotation-mobile-container">
             <p class = "annotation-mobile"> Aerial View Render</p>
           </div>
           <img class = "myImages landscape-images-right" src="asset/s.craig-st.theater/render2.png" alt="Entrance Render">
+          <!--annotation shows only on mobile device-->
           <div class = "annotation-mobile-container">
             <p class = "annotation-mobile"> Entrance Render</p>
           </div>
         </div>
 
+        <!--annotation shows only on laptop device-->
         <div class = "annotation">
           <p> Aerial View Render(Left) and Entrance Render (Right)</p>
         </div>
 
       </div>
 
+      <!--the div that contain everything related to image-->
       <div class = "image">
+        <!--the image shows on itself in a column-->
         <div class = "big-image">
           <!-- Trigger the Modal -->
           <img class = "myImages" src="asset/s.craig-st.theater/render3.png" alt="The Theater Render">
         </div>
+        <!--the annotation show on both device-->
         <div>
           <p class = "annotation-on-both"> The Theater Render</p>
         </div>
       </div>
       
+      <!--the div that contain everything related to image-->
       <div class = "image">
+        <!--the image shows on itself in a column-->
         <div class = "big-image">
           <!-- Trigger the Modal -->
           <img class = "myImages" src="asset/s.craig-st.theater/render.jpg" alt="The Street View Freehand Drawing">
         </div>
+        <!--the annotation show on both device-->
         <div>
           <p class = "annotation-on-both"> The Street View Freehand Drawing</p>
         </div>
@@ -250,13 +286,17 @@
         Contact Me
       </p>
       <div class = "contact-information-sub-section">
+        <!--implement the mail icon-->
         <span>&#9993;</span>
-        <a href="mailto:disha@uplers.com" class = "contact-text">
+        <!--enable the user to send me an email-->
+        <a href="mailto:shiyueli@andrew.cmu.edu" class = "contact-text">
           shiyueli@andrew.cmu.edu
         </a>
       </div>
       <div class = "contact-information-sub-section">
+        <!--implement the instagram icon-->
         <i class="fa fa-instagram"></i>
+        <!--lead the user to my instagram homepage-->
         <a href ="https://www.instagram.com/zoe_liiiiu/" class = "contact-text">Zoe_Liiiu</a>
       </div>
     </div>

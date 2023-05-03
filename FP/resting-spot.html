@@ -2,31 +2,31 @@
 <html lang="en">
   <head>
     <title>Resting Spot in Boreal Forest</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!--css-->
     <link rel ="stylesheet" href = "css/style.css">
     <link rel ="stylesheet" href = "css/style-mobile.css">
     <link rel = "stylesheet" href="css/style-project-detail.css">
     <link rel = "stylesheet" href="css/style-project-detail-mobile.css">
+    <!--the style for image zoom-in function-->
     <link rel = "stylesheet" href="css/style-for-modal.css">
-
-    <!--javascript-->
-    <!--<script defer src="js/modalImage-water.js"></script>-->
-    <script defer src="js/modalImage.js"></script>
-    <script defer src="js/navigator.js"></script>
-    <!--the script that enables you to send an email-->
-    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+    <!-- style of the animation text from textillate-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!--icon libraries-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--javascript-->
+    <!--define the behavior for image zoom-in function-->
+    <script defer src="js/modalImage.js"></script>
+    <!--define the behavior for navigation bar-->
+    <script defer src="js/navigator.js"></script>
 
-    <!-- import the library here-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- import the library: textillate.js-->
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script>
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js"></script>
-        
+    <!--define the animation-->  
     <script src = "js/animation.js"></script>
 
   </head>
@@ -60,8 +60,12 @@
 
     <!--main-content section--> 
     <div class = "main-content">
+
+      <!--white box make sure the main content and the navigation bar do not overlap--> 
       <div class = "white-box">
       </div>
+
+      <!--basic information section--> 
       <div class="basic-information">
         <p>Academic Project</p>
         <p>Individual Work</p>
@@ -72,7 +76,9 @@
         <p>Software Used: Rhino, Adobe Photoshop, Adobe Illustrator</p>
       </div>
 
+      <!--the div that contain everything related to image--> 
       <div class = "image">
+        <!--the image displays on its own in a column-->
         <div class = "big-image">
           <!-- Trigger the Modal -->
           <img class = "myImages" src="asset/resting-spot/experiential.png" alt="The Resting Spot Experiential Drawing">
@@ -87,40 +93,44 @@
           <!-- create two for two different styles-->
           <img class="modal-content-for-portrait" id="img01" alt="first modal image">
 
-
           <!-- Modal Caption (Image Text) -->
           <div id="caption" class = "caption"></div>
           </div>
 
          </div>
 
+         <!--annotation shows on both device-->
          <div class = "annotation-on-both">
           <p> The Resting Spot Experiential Drawing </p>
         </div>
 
       </div>
 
-
+      <!--description-->
       <div class="description">
-        <p>The resting spot is located in the boreal forest in Canada. We started by analyzing the site condition and a precedent. We specifically analyzed the longhouse to understand how ancient people deal with the climate.
-
-          Then, I started developing the resting spot by making sketch models. Due to the cold and windy climate, I made it into a shelter. After being iterated several times, the final model represents how the shelter responds to the natural environment and the spatial experience in it.
-          
-          The canopy faces the lake, blocking the rain and the wind from the lakeside, keeping the inside area of the shelter warm and dry, and providing hikers with a place to temporarily take a break. Moreover, the curved shape redirects the wind and the rain.
-          
-          The form leads people to explore the shelter. The “tail” evokes people's curiosity, inviting them to go further in, and by going further in, they will access the public and private areas. 
+        <p>The resting spot is located in the boreal forest in Canada. We started by analyzing the site condition and a precedent. 
+          We specifically analyzed the longhouse to understand how ancient people deal with the climate.
+          Then, I started developing the resting spot by making sketch models. 
+          Due to the cold and windy climate, I made it into a shelter. After being iterated several times, 
+          the final model represents how the shelter responds to the natural environment and the spatial experience in it.
+          The canopy faces the lake, blocking the rain and the wind from the lakeside, keeping the inside area of the shelter warm and dry, 
+          and providing hikers with a place to temporarily take a break. Moreover, the curved shape redirects the wind and the rain.
+          The form leads people to explore the shelter. The “tail” evokes people's curiosity, inviting them to go further in, and by going further in, 
+          they will access the public and private areas. 
         </p>
       </div>
 
+      <!--the div that contain everything related to image--> 
       <div class = "image">
+        <!--the image displays on its own in a column-->
         <div class = "big-image">
           <!-- Trigger the Modal -->
           <img class = "myImages" src="asset/resting-spot/model.png" alt="The Resting Spot Model">
+          <!--annotation shows on both device-->
           <div>
             <p class = "annotation-on-both"> The Resting Spot Model</p>
           </div>
         </div>
-
 
       </div>      
     
@@ -133,13 +143,17 @@
         Contact Me
       </p>
       <div class = "contact-information-sub-section">
+        <!--implement the mail icon-->
         <span>&#9993;</span>
-        <a href="mailto:disha@uplers.com" class = "contact-text">
+        <!--enable the user to send me an email-->
+        <a href="mailto:shiyueli@andrew.cmu.edu" class = "contact-text">
           shiyueli@andrew.cmu.edu
         </a>
       </div>
       <div class = "contact-information-sub-section">
+        <!--implement the instagram icon-->
         <i class="fa fa-instagram"></i>
+        <!--lead the user to my instagram homepage-->
         <a href ="https://www.instagram.com/zoe_liiiiu/" class = "contact-text">Zoe_Liiiu</a>
       </div>
     </div>
