@@ -1,5 +1,8 @@
+/*Responsive Design: for tablets*/
+/* this file define the style of project gallery page*/
 @media only screen and (min-width: 600px) {
 
+/*define the width of main content to have margin around*/
 .main-content{
     width: 60%;
     margin: auto;
@@ -11,6 +14,7 @@
     font-style: italic;
 }
 
+/*define the bottom margin between basic information and other part*/
 .basic-information{
   margin-bottom: 50px;
 }
@@ -18,34 +22,43 @@
 .image img{
     max-width: 100%;
     text-align: center;
+    /*change the cursor to indicate that the image can be zoom in*/
     cursor: zoom-in;
 }
 
+/*define the bottom margin between the image and the other parts*/
 .image{
   margin-bottom: 50px;
 }
 
-
+/*define the style of image showing in rows*/
 .image-flex{
     display:flex;
     justify-content: center;
 }
 
+/*this image is special*/
+/*define the experiential drawing on culinary center page specifically*/
 #experiential{
     width: 55%;
     margin-right: 10px;
 }
 
+/*this image is special*/
+/*define the walkthrough drawing on culinary center page specifically*/
 #walk-through{
     width:25%;
     margin-left: 10px;
 }
 
+/*this image is special*/
+/*define the walkthrough drawing on claw page specifically*/
 #claw-iteration{
   width: 50%;
   margin-left: 25%;
 }
 
+/*define the annotation style*/
 .annotation, .annotation-on-both{
   opacity: 0.8;
   text-align: center;
@@ -57,41 +70,55 @@
   margin: 3px;
 }
 
+/*define the style of the left images in a row of two images*/
+/*make sure the total row line up with other images*/
 .landscape-images-left{
   width: 40%;
   margin-right: 10px;
 }
 
+/*define the style of the right images in a row of two images*/
+/*make sure the total row line up with other images*/
 .landscape-images-right{
   width: 40%;
   margin-left: 10px;
 }
 
+/*define the style of the left images in a row of three images*/
+/*make sure the total row line up with other images*/
 .column-left{
   width: calc(80% / 3);
   margin-right: 10px;
 }
 
+/*define the style of the middle images in a row of three images*/
+/*make sure the total row line up with other images*/
 .column-middle{
   width: calc(80% / 3)
 }
 
+/*define the style of the right images in a row of three images*/
+/*make sure the total row line up with other images*/
 .column-right{
   width: calc(80% / 3);
   margin-left: 10px;
 }
 
+/*define the bottom margin of the description with other parts*/
 .description{
   margin-bottom: 50px;
 
 }
 
+/*define the style of the image shown by itself in a column*/
+/*make sure the total row line up with other images*/
 .big-image{
   width: calc(80% + 20px);
   margin-left: calc(10% - 10px);
 }
 }
 
+/*make sure the annotation that only shown on mobile device is not showing up*/
 .annotation-mobile{
   display: none;
 }
