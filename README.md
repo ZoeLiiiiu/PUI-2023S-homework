@@ -8,7 +8,7 @@ Repository link: https://github.com/ZoeLiiiiu/PUI-2023S-homework
 
 Deployed website: https://zoeliiiiu.github.io/PUI-2023S-homework/FP/architecture-gallery.html
 
-Project Folder: 
+Project Folder: https://github.com/ZoeLiiiiu/PUI-2023S-homework/tree/main/FP
 
 PDF Write-up: https://github.com/ZoeLiiiiu/PUI-2023S-homework/blob/main/FP/deliverable/PUI-FP4-Write-up.pdf
 
